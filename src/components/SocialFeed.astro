@@ -8,7 +8,7 @@ const latest = (videos as { id: string; title: string; published: string; url: s
 const youtube = social.find((s) => s.icon === 'youtube')!.href;
 const facebook = social.find((s) => s.icon === 'facebook')!.href;
 const xUrl = social.find((s) => s.icon === 'x')!.href;
-const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent('https://www.facebook.com/wascalclimate')}&tabs=timeline&width=500&height=560&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`;
+const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent('https://www.facebook.com/wascalclimate')}&tabs=timeline&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`;
 ---
 <section class="section social-section">
   <div class="wrap">
@@ -78,8 +78,8 @@ const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURICompone
   .v-title { font-weight: 600; font-size: 15px; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .video:hover .v-title { color: var(--blue); }
   .v-date { font-size: 13px; color: var(--muted); }
-  .fb-box { min-height: 200px; display: flex; justify-content: center; }
-  .fb-box :global(iframe) { width: 100%; max-width: 500px; height: 560px; border: 0; overflow: hidden; }
+  .fb-box { min-height: 200px; display: flex; justify-content: center; width: 100%; }
+  .fb-box :global(iframe) { display: block; margin-inline: auto; border: 0; overflow: hidden; max-width: 100%; }
   .fb-fallback { color: var(--muted); font-size: 15px; align-self: center; }
   .feed-actions { display: flex; flex-wrap: wrap; gap: 4px 20px; }
   @media (max-width: 900px) { .feeds { grid-template-columns: 1fr; } }
@@ -94,17 +94,26 @@ const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURICompone
     .play { width: 34px; height: 24px; margin: -12px 0 0 -17px; border-radius: 6px; }
     .play::after { left: 13px; top: 7px; border-width: 5px 0 5px 9px; }
     .v-title { font-size: 14px; }
-    .fb-box :global(iframe) { height: 460px; }
   }
 </style>
 
 <script>
-  // Load the Facebook page widget only when it scrolls into view (keeps the homepage fast).
+  // Facebook's page widget draws its posts at the pixel width it is asked for (180-500 px),
+  // so measure the box, request exactly that width, centre it, and redraw if the box resizes.
   const box = document.querySelector<HTMLElement>('[data-fb-feed]');
-  const load = () => {
-    if (!box || box.querySelector('iframe')) return;
+  let drawnWidth = 0;
+  const draw = () => {
+    if (!box) return;
+    const width = Math.floor(Math.min(500, Math.max(180, box.clientWidth)));
+    if (Math.abs(width - drawnWidth) < 20) return;
+    drawnWidth = width;
+    const height = width < 360 ? 480 : 560;
     const f = document.createElement('iframe');
-    f.src = box.dataset.src || '';
+    f.src = `${box.dataset.src}&width=${width}&height=${height}`;
+    f.width = String(width);
+    f.height = String(height);
+    f.style.width = `${width}px`;
+    f.style.height = `${height}px`;
     f.title = 'Recent posts from the WASCAL Facebook page';
     f.loading = 'lazy';
     f.setAttribute('scrolling', 'no');
@@ -112,7 +121,13 @@ const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURICompone
     box.replaceChildren(f);
   };
   if (box && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => { if (entries.some((e) => e.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '300px' });
+    const io = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      io.disconnect();
+      draw();
+      let t: number | undefined;
+      new ResizeObserver(() => { clearTimeout(t); t = window.setTimeout(draw, 300); }).observe(box);
+    }, { rootMargin: '300px' });
     io.observe(box);
-  } else load();
+  } else draw();
 </script>

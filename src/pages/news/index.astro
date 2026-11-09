@@ -3,9 +3,10 @@ import Base from '../../layouts/Base.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import NewsListing from '../../components/NewsListing.astro';
 import { posts, PER_PAGE } from '../../lib/content';
+import { heroes } from '../../lib/heroes';
 const last = Math.ceil(posts.length / PER_PAGE);
 ---
 <Base title="News" description="News, press releases and stories from WASCAL." current="/news/">
-  <PageHeader title="News & updates" crumbs={[{ label: 'News' }]} lead={`${posts.length} stories from across WASCAL's work since 2012.`} />
+  <PageHeader title="News & updates" image={heroes.news} crumbs={[{ label: 'News' }]} lead={`${posts.length} stories from across WASCAL's work since 2012.`} />
   <NewsListing posts={posts.slice(0, PER_PAGE)} current={1} last={last} base="/news/" />
 </Base>

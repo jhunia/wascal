@@ -3,9 +3,10 @@ import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
 import PartnerWall from '../components/PartnerWall.astro';
 import { partnerGroups, partnerCount } from '../data/partners';
+import { heroes } from '../lib/heroes';
 ---
 <Base title="Our partners" description="The governments, universities and research institutions WASCAL works with." current="/partners/">
-  <PageHeader title="Our partners" eyebrow="Who we are" crumbs={[{ label: 'Who we are' }, { label: 'Our partners' }]}
+  <PageHeader title="Our partners" eyebrow="Who we are" image={heroes.partners} crumbs={[{ label: 'Who we are' }, { label: 'Our partners' }]}
     lead={`WASCAL works with ${partnerCount} institutions across its 13 member countries, Germany and the wider international research community.`} />
 
   <div class="wrap partners" data-pagefind-body>

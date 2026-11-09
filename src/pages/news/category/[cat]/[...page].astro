@@ -3,6 +3,7 @@ import Base from '../../../../layouts/Base.astro';
 import PageHeader from '../../../../components/PageHeader.astro';
 import NewsListing from '../../../../components/NewsListing.astro';
 import { categories, postsIn, PER_PAGE } from '../../../../lib/content';
+import { heroFor } from '../../../../lib/heroes';
 
 export function getStaticPaths() {
   return categories.flatMap((c) => {
@@ -18,6 +19,6 @@ const { cat, list, n, last } = Astro.props;
 const base = `/news/category/${cat.slug}/`;
 ---
 <Base title={n > 1 ? `${cat.name} — page ${n}` : cat.name} current="/news/">
-  <PageHeader title={cat.name} eyebrow="News topic" crumbs={[{ label: 'News', href: '/news/' }, { label: cat.name }]} lead={`${list.length} ${list.length === 1 ? 'story' : 'stories'}`} />
+  <PageHeader title={cat.name} eyebrow="News topic" image={heroFor(`/${cat.slug}/`, 'News & resources')} crumbs={[{ label: 'News', href: '/news/' }, { label: cat.name }]} lead={`${list.length} ${list.length === 1 ? 'story' : 'stories'}`} />
   <NewsListing posts={list.slice((n - 1) * PER_PAGE, n * PER_PAGE)} current={n} last={last} base={base} activeCategory={cat.slug} />
 </Base>

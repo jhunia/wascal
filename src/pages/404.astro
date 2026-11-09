@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
+import { heroes } from '../lib/heroes';
 ---
 <Base title="Page not found" noindex>
-  <PageHeader title="We couldn't find that page" lead="It may have moved when the WASCAL website was redesigned." />
+  <PageHeader title="We couldn't find that page" image={heroes.competence} lead="It may have moved when the WASCAL website was redesigned." />
   <div class="wrap nf">
     <form action="/search/" method="get" role="search">
       <label for="nf-q">Search the site</label>

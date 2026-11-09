@@ -1,10 +1,12 @@
 ---
 interface Crumb { label: string; href?: string }
-interface Props { title: string; crumbs?: Crumb[]; lead?: string; eyebrow?: string }
-const { title, crumbs = [], lead, eyebrow } = Astro.props;
+interface Props { title: string; crumbs?: Crumb[]; lead?: string; eyebrow?: string; image?: string | null; imagePosition?: string }
+const { title, crumbs = [], lead, eyebrow, image, imagePosition = '50% 35%' } = Astro.props;
 ---
-<header class="ph">
-  <div class="wrap">
+<header class:list={['ph', { 'has-img': !!image }]}>
+  {image && <img class="ph-bg" src={image} alt="" fetchpriority="high" decoding="async" style={`object-position: ${imagePosition}`} />}
+  {image && <div class="ph-shade" aria-hidden="true"></div>}
+  <div class="wrap ph-inner">
     {crumbs.length > 0 && (
       <nav aria-label="Breadcrumb">
         <ol class="crumbs">
@@ -21,16 +23,23 @@ const { title, crumbs = [], lead, eyebrow } = Astro.props;
 </header>
 
 <style>
-  .ph { background: var(--blue-deep); color: var(--white); padding-block: 40px 44px; background-image: linear-gradient(120deg, rgba(27,83,155,0.55), rgba(11,35,67,0) 60%); }
+  .ph { position: relative; overflow: hidden; background: var(--blue-deep); color: var(--white); padding-block: 40px 44px; background-image: linear-gradient(120deg, rgba(27,83,155,0.55), rgba(11,35,67,0) 60%); }
+  .has-img { padding-block: 56px 60px; min-height: 280px; display: flex; align-items: center; }
+  .ph-bg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+  /* Dark blue on the left where the text sits, letting the photo show through on the right. */
+  .ph-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,35,67,0.95) 0%, rgba(11,35,67,0.86) 40%, rgba(15,46,87,0.55) 75%, rgba(15,46,87,0.4) 100%); }
+  .ph-inner { position: relative; width: 100%; }
   .crumbs { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 14px; color: var(--on-dark-2); }
   .crumbs li + li::before { content: '/'; margin-right: 6px; color: #7f96b8; }
   .crumbs a { color: var(--on-dark); text-decoration: none; }
   .crumbs a:hover { color: var(--white); text-decoration: underline; }
   .ph-eyebrow { font-size: 13.5px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
-  h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.15; max-width: 920px; }
+  h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.15; max-width: 920px; text-shadow: 0 1px 12px rgba(11,35,67,0.35); }
   .ph-lead { margin-top: 14px; font-size: 18px; color: var(--on-dark); max-width: 720px; }
   @media (max-width: 640px) {
     .ph { padding-block: 28px 30px; }
+    .has-img { padding-block: 32px 34px; min-height: 190px; }
+    .ph-shade { background: linear-gradient(180deg, rgba(11,35,67,0.45) 0%, rgba(11,35,67,0.72) 55%, rgba(11,35,67,0.88) 100%); }
     .crumbs { font-size: 13px; margin-bottom: 12px; }
     h1 { font-size: 25px; }
     .ph-lead { font-size: 15.5px; margin-top: 10px; }

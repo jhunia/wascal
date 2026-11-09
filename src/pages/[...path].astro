@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import PostCard from '../components/PostCard.astro';
 import { pages, postsIn, childPages, tidyRole, personUrl, type Page } from '../lib/content';
 import { sectionFor, type NavItem } from '../data/nav';
+import { heroFor } from '../lib/heroes';
 
 export function getStaticPaths() {
   // Paths the new site builds with its own templates.
@@ -30,7 +31,7 @@ const isEmpty = !showHtml && !list.length && !people.length;
 const sideItems: NavItem[] = found?.section.children ?? [];
 ---
 <Base title={page.title} image={page.image} current={page.path}>
-  <PageHeader title={page.title} crumbs={crumbs} eyebrow={found?.section.label} />
+  <PageHeader title={page.title} crumbs={crumbs} eyebrow={found?.section.label} image={heroFor(page.path, found?.section.label)} />
 
   <div class:list={['wrap', 'page-layout', { 'has-side': sideItems.length > 0 }]}>
     {sideItems.length > 0 && (

@@ -1,9 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
+import { heroes } from '../lib/heroes';
 ---
 <Base title="Search" current="/search/">
-  <PageHeader title="Search" crumbs={[{ label: 'Search' }]} lead="Search news, pages and people across the WASCAL website." />
+  <PageHeader title="Search" image={heroes.competence} crumbs={[{ label: 'Search' }]} lead="Search news, pages and people across the WASCAL website." />
   <div class="wrap search">
     <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
     <div id="search"></div>

@@ -3,10 +3,11 @@ import Base from '../layouts/Base.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Icon from '../components/Icon.astro';
 import { contact } from '../data/nav';
+import { heroes } from '../lib/heroes';
 const mapUrl = 'https://www.google.com/maps/search/?api=1&query=CSIR+Office+Complex+Agostino+Neto+Road+Accra';
 ---
 <Base title="Contact" description="Contact WASCAL headquarters in Accra, Ghana." current="/contact/">
-  <PageHeader title="Contact us" crumbs={[{ label: 'Contact' }]} lead="Reach WASCAL headquarters in Accra, or the Competence Centre in Ouagadougou." />
+  <PageHeader title="Contact us" image={heroes.who} crumbs={[{ label: 'Contact' }]} lead="Reach WASCAL headquarters in Accra, or the Competence Centre in Ouagadougou." />
   <div class="wrap contact">
     <section class="card">
       <h2>Headquarters</h2>

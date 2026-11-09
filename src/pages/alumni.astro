@@ -5,6 +5,7 @@ import PostCard from '../components/PostCard.astro';
 import Icon from '../components/Icon.astro';
 import { posts, pages, memberCountries, postUrl, formatDate } from '../lib/content';
 import { contact, social } from '../data/nav';
+import { heroes } from '../lib/heroes';
 
 // Alumni news: stories about WASCAL graduates, newest first.
 const stories = posts.filter((p) => /alumn/i.test(p.title)).slice(0, 4);
@@ -20,7 +21,7 @@ const programmes = pages
 const linkedin = social.find((s) => s.icon === 'linkedin')!.href;
 ---
 <Base title="Alumni" description="The WASCAL alumni network: more than 700 doctoral and master's graduates working on climate change across West Africa." current="/alumni/">
-  <PageHeader title="WASCAL Alumni" eyebrow="Capacity building" crumbs={[{ label: 'Capacity building' }, { label: 'Alumni' }]}
+  <PageHeader title="WASCAL Alumni" image={heroes.alumni} eyebrow="Capacity building" crumbs={[{ label: 'Capacity building' }, { label: 'Alumni' }]}
     lead="A network of more than 700 doctoral and master's graduates leading climate research, policy and innovation across West Africa." />
 
   <!-- Key figures (from the WASCAL at a glance infographic) -->

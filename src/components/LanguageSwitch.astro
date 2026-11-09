@@ -51,7 +51,6 @@
       document.documentElement.classList.add('lang-' + lang);
       // Fixed French labels for the menu (shorter and more accurate than machine translation).
       document.querySelectorAll('[data-fr]').forEach(function (el) { el.textContent = el.getAttribute('data-fr'); });
-      document.querySelectorAll('[data-fr-html]').forEach(function (el) { el.innerHTML = el.getAttribute('data-fr-html'); });
       window.gtInit = function () {
         new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'fr', autoDisplay: false }, 'gt-element');
       };

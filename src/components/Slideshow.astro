@@ -73,12 +73,20 @@ const slides = [
   .dot[aria-current='true'] span { width: 28px; background: var(--ochre); }
 
   @media (max-width: 720px) {
-    .slideshow { height: 560px; }
-    .slide-body { padding-inline: var(--gutter); bottom: 72px; }
-    .arrow { top: auto; bottom: 14px; transform: none; width: 44px; height: 44px; }
+    .slideshow { height: 440px; }
+    .slide-body { padding-inline: var(--gutter); bottom: 64px; }
+    .slide-text { gap: 10px; }
+    .slide-eyebrow { font-size: 11.5px; }
+    .slide-text h1, .slide-text h2 { font-size: 23px; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+    .slide-lead { font-size: 14.5px; line-height: 1.5; }
+    .slide-text .btn { min-height: 40px; padding: 0 16px; font-size: 14.5px; margin-top: 2px; }
+    .arrow { top: auto; bottom: 12px; transform: none; width: 40px; height: 40px; }
     .prev { left: 12px; }
     .next { right: 12px; }
-    .slide-lead { font-size: 16px; }
+    .dots-row { bottom: 10px; }
+    .dot { width: 26px; }
+    .dot span { width: 8px; height: 5px; }
+    .dot[aria-current='true'] span { width: 20px; }
     .caption { display: none; }
   }
 </style>

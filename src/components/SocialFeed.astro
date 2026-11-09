@@ -83,6 +83,19 @@ const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURICompone
   .fb-fallback { color: var(--muted); font-size: 15px; align-self: center; }
   .feed-actions { display: flex; flex-wrap: wrap; gap: 4px 20px; }
   @media (max-width: 900px) { .feeds { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    .social-links { gap: 6px; }
+    .social-links a { min-height: 40px; padding: 0 12px; font-size: 13.5px; gap: 6px; }
+    .feed { padding: 16px; }
+    .feed-title { font-size: 16px; }
+    .videos { grid-template-columns: 1fr; gap: 12px; }
+    .video { flex-direction: row; gap: 12px; align-items: flex-start; }
+    .thumb { flex: 0 0 132px; }
+    .play { width: 34px; height: 24px; margin: -12px 0 0 -17px; border-radius: 6px; }
+    .play::after { left: 13px; top: 7px; border-width: 5px 0 5px 9px; }
+    .v-title { font-size: 14px; }
+    .fb-box :global(iframe) { height: 460px; }
+  }
 </style>
 
 <script>

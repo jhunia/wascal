@@ -48,11 +48,10 @@ const isActive = (item: NavItem): boolean =>
       <img src="/images/wascal-logo.png" width="420" height="255" alt="WASCAL — West African Science Service Centre on Climate Change and Adapted Land Use" />
     </a>
     <p class="tagline">Combating Climate Change.<br /><span>Improving Livelihoods.</span></p>
-    <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer">
-      <span class="funder-label" data-fr-html="Financé<br />par">Funded<br />by</span>
+    <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer" aria-label="Federal Ministry of Research, Technology and Space (opens in a new tab)">
       <img src="/images/bmftr-logo.png" width="420" height="180" alt="Federal Ministry of Research, Technology and Space" />
     </a>
-    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
       <Icon name="menu" size={22} /><span>Menu</span>
     </button>
   </div>
@@ -159,8 +158,7 @@ const isActive = (item: NavItem): boolean =>
   .brand-logo img { height: 84px; width: auto; display: block; }
   .tagline { flex: 1 1 auto; text-align: center; font-size: clamp(20px, 2.1vw, 28px); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; color: var(--blue); }
   .tagline span { font-weight: 400; color: var(--ink-2); }
-  .funder { flex: none; display: flex; align-items: center; gap: 14px; text-decoration: none; }
-  .funder-label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border-right: 1px solid var(--line-2); padding-right: 14px; line-height: 1.3; }
+  .funder { flex: none; display: flex; align-items: center; text-decoration: none; }
   .funder img { height: 62px; width: auto; display: block; }
   .menu-toggle { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); font-weight: 600; cursor: pointer; }
 
@@ -210,15 +208,27 @@ const isActive = (item: NavItem): boolean =>
     :global(html.lang-fr) .menu-toggle { display: inline-flex; }
   }
   @media (max-width: 900px) {
-    .tagline, .funder-label { display: none; }
+    .tagline { display: none; }
     .funder img { height: 48px; }
     .brand-logo img { height: 64px; }
     .topbar-social { display: none; }
   }
+  /* Phones: compact header with both logos kept, smaller. */
   @media (max-width: 640px) {
     .ticker { display: none; }
-    .topbar-inner { justify-content: flex-end; }
-    .funder { display: none; }
+    .topbar { font-size: 12.5px; }
+    .topbar-inner { justify-content: flex-end; min-height: 34px; }
+    .topbar-tools { gap: 10px; }
+    .topbar-search { padding: 4px 8px; }
+    .brand-inner { gap: 10px; padding-block: 8px; }
+    .brand-logo img { height: 44px; }
+    .funder { margin-left: auto; }
+    .funder img { height: 30px; }
+    .menu-toggle { min-height: 40px; padding: 0 10px; font-size: 14px; gap: 6px; }
+  }
+  @media (max-width: 380px) {
+    .menu-toggle span { display: none; }
+    .menu-toggle { width: 40px; justify-content: center; padding: 0; }
   }
 </style>
 

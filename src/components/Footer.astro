@@ -68,6 +68,12 @@ import { contact, social } from '../data/nav';
   .f-social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #23406a; border-radius: 8px; }
   .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid #23406a; padding-top: 24px; margin-top: 48px; font-size: 14px; }
   .bottom-links { display: flex; gap: 20px; align-items: center; }
+  @media (max-width: 640px) {
+    .footer { padding-block: 44px 24px; font-size: 14.5px; }
+    .cols { gap: 28px; }
+    h2 { font-size: 16.5px; }
+    .bottom { margin-top: 32px; font-size: 13px; }
+  }
   .bottom-links button { background: none; border: 0; padding: 4px 0; color: var(--on-dark); text-decoration: underline; cursor: pointer; font-size: inherit; }
   .bottom-links button[aria-pressed='true'] { color: var(--white); font-weight: 600; text-decoration: none; }
 </style>

@@ -101,4 +101,13 @@ const [lead, ...rest] = withImage.slice(0, 4);
   .flags { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 24px 12px; text-align: center; }
   .flags li { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; }
   .flags img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; box-shadow: 0 1px 6px rgba(11,35,67,0.18); }
+  @media (max-width: 640px) {
+    .flags { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 6px; }
+    .flags li { font-size: 12px; gap: 6px; line-height: 1.25; }
+    .flags img { width: 40px; height: 40px; }
+    .mission { padding: 24px; }
+    .mission-text { font-size: 17px; }
+    .news-grid { gap: 14px; }
+    .news-side { gap: 12px; }
+  }
 </style>

@@ -52,8 +52,8 @@ const isActive = (item: NavItem): boolean =>
       <a href="/our-events/" aria-current={current === '/our-events/' ? 'page' : undefined}><Icon name="calendar" size={18} /><span class="notranslate" data-fr="Événements">Events</span></a>
       <a href="/faqs/" aria-current={current === '/faqs/' ? 'page' : undefined}><span class="faq-icon" aria-hidden="true">?</span><span class="notranslate" data-fr="FAQ">FAQs</span></a>
     </nav>
-    <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer" aria-label="Federal Ministry of Research, Technology and Space (opens in a new tab)">
-      <img src="/images/bmftr-logo.png" width="420" height="180" alt="Federal Ministry of Research, Technology and Space" />
+    <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer" aria-label="With funding from the Federal Ministry of Research, Technology and Space (opens in a new tab)">
+      <img src="/images/bmftr-logo.png" width="233" height="148" alt="With funding from the Federal Ministry of Research, Technology and Space" />
     </a>
     <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
       <Icon name="menu" size={22} /><span>Menu</span>
@@ -168,7 +168,7 @@ const isActive = (item: NavItem): boolean =>
   .brand-links :global(svg) { color: var(--blue); }
   .faq-icon { width: 19px; height: 19px; border-radius: 50%; border: 2px solid var(--blue); color: var(--blue); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; line-height: 1; }
   .funder { flex: none; display: flex; align-items: center; text-decoration: none; }
-  .funder img { height: 62px; width: auto; display: block; }
+  .funder img { height: 74px; width: auto; display: block; }
   .menu-toggle { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); font-weight: 600; cursor: pointer; }
 
   .mainnav { background: var(--blue); position: relative; z-index: 40; }
@@ -223,7 +223,7 @@ const isActive = (item: NavItem): boolean =>
   @media (max-width: 900px) {
     .tagline { display: none; }
     .brand-links { margin-left: auto; border-right: 0; padding-right: 4px; }
-    .funder img { height: 48px; }
+    .funder img { height: 58px; }
     .brand-logo img { height: 64px; }
     .topbar-social { display: none; }
   }
@@ -238,7 +238,7 @@ const isActive = (item: NavItem): boolean =>
     .brand-logo img { height: 44px; }
     .brand-links { display: none; }
     .funder { margin-left: auto; }
-    .funder img { height: 30px; }
+    .funder img { height: 40px; }
     .menu-toggle { min-height: 40px; padding: 0 10px; font-size: 14px; gap: 6px; }
   }
   @media (max-width: 380px) {

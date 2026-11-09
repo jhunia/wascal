@@ -48,6 +48,10 @@ const isActive = (item: NavItem): boolean =>
       <img src="/images/wascal-logo.png" width="420" height="255" alt="WASCAL — West African Science Service Centre on Climate Change and Adapted Land Use" />
     </a>
     <p class="tagline">Combating Climate Change.<br /><span>Improving Livelihoods.</span></p>
+    <nav class="brand-links" aria-label="Quick links">
+      <a href="/our-events/" aria-current={current === '/our-events/' ? 'page' : undefined}><Icon name="calendar" size={18} /><span class="notranslate" data-fr="Événements">Events</span></a>
+      <a href="/faqs/" aria-current={current === '/faqs/' ? 'page' : undefined}><span class="faq-icon" aria-hidden="true">?</span><span class="notranslate" data-fr="FAQ">FAQs</span></a>
+    </nav>
     <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer" aria-label="Federal Ministry of Research, Technology and Space (opens in a new tab)">
       <img src="/images/bmftr-logo.png" width="420" height="180" alt="Federal Ministry of Research, Technology and Space" />
     </a>
@@ -158,6 +162,11 @@ const isActive = (item: NavItem): boolean =>
   .brand-logo img { height: 84px; width: auto; display: block; }
   .tagline { flex: 1 1 auto; text-align: center; font-size: clamp(20px, 2.1vw, 28px); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; color: var(--blue); }
   .tagline span { font-weight: 400; color: var(--ink-2); }
+  .brand-links { flex: none; display: flex; align-items: center; gap: 4px; padding-right: 18px; margin-right: 2px; border-right: 1px solid var(--line-2); }
+  .brand-links a { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: var(--ink-2); font-weight: 600; font-size: 15.5px; text-decoration: none; }
+  .brand-links a:hover, .brand-links a[aria-current='page'] { background: var(--blue-tint); color: var(--blue-deep); }
+  .brand-links :global(svg) { color: var(--blue); }
+  .faq-icon { width: 19px; height: 19px; border-radius: 50%; border: 2px solid var(--blue); color: var(--blue); display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; line-height: 1; }
   .funder { flex: none; display: flex; align-items: center; text-decoration: none; }
   .funder img { height: 62px; width: auto; display: block; }
   .menu-toggle { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); font-weight: 600; cursor: pointer; }
@@ -207,8 +216,13 @@ const isActive = (item: NavItem): boolean =>
     :global(html.lang-fr) .mainnav { display: none; }
     :global(html.lang-fr) .menu-toggle { display: inline-flex; }
   }
+  @media (max-width: 1240px) {
+    .tagline { font-size: 20px; }
+    .brand-links a { padding: 0 8px; font-size: 14.5px; }
+  }
   @media (max-width: 900px) {
     .tagline { display: none; }
+    .brand-links { margin-left: auto; border-right: 0; padding-right: 4px; }
     .funder img { height: 48px; }
     .brand-logo img { height: 64px; }
     .topbar-social { display: none; }
@@ -222,6 +236,7 @@ const isActive = (item: NavItem): boolean =>
     .topbar-search { padding: 4px 8px; }
     .brand-inner { gap: 10px; padding-block: 8px; }
     .brand-logo img { height: 44px; }
+    .brand-links { display: none; }
     .funder { margin-left: auto; }
     .funder img { height: 30px; }
     .menu-toggle { min-height: 40px; padding: 0 10px; font-size: 14px; gap: 6px; }

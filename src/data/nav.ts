@@ -85,6 +85,7 @@ export const mainNav: NavItem[] = [
       { label: 'Reports & newsletters', href: '/reports/' },
       { label: 'Documents', href: '/documents/' },
       { label: 'Vacancies', href: '/vacancies/' },
+      { label: 'FAQs', href: '/faqs/' },
     ],
   },
   { label: 'Partners', fr: 'Partenaires', href: '/partners/' },

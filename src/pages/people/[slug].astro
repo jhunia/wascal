@@ -1,0 +1,36 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { people, tidyRole, type Person } from '../../lib/content';
+
+export function getStaticPaths() {
+  return people.map((person) => ({ params: { slug: person.slug }, props: { person } }));
+}
+const { person } = Astro.props as { person: Person };
+const GROUPS: Record<string, { label: string; href: string }> = {
+  board: { label: 'Board members', href: '/new-board-members/' },
+  management: { label: 'Management team', href: '/executive-management-team/' },
+  sac: { label: 'Scientific Advisory Committee', href: '/new-sac-members/' },
+};
+const group = GROUPS[person.memberships[0]?.group ?? ''];
+const role = tidyRole(person.role);
+---
+<Base title={person.name} image={person.image} current={group?.href}>
+  <PageHeader title={person.name} eyebrow={role || undefined}
+    crumbs={[{ label: 'Who we are' }, ...(group ? [{ label: group.label, href: group.href }] : []), { label: person.name }]} />
+  <div class="wrap profile" data-pagefind-body>
+    {person.image && <img src={person.image} alt={person.name} class="portrait" />}
+    <div>
+      {person.bio ? <div class="prose" set:html={person.bio} /> : <p class="none">A profile for {person.name} will be added soon.</p>}
+      {group && <p class="back"><a href={group.href}>← Back to {group.label.toLowerCase()}</a></p>}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .profile { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 48px; align-items: start; padding-block: 48px 80px; }
+  .portrait { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; border-radius: var(--radius); }
+  .none { color: var(--muted); }
+  .back { margin-top: 32px; font-weight: 600; }
+  @media (max-width: 760px) { .profile { grid-template-columns: 1fr; } .portrait { max-width: 280px; } }
+</style>

@@ -1,0 +1,17 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import NewsListing from '../../../components/NewsListing.astro';
+import { posts, PER_PAGE } from '../../../lib/content';
+
+export function getStaticPaths() {
+  const last = Math.ceil(posts.length / PER_PAGE);
+  return Array.from({ length: last - 1 }, (_, i) => ({ params: { n: String(i + 2) } }));
+}
+const n = Number(Astro.params.n);
+const last = Math.ceil(posts.length / PER_PAGE);
+---
+<Base title={`News — page ${n}`} current="/news/">
+  <PageHeader title="News & updates" crumbs={[{ label: 'News', href: '/news/' }, { label: `Page ${n}` }]} />
+  <NewsListing posts={posts.slice((n - 1) * PER_PAGE, n * PER_PAGE)} current={n} last={last} base="/news/" />
+</Base>

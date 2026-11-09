@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PartnerWall from '../components/PartnerWall.astro';
+import { partnerGroups, partnerCount } from '../data/partners';
+---
+<Base title="Our partners" description="The governments, universities and research institutions WASCAL works with." current="/partners/">
+  <PageHeader title="Our partners" eyebrow="Who we are" crumbs={[{ label: 'Who we are' }, { label: 'Our partners' }]}
+    lead={`WASCAL works with ${partnerCount} institutions across its 13 member countries, Germany and the wider international research community.`} />
+
+  <div class="wrap partners" data-pagefind-body>
+    <nav class="jump" aria-label="Partner groups">
+      {partnerGroups.map((g) => <a href={`#${g.id}`} class="chip">{g.title}</a>)}
+    </nav>
+    {partnerGroups.map((g) => (
+      <section id={g.id} class="group" aria-labelledby={`${g.id}-h`}>
+        <h2 id={`${g.id}-h`}>{g.title} <span>{g.partners.length}</span></h2>
+        {g.intro && <p class="intro">{g.intro}</p>}
+        <PartnerWall partners={g.partners} label={g.title} />
+      </section>
+    ))}
+  </div>
+
+  <section class="cta-band">
+    <div class="wrap cta">
+      <div>
+        <h2>Partner with WASCAL</h2>
+        <p>We work with governments, funders, universities and the private sector on climate research, training and green hydrogen.</p>
+      </div>
+      <a href="/contact/" class="btn btn-accent">Get in touch</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .partners { padding-block: 40px 72px; display: flex; flex-direction: column; gap: 56px; }
+  .jump { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jump .chip { min-height: 40px; padding: 0 14px; }
+  .group { scroll-margin-top: 16px; }
+  .group h2 { font-size: 24px; margin-bottom: 18px; display: flex; align-items: baseline; gap: 10px; }
+  .group h2 span { font-size: 15px; font-weight: 600; color: var(--muted); }
+  .intro { color: var(--muted); margin: -8px 0 18px; }
+  .cta-band { background: var(--blue); color: var(--white); }
+  .cta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding-block: 48px; }
+  .cta h2 { font-size: 28px; }
+  .cta p { color: var(--on-dark); margin-top: 8px; max-width: 640px; }
+</style>

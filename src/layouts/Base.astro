@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LanguageSwitch from '../components/LanguageSwitch.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string | null;
+  current?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+const { title, description = 'WASCAL is a West African intergovernmental organisation providing climate change solutions through research, capacity building, climate services and green hydrogen.', image, current = Astro.url.pathname, type = 'website', noindex = false } = Astro.props;
+const fullTitle = title === 'WASCAL' ? 'WASCAL — Combating Climate Change. Improving Livelihoods.' : `${title} | WASCAL`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = image || new URL('/images/station.jpg', Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content="WASCAL" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#1b539b" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <!-- Feedback build: keep it out of search engines until launch. -->
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <Header current={current} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <LanguageSwitch />
+  </body>
+</html>
+
+<style is:global>
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+  main { flex: 1 0 auto; }
+</style>

@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+import Slideshow from '../components/Slideshow.astro';
+import PostCard from '../components/PostCard.astro';
+import PartnerWall from '../components/PartnerWall.astro';
+import Icon from '../components/Icon.astro';
+import SocialFeed from '../components/SocialFeed.astro';
+import { posts, memberCountries } from '../lib/content';
+import { featuredPartners } from '../data/partners';
+
+// Same behaviour as today's slider: the latest stories that have a photo.
+const withImage = posts.filter((p) => p.image);
+const slides = withImage.slice(0, 5);
+const [lead, ...rest] = withImage.slice(0, 4);
+---
+<Base title="WASCAL" current="/">
+  <Slideshow posts={slides} />
+
+  <!-- News & updates -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">News &amp; updates</h2>
+        <a href="/news/" class="more-link">All news <Icon name="arrow-right" size={16} /></a>
+      </div>
+      <div class="news-grid">
+        <PostCard post={lead} variant="lead" />
+        <div class="news-side">
+          {rest.map((p) => <PostCard post={p} variant="row" />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we are / Our mission -->
+  <section class="section">
+    <div class="wrap about">
+      <div class="about-text">
+        <p class="eyebrow">Who we are</p>
+        <h2 class="section-title">A West African intergovernmental organisation for climate change solutions</h2>
+        <p>The West African Science Service Centre on Climate Change and Adapted Land Use (WASCAL) is headquartered in Accra, Ghana, with 13 member countries: Benin, Burkina Faso, Cabo Verde, Côte d'Ivoire, The Gambia, Ghana, Guinea, Mali, Niger, Nigeria, Senegal, Sierra Leone and Togo.</p>
+        <p>We provide comprehensive climate change solutions through capacity building, research and innovation, climate and environmental services, and the promotion of green hydrogen and renewable energy.</p>
+        <a href="/our-story/" class="btn btn-outline">Our story</a>
+      </div>
+      <div class="mission">
+        <p class="eyebrow on-dark">Our mission</p>
+        <p class="mission-text">To advance climate science, strengthen resilience, and support evidence-based policy making for the sustainable development of West Africa through research, innovation, capacity building and demand-driven climate and environmental services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WASCAL at a glance (client infographic) -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title center">WASCAL at a glance</h2>
+      <img class="glance" src="/images/at-a-glance.webp" loading="lazy" width="1415" height="1112"
+        alt="WASCAL at a glance: 13 West African universities; 11 doctoral programmes in climate change; 2 master programmes in climate change; 6 master programmes in green hydrogen; 700+ beneficiaries of doctoral and master's programmes; 700+ alumni; 40+ research projects; 1000+ beneficiaries of short courses and seminars; 12 renewable energy and green hydrogen projects; 6 WRAP 2.0 projects in the Competence Centre; 13 West African member countries; recognised by ECOWAS; funded by BMFTR; headquarters in Accra; Competence Centre in Burkina Faso." />
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Our partners</h2>
+          <p class="section-lead">Governments, universities and research institutions across West Africa and Europe make our work possible.</p>
+        </div>
+        <a href="/partners/" class="more-link">See all partners <Icon name="arrow-right" size={16} /></a>
+      </div>
+      <PartnerWall partners={featuredPartners} label="Featured partners" />
+    </div>
+  </section>
+
+  <!-- Member countries -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title center">Member countries</h2>
+      <ul class="flags">
+        {memberCountries.map((c) => (
+          <li><img src={`/images/flags/${c.flag}`} alt="" width="64" height="64" loading="lazy" /><span class="notranslate" data-fr={c.fr}>{c.name}</span></li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <SocialFeed />
+</Base>
+
+<style>
+  .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr)); gap: 24px; }
+  .news-side { display: flex; flex-direction: column; gap: 16px; }
+  .about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 56px; align-items: start; }
+  .about-text { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; color: var(--ink-2); }
+  .about-text .section-title { color: var(--ink); }
+  .mission { background: var(--blue); color: var(--white); border-radius: 16px; padding: clamp(28px, 4vw, 44px); display: flex; flex-direction: column; gap: 16px; }
+  .eyebrow.on-dark { color: var(--ochre); }
+  .mission-text { font-size: clamp(19px, 1.8vw, 23px); line-height: 1.5; font-weight: 500; }
+  .center { text-align: center; margin-bottom: 28px; }
+  .glance { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+  .flags { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); gap: 24px 12px; text-align: center; }
+  .flags li { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; }
+  .flags img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; box-shadow: 0 1px 6px rgba(11,35,67,0.18); }
+</style>

@@ -1,0 +1,4520 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/wascaal-news/",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/faqs-2/",
+      "destination": "/faqs/",
+      "permanent": true
+    },
+    {
+      "source": "/doctoral-pogramme-west-african-climate-systems/",
+      "destination": "/doctoral-programme-west-african-climate-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-calls-for-strategic-partnerships-at-cop31-to-scale-climate-and-energy-solutions-in-west-africa/",
+      "destination": "/news/wascal-calls-for-strategic-partnerships-at-cop31-to-scale-climate-and-energy-solutions-in-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-dr-seyni-salack-as-director-of-its-competence-centre/",
+      "destination": "/news/wascal-appoints-dr-seyni-salack-as-director-of-its-competence-centre/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-partners-secure-e2-million-to-help-farmers-build-climate-resilience-in-west-africa/",
+      "destination": "/news/wascal-and-partners-secure-e2-million-to-help-farmers-build-climate-resilience-in-west-afr/",
+      "permanent": true
+    },
+    {
+      "source": "/%f0%9d%97%aa%f0%9d%97%94%f0%9d%97%a6%f0%9d%97%96%f0%9d%97%94%f0%9d%97%9f-%f0%9d%97%98%f0%9d%97%a1%f0%9d%97%9a%f0%9d%97%94%f0%9d%97%9a%f0%9d%97%98%f0%9d%97%a6-%f0%9d%97%9a%f0%9d%97%9c%f0%9d%97%ad/",
+      "destination": "/news/wascal-engages-giz/",
+      "permanent": true
+    },
+    {
+      "source": "/bulletin-3-does-climate-change-impact-on-health-in-west-africa/",
+      "destination": "/news/bulletin-3-does-climate-change-impact-on-health-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/strengthening-accountability-positioning-wascal-for-global-opportunities/",
+      "destination": "/news/strengthening-accountability-positioning-wascal-for-global-opportunities/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-takes-africas-renewable-energy-priorities-to-venice/",
+      "destination": "/news/wascal-takes-africas-renewable-energy-priorities-to-venice/",
+      "permanent": true
+    },
+    {
+      "source": "/chair-of-the-wascal-ministerial-council-is-championing-sustainable-development-in-africa/",
+      "destination": "/news/chair-of-the-wascal-ministerial-council-is-championing-sustainable-development-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-governing-board-reviews-progress-and-sets-priorities-for-2027/",
+      "destination": "/news/wascal-governing-board-reviews-progress-and-sets-priorities-for-2027/",
+      "permanent": true
+    },
+    {
+      "source": "/igst/",
+      "destination": "/news/igst/",
+      "permanent": true
+    },
+    {
+      "source": "/wise-call/",
+      "destination": "/news/wise-call/",
+      "permanent": true
+    },
+    {
+      "source": "/nigeria4h2/",
+      "destination": "/news/nigeria4h2/",
+      "permanent": true
+    },
+    {
+      "source": "/co-developing-innovations-for-sustainable-land-management-in-west-africa-coins/",
+      "destination": "/news/co-developing-innovations-for-sustainable-land-management-in-west-africa-coins/",
+      "permanent": true
+    },
+    {
+      "source": "/declare/",
+      "destination": "/news/declare/",
+      "permanent": true
+    },
+    {
+      "source": "/bio2h/",
+      "destination": "/news/bio2h/",
+      "permanent": true
+    },
+    {
+      "source": "/cicles-project/",
+      "destination": "/news/cicles-project/",
+      "permanent": true
+    },
+    {
+      "source": "/pv2h/",
+      "destination": "/news/pv2h/",
+      "permanent": true
+    },
+    {
+      "source": "/strategic-plan-2026-2030-2/",
+      "destination": "/news/strategic-plan-2026-2030-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-regional-water-stakeholders-at-freao-2026/",
+      "destination": "/news/wascal-engages-regional-water-stakeholders-at-freao-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-2ie-forge-a-new-path-for-climate-and-sustainable-development-solutions/",
+      "destination": "/news/wascal-and-2ie-forge-a-new-path-for-climate-and-sustainable-development-solutions/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-meets-with-benin-government-to-co-organise-2027-i3cjet-in-benin/",
+      "destination": "/news/wascal-meets-with-benin-government-to-co-organise-2027-i3cjet-in-benin/",
+      "permanent": true
+    },
+    {
+      "source": "/cote-divoire-launches-the-development-of-its-national-green-hydrogen-strategy/",
+      "destination": "/news/cote-divoire-launches-the-development-of-its-national-green-hydrogen-strategy/",
+      "permanent": true
+    },
+    {
+      "source": "/politique-sur-lhydrogene-vert-de-la-cedeao/",
+      "destination": "/news/politique-sur-lhydrogene-vert-de-la-cedeao/",
+      "permanent": true
+    },
+    {
+      "source": "/strategie-sur-lhydrogene-vert-de-la-cedeao/",
+      "destination": "/news/strategie-sur-lhydrogene-vert-de-la-cedeao/",
+      "permanent": true
+    },
+    {
+      "source": "/request-for-proposal-rfp/",
+      "destination": "/news/request-for-proposal-rfp/",
+      "permanent": true
+    },
+    {
+      "source": "/strategic-plan-2026-2030/",
+      "destination": "/news/strategic-plan-2026-2030/",
+      "permanent": true
+    },
+    {
+      "source": "/project-name-trans-sahara/",
+      "destination": "/news/project-name-trans-sahara/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-announces-14-innovative-projects-selected-under-wise/",
+      "destination": "/news/wascal-announces-14-innovative-projects-selected-under-wise/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-celebrates-e6-88-million-horizon-europe-success-with-the-rain4africa-project-to-strengthen-rainfall-forecasting-across-west-africa/",
+      "destination": "/news/wascal-celebrates-e6-88-million-horizon-europe-success-with-the-rain4africa-project-to-str/",
+      "permanent": true
+    },
+    {
+      "source": "/successful-phd-defense-highlights-the-role-of-green-spaces-in-climate-resilience/",
+      "destination": "/news/successful-phd-defense-highlights-the-role-of-green-spaces-in-climate-resilience/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-supports-validation-and-sustainable-land-management-innovations-in-ghana/",
+      "destination": "/news/wascal-supports-validation-and-sustainable-land-management-innovations-in-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-alumnus-leads-landmark-discovery-of-living-coral-reefs-in-benin/",
+      "destination": "/news/wascal-alumnus-leads-landmark-discovery-of-living-coral-reefs-in-benin/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-news-march-june-2026/",
+      "destination": "/news/climate-news-march-june-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-masters-research-advances-sustainable-aquaculture-in-west-africa/",
+      "destination": "/news/wascal-masters-research-advances-sustainable-aquaculture-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/press-release/",
+      "destination": "/news/press-release/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-wishes-its-former-human-resource-manager-a-happy-retirement/",
+      "destination": "/news/wascal-wishes-its-former-human-resource-manager-a-happy-retirement/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-sasscal-alumni-share-how-graduate-education-is-transforming-climate-leadership-in-africa/",
+      "destination": "/news/wascal-and-sasscal-alumni-share-how-graduate-education-is-transforming-climate-leadership-/",
+      "permanent": true
+    },
+    {
+      "source": "/training-west-africas-future-climate-scientists-at-sea/",
+      "destination": "/news/training-west-africas-future-climate-scientists-at-sea/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-wins-top-innovation-award-for-clean-cooking-technology-at-solardays-in-togo/",
+      "destination": "/news/wascal-wins-top-innovation-award-for-clean-cooking-technology-at-solardays-in-togo/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-marks-world-environment-day-2026-with-high-level-climate-action-dialogue-and-symbolic-tree-planting-in-ghana/",
+      "destination": "/news/wascal-marks-world-environment-day-2026-with-high-level-climate-action-dialogue-and-symbol/",
+      "permanent": true
+    },
+    {
+      "source": "/advancing-strategic-partnership-through-horizon-europe-proposal-development-workshop/",
+      "destination": "/news/advancing-strategic-partnership-through-horizon-europe-proposal-development-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-news-january-march-2026/",
+      "destination": "/news/climate-news-january-march-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-alumni-are-making-a-difference-in-the-fight-against-climate-change/",
+      "destination": "/news/wascal-alumni-are-making-a-difference-in-the-fight-against-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/global-recognition-for-wascal-alumnus-in-sustainable-ocean-governance/",
+      "destination": "/news/global-recognition-for-wascal-alumnus-in-sustainable-ocean-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-strengthens-marine-and-climate-science-capacity-through-successful-masters-thesis-defense/",
+      "destination": "/news/wascal-strengthens-marine-and-climate-science-capacity-through-successful-masters-thesis-d/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-strengthens-scientific-voice-at-global-marine-symposium/",
+      "destination": "/news/wascal-strengthens-scientific-voice-at-global-marine-symposium/",
+      "permanent": true
+    },
+    {
+      "source": "/towards-sustainable-mangrove-and-wetland-management/",
+      "destination": "/news/towards-sustainable-mangrove-and-wetland-management/",
+      "permanent": true
+    },
+    {
+      "source": "/advancing-marine-science-through-genetic-innovation-in-cabo-verde/",
+      "destination": "/news/advancing-marine-science-through-genetic-innovation-in-cabo-verde/",
+      "permanent": true
+    },
+    {
+      "source": "/african-climate-research-gains-global-spotlight-through-wascal-student/",
+      "destination": "/news/african-climate-research-gains-global-spotlight-through-wascal-student/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-students-take-learning-to-the-open-ocean/",
+      "destination": "/news/wascal-students-take-learning-to-the-open-ocean/",
+      "permanent": true
+    },
+    {
+      "source": "/building-africas-climate-data-future-through-wascal/",
+      "destination": "/news/building-africas-climate-data-future-through-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/advancing-climate-research-and-collaboration-at-nmets-conference/",
+      "destination": "/news/advancing-climate-research-and-collaboration-at-nmets-conference/",
+      "permanent": true
+    },
+    {
+      "source": "/advancing-solar-streetlighting-performance-and-strengthening-sustainable-energy-systems-in-the-gambia/",
+      "destination": "/news/advancing-solar-streetlighting-performance-and-strengthening-sustainable-energy-systems-in/",
+      "permanent": true
+    },
+    {
+      "source": "/strengthening-transparency-and-merit-in-climate-education-across-west-africa/",
+      "destination": "/news/strengthening-transparency-and-merit-in-climate-education-across-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/final-report-unlocking-nigerias-potential-for-green-hydrogen-to-fertiliser-production/",
+      "destination": "/news/final-report-unlocking-nigerias-potential-for-green-hydrogen-to-fertiliser-production/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-news-january-december-2025/",
+      "destination": "/news/climate-news-january-december-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-strengthens-national-dialogue-on-bioenergy-and-green-hydrogen-in-burkina-faso/",
+      "destination": "/news/wascal-strengthens-national-dialogue-on-bioenergy-and-green-hydrogen-in-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-advances-strategic-research-collaboration-and-formalises-partnership-with-lancaster-university/",
+      "destination": "/news/wascal-advances-strategic-research-collaboration-and-formalises-partnership-with-lancaster/",
+      "permanent": true
+    },
+    {
+      "source": "/advancing-climate-action-through-high-level-africa-germany-academic-collaboration/",
+      "destination": "/news/advancing-climate-action-through-high-level-africa-germany-academic-collaboration/",
+      "permanent": true
+    },
+    {
+      "source": "/why-climate-communication-matters-for-climate-action-in-west-africa/",
+      "destination": "/news/why-climate-communication-matters-for-climate-action-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/analysis-of-west-african-countries-commitments-to-climate-change-mitigation-and-adaptation-through-nationally-determined-contributions-ndcs/",
+      "destination": "/news/analysis-of-west-african-countries-commitments-to-climate-change-mitigation-and-adaptation/",
+      "permanent": true
+    },
+    {
+      "source": "/expanding-the-independent-global-stocktake-hubin-west-africa-for-inclusive-climate-action/",
+      "destination": "/news/expanding-the-independent-global-stocktake-hubin-west-africa-for-inclusive-climate-action/",
+      "permanent": true
+    },
+    {
+      "source": "/capacitating-the-west-african-civil-societyorganisations-on-climate-finance-mobilization/",
+      "destination": "/news/capacitating-the-west-african-civil-societyorganisations-on-climate-finance-mobilization/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-profiles-andpolicy-frameworks-inagriculture-and-energysectors-in-benin-andburkina-faso/",
+      "destination": "/news/climate-profiles-andpolicy-frameworks-inagriculture-and-energysectors-in-benin-andburkina-/",
+      "permanent": true
+    },
+    {
+      "source": "/bridging-the-2-degree-gap-with-ndcs-3-0-west-africas-climate-commitment-and-lessons-from-the-first-global-stocktake/",
+      "destination": "/news/bridging-the-2-degree-gap-with-ndcs-3-0-west-africas-climate-commitment-and-lessons-from-t/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-sasscal-strengthen-strategic-partnership-for-continental-climate-action/",
+      "destination": "/news/wascal-and-sasscal-strengthen-strategic-partnership-for-continental-climate-action/",
+      "permanent": true
+    },
+    {
+      "source": "/enhancing-climate-resilience-in-benin-through-science-data-and-strategic-communication/",
+      "destination": "/news/enhancing-climate-resilience-in-benin-through-science-data-and-strategic-communication/",
+      "permanent": true
+    },
+    {
+      "source": "/technical-and-financial-assistance-for-the-development-of-the-republic-of-cote-divoires-national-green-hydrogen-strategy/",
+      "destination": "/news/technical-and-financial-assistance-for-the-development-of-the-republic-of-cote-divoires-na/",
+      "permanent": true
+    },
+    {
+      "source": "/masters-research-programme-on-climate-change-and-marine-sciences-mrp-ccms/",
+      "destination": "/news/masters-research-programme-on-climate-change-and-marine-sciences-mrp-ccms/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2026-2027-academic-session/",
+      "destination": "/news/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/strengthening-strategic-partnerships-between-wascal-and-ucc/",
+      "destination": "/news/strengthening-strategic-partnerships-between-wascal-and-ucc/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-unveils-strategic-vision-and-expands-global-climate-leadership-at-cop30/",
+      "destination": "/news/wascal-unveils-strategic-vision-and-expands-global-climate-leadership-at-cop30/",
+      "permanent": true
+    },
+    {
+      "source": "/a-bold-scientific-roadmap-for-global-climate-action-emerges-from-cop30/",
+      "destination": "/news/a-bold-scientific-roadmap-for-global-climate-action-emerges-from-cop30/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-champions-climate-resilience-across-west-africa-on-ghanas-farmers-day-2025/",
+      "destination": "/news/wascal-champions-climate-resilience-across-west-africa-on-ghanas-farmers-day-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-barani-boost-nigerias-climate-monitoring-with-advanced-iot-weather-station-donation/",
+      "destination": "/news/wascal-and-barani-boost-nigerias-climate-monitoring-with-advanced-iot-weather-station-dona/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-leads-regional-dialogue-on-climate-action-and-energy-transition-at-i3c-jet-2025/",
+      "destination": "/news/wascal-leads-regional-dialogue-on-climate-action-and-energy-transition-at-i3c-jet-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-reaffirms-its-leadership-in-driving-west-africas-green-hydrogen-future-at-cop30/",
+      "destination": "/news/wascal-reaffirms-its-leadership-in-driving-west-africas-green-hydrogen-future-at-cop30/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-strengthens-leadership-in-climate-science-regional-cooperation-and-strategic-partnerships-at-cop30/",
+      "destination": "/news/wascal-strengthens-leadership-in-climate-science-regional-cooperation-and-strategic-partne/",
+      "permanent": true
+    },
+    {
+      "source": "/empowering-west-african-climate-experts-in-burkina-faso/",
+      "destination": "/news/empowering-west-african-climate-experts-in-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-unveils-2026-2030-strategic-plan-at-cop30/",
+      "destination": "/news/wascal-unveils-2026-2030-strategic-plan-at-cop30/",
+      "permanent": true
+    },
+    {
+      "source": "/impact-book/",
+      "destination": "/news/impact-book/",
+      "permanent": true
+    },
+    {
+      "source": "/wise/",
+      "destination": "/news/wise/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-fund-raising-and-project-manager/",
+      "destination": "/news/wascal-is-hiring-fund-raising-and-project-manager/",
+      "permanent": true
+    },
+    {
+      "source": "/launching/",
+      "destination": "/news/launching/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-director-of-research/",
+      "destination": "/news/wascal-is-hiring-director-of-research/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-showcases-the-impact-of-the-cicles-project-at-i3c-jet-2025/",
+      "destination": "/news/wascal-showcases-the-impact-of-the-cicles-project-at-i3c-jet-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-leads-regional-drive-for-climate-action-and-just-energy-transition-in-west-africa/",
+      "destination": "/news/wascal-leads-regional-drive-for-climate-action-and-just-energy-transition-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/12539/",
+      "destination": "/news/12539/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-communication-team-at-i3cjet-2025/",
+      "destination": "/news/wascal-communication-team-at-i3cjet-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/graduate-studies-programmes-gsps-drectors-meeting-at-i3cjet-in-abuja-nigeriea/",
+      "destination": "/news/graduate-studies-programmes-gsps-drectors-meeting-at-i3cjet-in-abuja-nigeriea/",
+      "permanent": true
+    },
+    {
+      "source": "/12524/",
+      "destination": "/news/12524/",
+      "permanent": true
+    },
+    {
+      "source": "/at-the-international-conference-on-climate-change-and-just-energy-transition-i3cjet/",
+      "destination": "/news/at-the-international-conference-on-climate-change-and-just-energy-transition-i3cjet/",
+      "permanent": true
+    },
+    {
+      "source": "/the-scorching-heat-bulletin-2/",
+      "destination": "/news/the-scorching-heat-bulletin-2/",
+      "permanent": true
+    },
+    {
+      "source": "/west-africas-climate-diplomacy-takes-centre-stage-in-guinea/",
+      "destination": "/news/west-africas-climate-diplomacy-takes-centre-stage-in-guinea/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-leads-west-africa-to-strengthen-resolve-for-climate-smart-futures/",
+      "destination": "/news/wascal-leads-west-africa-to-strengthen-resolve-for-climate-smart-futures/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-host-inaugural-international-conference-on-climate-change-and-just-energy-transition-i3c-jet-2025-in-abuja/",
+      "destination": "/news/wascal-to-host-inaugural-international-conference-on-climate-change-and-just-energy-transi/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-coordinator-of-the-international-masters-programme-in-renewable-energy-and-green-hydrogen-imp-egh/",
+      "destination": "/news/wascal-is-hiring-coordinator-of-the-international-masters-programme-in-renewable-energy-an/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-postdoctoral-fellow-in-agro-digital-modelling-and-innovation-2/",
+      "destination": "/news/wascal-is-hiring-postdoctoral-fellow-in-agro-digital-modelling-and-innovation-2/",
+      "permanent": true
+    },
+    {
+      "source": "/renforcez-vos-competences-sur-les-drones-liot-la-modelisation-ou-les-services-climatiques-postulez-des-maintenant-a-lecole-wascal-gerics-2025-au-burkina-faso/",
+      "destination": "/news/renforcez-vos-competences-sur-les-drones-liot-la-modelisation-ou-les-services-climatiques-/",
+      "permanent": true
+    },
+    {
+      "source": "/boost-your-skills-in-drones-iot-modeling-or-climate-services-apply-now-to-the-wascal-gerics-school-2025-in-burkina/",
+      "destination": "/news/boost-your-skills-in-drones-iot-modeling-or-climate-services-apply-now-to-the-wascal-geric/",
+      "permanent": true
+    },
+    {
+      "source": "/nigeria4h2-study-unveils-countrys-capacity-for-green-hydrogen-and-sustainable-fertiliser-production/",
+      "destination": "/news/nigeria4h2-study-unveils-countrys-capacity-for-green-hydrogen-and-sustainable-fertiliser-p/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-facility-manager/",
+      "destination": "/news/wascal-is-hiring-facility-manager/",
+      "permanent": true
+    },
+    {
+      "source": "/towards-a-sustainable-hydrogen-economy-in-nigeria/",
+      "destination": "/news/towards-a-sustainable-hydrogen-economy-in-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/maize-farmers-perceptions-of-fall-armyworm-invasion-in-burkina-faso-bridging-awareness-and-action/",
+      "destination": "/news/maize-farmers-perceptions-of-fall-armyworm-invasion-in-burkina-faso-bridging-awareness-and/",
+      "permanent": true
+    },
+    {
+      "source": "/plantesaine-an-artificial-intelligent-empowered-mobile-application-for-pests-and-disease-management-for-maize-tomato-and-onion-farmers-in-burkina-faso/",
+      "destination": "/news/plantesaine-an-artificial-intelligent-empowered-mobile-application-for-pests-and-disease-m/",
+      "permanent": true
+    },
+    {
+      "source": "/tom2024-datasets-of-tomato-onion-and-maize-images-for-developing-pests-and-diseases-ai-based-classification-models/",
+      "destination": "/news/tom2024-datasets-of-tomato-onion-and-maize-images-for-developing-pests-and-diseases-ai-bas/",
+      "permanent": true
+    },
+    {
+      "source": "/pews-a-pilot-early-warning-system-for-pest-and-disease-management-in-burkina-faso/",
+      "destination": "/news/pews-a-pilot-early-warning-system-for-pest-and-disease-management-in-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-launches-climate-change-action-now-a-climate-advocacy-initiative/",
+      "destination": "/news/wascal-launches-climate-change-action-now-a-climate-advocacy-initiative/",
+      "permanent": true
+    },
+    {
+      "source": "/dar-es-salaam-energy-village-a-game-changer-for-community-resilience-in-niger/",
+      "destination": "/news/dar-es-salaam-energy-village-a-game-changer-for-community-resilience-in-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/african-universities-pledge-to-integrate-climate-solutions-into-curricula/",
+      "destination": "/news/african-universities-pledge-to-integrate-climate-solutions-into-curricula/",
+      "permanent": true
+    },
+    {
+      "source": "/international-conference-on-climate-change-and-just-energy-transition-2025i3c-jet/",
+      "destination": "/news/international-conference-on-climate-change-and-just-energy-transition-2025i3c-jet/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-consultancy-technical-assistance-for-the-operationalisation-of-the-waste-2-energy-w2e-sustainability-plan/",
+      "destination": "/news/wascal-is-hiring-consultancy-technical-assistance-for-the-operationalisation-of-the-waste-/",
+      "permanent": true
+    },
+    {
+      "source": "/actualites-climatiques-de-wascal-1er-trimestre-2025-2/",
+      "destination": "/news/actualites-climatiques-de-wascal-1er-trimestre-2025-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-january-march-2025/",
+      "destination": "/news/wascal-climate-news-january-march-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/west-africa-strengthens-commitment-to-climate-action-at-global-stocktake-regional-workshop-in-togo/",
+      "destination": "/news/west-africa-strengthens-commitment-to-climate-action-at-global-stocktake-regional-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/niger-strengthens-leadership-in-clean-energy-with-launch-of-wascal-green-hydrogen-centre/",
+      "destination": "/news/niger-strengthens-leadership-in-clean-energy-with-launch-of-wascal-green-hydrogen-centre/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-event-coordinator-for-wascal-international-conference-on-climate-change-and-just-energy-transition-i3c-jet/",
+      "destination": "/news/wascal-is-hiring-event-coordinator-for-wascal-international-conference-on-climate-change-a/",
+      "permanent": true
+    },
+    {
+      "source": "/promoting-climate-resilience-and-renewable-energy-in-west-africa/",
+      "destination": "/news/promoting-climate-resilience-and-renewable-energy-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/all-aboard-for-the-third-floating-university/",
+      "destination": "/news/all-aboard-for-the-third-floating-university/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-consultancy-strategic-planning-consultant/",
+      "destination": "/news/wascal-is-hiring-consultancy-strategic-planning-consultant/",
+      "permanent": true
+    },
+    {
+      "source": "/intensifying-support-for-women-leading-climate-action-in-west-africa/",
+      "destination": "/news/intensifying-support-for-women-leading-climate-action-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-450000-cleaning-equipment-to-sonabel-to-improve-the-efficiency-of-burkina-faso-solar-power-plant/",
+      "destination": "/news/wascal-donates-450000-cleaning-equipment-to-sonabel-to-improve-the-efficiency-of-burkina-f/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-egh-energy-systems-analysis-for-green-hydrogen/",
+      "destination": "/news/2025-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technol/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-egh-photovoltaics-for-green-hydrogen-technologies/",
+      "destination": "/news/2025-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technol-11993/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology-imp-egh-georesources-water-wind-and-technology-for-hydrogen-production/",
+      "destination": "/news/2025-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology-/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admissions-into-international-master-programme-in-energy-and-green-hydrogen-technology-imp-egh-green-hydrogen-production-and-technology/",
+      "destination": "/news/2025-admissions-into-international-master-programme-in-energy-and-green-hydrogen-technolog/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-egh-economics-policies-infrastructures-and-green-hydrogen-technology/",
+      "destination": "/news/2025-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technolo/",
+      "permanent": true
+    },
+    {
+      "source": "/2025-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-egh-bioenergy-biofuels-and-green-hydrogen-technology/",
+      "destination": "/news/2025-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technolo-11967/",
+      "permanent": true
+    },
+    {
+      "source": "/investment-report-for-gsp-nigeria/",
+      "destination": "/news/investment-report-for-gsp-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-an-international-post-doctoral-scientist-social-learning-andimplementation-facilitator/",
+      "destination": "/news/wascal-is-hiring-an-international-post-doctoral-scientist-social-learning-andimplementatio/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-july-december-2024/",
+      "destination": "/news/wascal-climate-news-july-december-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/actualites-climatiques-de-wascal-1er-trimestre-2025/",
+      "destination": "/news/actualites-climatiques-de-wascal-1er-trimestre-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-international-post-doctoral-scientist-position/",
+      "destination": "/news/wascal-is-hiring-international-post-doctoral-scientist-position/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-announces-call-for-applications-for-its-2015-2016-scholarship-programmes-in-climate-change/",
+      "destination": "/news/wascal-announces-call-for-applications-for-its-2015-2016-scholarship-programmes-in-climate/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-doctoral-research-programme-in-climate-change-mining-environment-and-forestry/",
+      "destination": "/news/call-for-applications-doctoral-research-programme-in-climate-change-mining-environment-and/",
+      "permanent": true
+    },
+    {
+      "source": "/translating-science-into-policy-wascal-and-gerics-host-key-dialogue-on-climate-services-for-africa/",
+      "destination": "/news/translating-science-into-policy-wascal-and-gerics-host-key-dialogue-on-climate-services-fo/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-graduate-research-program-on-climate-change-and-water-resources-grp-ccwr/",
+      "destination": "/news/call-for-applications-graduate-research-program-on-climate-change-and-water-resources-grp-/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-phd-programme-in-climate-change-economics/",
+      "destination": "/news/call-for-applications-phd-programme-in-climate-change-economics/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-phd-programme-in-climate-change-and-land-use/",
+      "destination": "/news/call-for-applications-phd-programme-in-climate-change-and-land-use/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-doctoral-research-programme-in-west-african-climate-systems-drp-wacs/",
+      "destination": "/news/call-for-applications-doctoral-research-programme-in-west-african-climate-systems-drp-wacs/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-doctoral-research-programme-on-climate-change-and-education/",
+      "destination": "/news/call-for-applications-doctoral-research-programme-on-climate-change-and-education/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-doctoral-research-programme-in-climate-change-and-disaster-risk-management-drp-ccdrm/",
+      "destination": "/news/call-for-applications-doctoral-research-programme-in-climate-change-and-disaster-risk-mana/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-master-research-programme-in-informatics-for-climate-change-2025-2026-academic-session/",
+      "destination": "/news/call-for-applications-master-research-programme-in-informatics-for-climate-change-2025-202/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-biodiversity/",
+      "destination": "/news/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-biodiversit/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-wascal-climate-change-and-land-use-phd-programme-kwame-nkrumah-university-of-science-and-technology-kumasi/",
+      "destination": "/news/call-for-applications-wascal-climate-change-and-land-use-phd-programme-kwame-nkrumah-unive/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-masters-research-program-on-climate-change-and-marine-sciences-mrp-ccms/",
+      "destination": "/news/call-for-applications-masters-research-program-on-climate-change-and-marine-sciences-mrp-c/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-agriculture/",
+      "destination": "/news/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-agriculture/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-human-habitat-cchh/",
+      "destination": "/news/call-for-applications-2025-admissions-into-phd-programme-in-climate-change-and-human-habit/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-application-doctoral-research-programme-in-climate-change-and-energy-drp-cce-2025/",
+      "destination": "/news/call-for-application-doctoral-research-programme-in-climate-change-and-energy-drp-cce-2025/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-commits-to-advancing-green-hydrogen-at-ecowas-sustainable-energy-forum-2024/",
+      "destination": "/news/wascal-commits-to-advancing-green-hydrogen-at-ecowas-sustainable-energy-forum-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/europe-and-africa-academic-network-strengthens-climate-change-research-in-africa/",
+      "destination": "/news/europe-and-africa-academic-network-strengthens-climate-change-research-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/international-stocktaking-conference-on-climate-services-for-risk-reduction-in-africa-stakeholders-build-cooperation-in-banjul/",
+      "destination": "/news/international-stocktaking-conference-on-climate-services-for-risk-reduction-in-africa-stak/",
+      "permanent": true
+    },
+    {
+      "source": "/ready-to-strengthen-partnerships-and-showcase-climate-resilience-efforts-in-west-africa-at-cop-29/",
+      "destination": "/news/ready-to-strengthen-partnerships-and-showcase-climate-resilience-efforts-in-west-africa-at/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-the-shaping-futures-academy-2025-closes-soon/",
+      "destination": "/news/call-for-applications-for-the-shaping-futures-academy-2025-closes-soon/",
+      "permanent": true
+    },
+    {
+      "source": "/premier-numero-bulletin-de-cicles-intitule-migration-dans-un-contexte-multi-aleas-premier-numerobulletin-de-cicles-intitule-migration-dans-un-contexte-multi-aleas/",
+      "destination": "/news/premier-numero-bulletin-de-cicles-intitule-migration-dans-un-contexte-multi-aleas-premier-/",
+      "permanent": true
+    },
+    {
+      "source": "/migration-under-multi-hazards-bulletin-no1-issue-1-2024/",
+      "destination": "/news/migration-under-multi-hazards-bulletin-no1-issue-1-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-partners-enhance-climate-resilience-in-west-africa-with-successful-wrap-2-0-project/",
+      "destination": "/news/wascal-and-partners-enhance-climate-resilience-in-west-africa-with-successful-wrap-2-0-pro/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-procurement-of-15-automatic-weather-stations-aws-for-west-african-countries/",
+      "destination": "/news/call-for-procurement-of-15-automatic-weather-stations-aws-for-west-african-countries/",
+      "permanent": true
+    },
+    {
+      "source": "/sasscal-is-hiring-executive-director/",
+      "destination": "/news/sasscal-is-hiring-executive-director/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-waste-to-energy-plant-stakeholders-meet-to-pave-path-for-sustainable-innovation-in-ghana/",
+      "destination": "/news/wascals-waste-to-energy-plant-stakeholders-meet-to-pave-path-for-sustainable-innovation-in/",
+      "permanent": true
+    },
+    {
+      "source": "/actualites-climatiques-de-wascal-2eme-trimestre-2024/",
+      "destination": "/news/actualites-climatiques-de-wascal-2eme-trimestre-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-april-june-2024/",
+      "destination": "/news/wascal-climate-news-april-june-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/public-launch-of-ppedmas-project-apps/",
+      "destination": "/news/public-launch-of-ppedmas-project-apps/",
+      "permanent": true
+    },
+    {
+      "source": "/beyond-promises-a-call-to-action-for-west-africa-on-world-environment-day/",
+      "destination": "/news/beyond-promises-a-call-to-action-for-west-africa-on-world-environment-day/",
+      "permanent": true
+    },
+    {
+      "source": "/expression-of-interest-writing-winning-project-proposals-grant-management-skills/",
+      "destination": "/news/expression-of-interest-writing-winning-project-proposals-grant-management-skills/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-inaugurates-academic-and-research-complex-in-togo-marking-a-milestone-in-west-africas-climate-and-energy-transition/",
+      "destination": "/news/wascal-inaugurates-academic-and-research-complex-in-togo-marking-a-milestone-in-west-afric/",
+      "permanent": true
+    },
+    {
+      "source": "/open-day/",
+      "destination": "/news/open-day/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-ecreee-strengthen-capacity-of-ecowas-energy-directors-on-green-hydrogen/",
+      "destination": "/news/wascal-and-ecreee-strengthen-capacity-of-ecowas-energy-directors-on-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/oecd-conference-in-paris/",
+      "destination": "/news/oecd-conference-in-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-january-march-2024/",
+      "destination": "/news/wascal-climate-news-january-march-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/it-is-official-apply-now/",
+      "destination": "/news/it-is-official-apply-now/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-masters-research-programme-in-marine-sciences-2024-2025-academic-session/",
+      "destination": "/news/call-for-applications-for-masters-research-programme-in-marine-sciences-2024-2025-academic/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2024-2025-academic-session/",
+      "destination": "/news/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-consultancy-sustainable-groundwater-resource-development-and-utilization-for-enhanced-agricultural-productivity-and-resilience-to-impacts-of-climate-change/",
+      "destination": "/news/wascal-is-hiring-consultancy-sustainable-groundwater-resource-development-and-utilization-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-commitment-to-building-resilience-to-tackle-water-and-climate-change-in-west-africa/",
+      "destination": "/news/wascals-commitment-to-building-resilience-to-tackle-water-and-climate-change-in-west-afric/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-variability-and-outlook-ofcocoa-production-in-cote-divoireunder-future-climate/",
+      "destination": "/news/climate-variability-and-outlook-ofcocoa-production-in-cote-divoireunder-future-climate/",
+      "permanent": true
+    },
+    {
+      "source": "/prof-chinedum-nwajiuba-elected-as-new-wascal-board-chair/",
+      "destination": "/news/prof-chinedum-nwajiuba-elected-as-new-wascal-board-chair/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-prof-emmanuel-ramde-as-new-executive-director-to-steer-affairs-of-climate-action-in-west-africa/",
+      "destination": "/news/wascal-appoints-prof-emmanuel-ramde-as-new-executive-director-to-steer-affairs-of-climate-/",
+      "permanent": true
+    },
+    {
+      "source": "/inspiring-womens-inclusion-in-climate-change-communications-for-resilience-building/",
+      "destination": "/news/inspiring-womens-inclusion-in-climate-change-communications-for-resilience-building/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-approcah-to-exploring-digital-innovation-to-address-climate-change-and-wildlife-management-wascals-approcah/",
+      "destination": "/news/wascals-approcah-to-exploring-digital-innovation-to-address-climate-change-and-wildlife-ma/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-plant-manager/",
+      "destination": "/news/wascal-is-hiring-plant-manager/",
+      "permanent": true
+    },
+    {
+      "source": "/tribute-to-former-board-member-professor-fran%d2%abois-messanvi-gbeassor/",
+      "destination": "/news/tribute-to-former-board-member-professor-fran-ois-messanvi-gbeassor/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-october-december-2023/",
+      "destination": "/news/wascal-climate-news-october-december-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/spotlighting-guineas-commitment-to-save-mining-and-forestry-industry-through-wascals-capacity-building-schorlaship/",
+      "destination": "/news/spotlighting-guineas-commitment-to-save-mining-and-forestry-industry-through-wascals-capac/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-research-assistant-data-instrumentation-and-internet-of-things-iot/",
+      "destination": "/news/wascal-is-hiring-research-assistant-data-instrumentation-and-internet-of-things-iot/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-partnered-with-gerics-to-combat-climate-change-and-improve-livelihoods-in-west-africa/",
+      "destination": "/news/wascal-partnered-with-gerics-to-combat-climate-change-and-improve-livelihoods-in-west-afri/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-joined-discussions-on-igst-at-cop28-in-dubai/",
+      "destination": "/news/wascal-joined-discussions-on-igst-at-cop28-in-dubai/",
+      "permanent": true
+    },
+    {
+      "source": "/cicles-inception-workshop-wascal-gerics/",
+      "destination": "/news/cicles-inception-workshop-wascal-gerics/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-cop28-in-uae/",
+      "destination": "/news/wascal-cop28-in-uae/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-elects-new-ministerial-council-chair-to-drive-sustainable-climate-action-in-west-africa/",
+      "destination": "/news/wascal-elects-new-ministerial-council-chair-to-drive-sustainable-climate-action-in-west-af/",
+      "permanent": true
+    },
+    {
+      "source": "/5th-wascal-ministerial-council-meeting-factsheet/",
+      "destination": "/news/5th-wascal-ministerial-council-meeting-factsheet/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-5th-ministerial-council-meeting-in-accra-ghana/",
+      "destination": "/news/wascal-5th-ministerial-council-meeting-in-accra-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/leveraging-knowledge-and-resources-to-address-climate-change-issues-in-west-africa-wascal-bmbf-and-julich-forge-stronger-ties/",
+      "destination": "/news/leveraging-knowledge-and-resources-to-address-climate-change-issues-in-west-africa-wascal-/",
+      "permanent": true
+    },
+    {
+      "source": "/ahead-of-cop-28-in-dubai-wascal-to-host-west-african-ministers-on-climate-change-in-accra/",
+      "destination": "/news/ahead-of-cop-28-in-dubai-wascal-to-host-west-african-ministers-on-climate-change-in-accra/",
+      "permanent": true
+    },
+    {
+      "source": "/launch-of-the-2nd-batch-of-international-masters-programme-in-energy-and-green-hydrogen-programme-outline/",
+      "destination": "/news/launch-of-the-2nd-batch-of-international-masters-programme-in-energy-and-green-hydrogen-pr/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-hydrological-sensors-to-enhance-climate-research-in-nigeria/",
+      "destination": "/news/wascal-donates-hydrological-sensors-to-enhance-climate-research-in-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-papers-all-african-symposium-on-climate-change-adaptation-2/",
+      "destination": "/news/call-for-papers-all-african-symposium-on-climate-change-adaptation-2/",
+      "permanent": true
+    },
+    {
+      "source": "/5th-wascal-ministerial-council-meeting/",
+      "destination": "/news/5th-wascal-ministerial-council-meeting/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-creating-enabling-environment-for-green-hydrogen-research-and-capacity-building-in-west-africa/",
+      "destination": "/news/wascal-creating-enabling-environment-for-green-hydrogen-research-and-capacity-building-in-/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-papers-all-african-symposium-on-climate-change-adaptation/",
+      "destination": "/news/call-for-papers-all-african-symposium-on-climate-change-adaptation/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-post-doctoral-scientist-associate/",
+      "destination": "/news/wascal-is-hiring-post-doctoral-scientist-associate/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-green-scholarship-programme-59-west-african-students-in-the-international-masters-programme-in-energy-and-green-hydrogen/",
+      "destination": "/news/wascal-green-scholarship-programme-59-west-african-students-in-the-international-masters-p/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-data-technician/",
+      "destination": "/news/wascal-is-hiring-data-technician/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-and-environmental-services-for-water-excess-management/",
+      "destination": "/news/climate-and-environmental-services-for-water-excess-management/",
+      "permanent": true
+    },
+    {
+      "source": "/events-post/",
+      "destination": "/news/events-post/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-engage-in-green-conversations-at-the-west-african-clean-energy-conference-in-accra/",
+      "destination": "/news/wascal-to-engage-in-green-conversations-at-the-west-african-clean-energy-conference-in-acc/",
+      "permanent": true
+    },
+    {
+      "source": "/green-conversations/",
+      "destination": "/news/green-conversations/",
+      "permanent": true
+    },
+    {
+      "source": "/wacee-2023/",
+      "destination": "/news/wacee-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/federal-president-steinmeier-learns-about-research-on-cabo-verde/",
+      "destination": "/news/federal-president-steinmeier-learns-about-research-on-cabo-verde/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-project-manager/",
+      "destination": "/news/wascal-is-hiring-project-manager/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-project-officer/",
+      "destination": "/news/wascal-is-hiring-project-officer/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-service-for-risk-reduction-in-africa/",
+      "destination": "/news/climate-service-for-risk-reduction-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/vacancy-for-software-engineer/",
+      "destination": "/news/vacancy-for-software-engineer/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-ruforum-build-capacities-towards-developing-university-curricula-in-climate-smart-agriculture-and-climate-information-services/",
+      "destination": "/news/wascal-and-ruforum-build-capacities-towards-developing-university-curricula-in-climate-sma/",
+      "permanent": true
+    },
+    {
+      "source": "/mainstreaming-csa-and-cis-into-universitiescurricula-training-west-africa-universitieslecturers-on-four-thematic-modulesin-africa/",
+      "destination": "/news/mainstreaming-csa-and-cis-into-universitiescurricula-training-west-africa-universitieslect/",
+      "permanent": true
+    },
+    {
+      "source": "/republic-of-guinea-joins-wascal-as-12th-member-state-scholarship-in-climate-change-mining-environment-and-forest-to-commence-soon/",
+      "destination": "/news/republic-of-guinea-joins-wascal-as-12th-member-state-scholarship-in-climate-change-mining-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-mobilizes-more-than-300-csos-to-take-stock-of-west-african-countries-progress-on-paris-agreement/",
+      "destination": "/news/wascal-mobilizes-more-than-300-csos-to-take-stock-of-west-african-countries-progress-on-pa/",
+      "permanent": true
+    },
+    {
+      "source": "/africa-climate-summit-2023-wascal-calls-on-global-climate-change-players-to-engage-csos-to-facilitate-the-regional-green-growth-agenda/",
+      "destination": "/news/africa-climate-summit-2023-wascal-calls-on-global-climate-change-players-to-engage-csos-to/",
+      "permanent": true
+    },
+    {
+      "source": "/africa-climate-week-wascal-leads-west-african-csos-to-push-countries-for-more-climate-action-through-the-independent-global-stocktake-hub/",
+      "destination": "/news/africa-climate-week-wascal-leads-west-african-csos-to-push-countries-for-more-climate-acti/",
+      "permanent": true
+    },
+    {
+      "source": "/orientation-workshop/",
+      "destination": "/news/orientation-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/regional-climate-week/",
+      "destination": "/news/regional-climate-week/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-renewable-energy-and-green-hydrogen-technician/",
+      "destination": "/news/wascal-is-hiring-renewable-energy-and-green-hydrogen-technician/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-project-technical-assistant-2/",
+      "destination": "/news/wascal-is-hiring-project-technical-assistant-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-project-technical-assistant/",
+      "destination": "/news/wascal-is-hiring-project-technical-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-finance-assistant/",
+      "destination": "/news/wascal-is-hiring-finance-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-post-doc-position-in-solar-energy-green-hydrogen/",
+      "destination": "/news/wascal-is-hiring-post-doc-position-in-solar-energy-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-post-doc-position-renewable-energy-and-green/",
+      "destination": "/news/wascal-is-hiring-post-doc-position-renewable-energy-and-green/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-call-for-a-phd-fellow-in-biodiversity-assessment-and-monitoring-at-wascalwascal-is-hiring/",
+      "destination": "/news/wascal-is-hiring-call-for-a-phd-fellow-in-biodiversity-assessment-and-monitoring-at-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-april-june-2023/",
+      "destination": "/news/wascal-climate-news-april-june-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-ecreee-commence-green-hydorgy-policy-strategy-and-action-plan-for-west-africa/",
+      "destination": "/news/wascal-and-ecreee-commence-green-hydorgy-policy-strategy-and-action-plan-for-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/join-the-west-africa-igst-regional-hub/",
+      "destination": "/news/join-the-west-africa-igst-regional-hub/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-announces-the-resignation-of-executive-director-dr-moumini-savadogo/",
+      "destination": "/news/wascal-announces-the-resignation-of-executive-director-dr-moumini-savadogo/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-gis-and-remote-sensing-research-scientist/",
+      "destination": "/news/wascal-is-hiring-gis-and-remote-sensing-research-scientist/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-data-science-and-ai-research-assistant/",
+      "destination": "/news/wascal-is-hiring-data-science-and-ai-research-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-research-assistant-data-science-and-ai/",
+      "destination": "/news/wascal-is-hiring-research-assistant-data-science-and-ai/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-gis-technician/",
+      "destination": "/news/wascal-is-hiring-gis-technician/",
+      "permanent": true
+    },
+    {
+      "source": "/experts-call-on-the-government-to-examine-climate-change-as-a-cause-of-rural-urban-migration/",
+      "destination": "/news/experts-call-on-the-government-to-examine-climate-change-as-a-cause-of-rural-urban-migrati/",
+      "permanent": true
+    },
+    {
+      "source": "/enhancing-disaster-risk-reduction-in-africa-undrr-and-network-of-centres-of-excellence-train-experts-in-early-warning-systems/",
+      "destination": "/news/enhancing-disaster-risk-reduction-in-africa-undrr-and-network-of-centres-of-excellence-tra/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-it-officer/",
+      "destination": "/news/wascal-is-hiring-it-officer/",
+      "permanent": true
+    },
+    {
+      "source": "/invitation-to-tender-2/",
+      "destination": "/news/invitation-to-tender-2/",
+      "permanent": true
+    },
+    {
+      "source": "/independent-global-stocktake-igst-west-africa-regional-hub-launched/",
+      "destination": "/news/independent-global-stocktake-igst-west-africa-regional-hub-launched/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-5-water-level-sensors-to-water-research-institute/",
+      "destination": "/news/wascal-donates-5-water-level-sensors-to-water-research-institute/",
+      "permanent": true
+    },
+    {
+      "source": "/regional-workshop-for-the-official-launch-of-the-igst-west-africa-regional-hub/",
+      "destination": "/news/regional-workshop-for-the-official-launch-of-the-igst-west-africa-regional-hub/",
+      "permanent": true
+    },
+    {
+      "source": "/the-independent-global-stocktake-west-africa-regional-hub-project-set-to-be-officially-launched/",
+      "destination": "/news/the-independent-global-stocktake-west-africa-regional-hub-project-set-to-be-officially-lau/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-january-march-2023/",
+      "destination": "/news/wascal-climate-news-january-march-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-building-capacities-for-well-qualified-professionals-in-green-hydrogen/",
+      "destination": "/news/wascal-building-capacities-for-well-qualified-professionals-in-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/african-scientists-converge-to-discuss-solutions-to-adapt-to-and-mitigate-climate-change-through-artificial-intelligence-ai/",
+      "destination": "/news/african-scientists-converge-to-discuss-solutions-to-adapt-to-and-mitigate-climate-change-t/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-masters-research-programme-in-marine-sciences-2022-2023-academic-session/",
+      "destination": "/news/call-for-applications-for-masters-research-programme-in-marine-sciences-2022-2023-academic/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2022-2023-academic-session/",
+      "destination": "/news/call-for-applications-for-master-research-programme-in-informatics-for-climate-change-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/59-fully-funded-green-hydrogen-scholars-from-west-africa-arrive-in-germany-on-a-4-month-study/",
+      "destination": "/news/59-fully-funded-green-hydrogen-scholars-from-west-africa-arrive-in-germany-on-a-4-month-st/",
+      "permanent": true
+    },
+    {
+      "source": "/vacancy-notice-for-two-open-positions/",
+      "destination": "/news/vacancy-notice-for-two-open-positions/",
+      "permanent": true
+    },
+    {
+      "source": "/news-on-sasscal-wascal-joint-ministerial-council-meeting-in-berlin/",
+      "destination": "/news/news-on-sasscal-wascal-joint-ministerial-council-meeting-in-berlin/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-accreditation-process-by-hceres-at-ucad-and-uac-site-visit/",
+      "destination": "/news/wascal-accreditation-process-by-hceres-at-ucad-and-uac-site-visit/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-directors-meeting-in-benin/",
+      "destination": "/news/wascal-directors-meeting-in-benin/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-tenders-to-conduct-a-study-for-the-construction-of-a-1-mw-biomass-power-plant-based-on-household-and-industrial-solid-waste-in-the-city-of-ouagadougou/",
+      "destination": "/news/call-for-tenders-to-conduct-a-study-for-the-construction-of-a-1-mw-biomass-power-plant-bas/",
+      "permanent": true
+    },
+    {
+      "source": "/appel-doffres-pour-la-realisation-dune-etude-pour-la-construction-dune-centrale-a-biomasse-de-1-mw-utilisant-des-dechets-solides-menagers-et-industriels-dans-la-ville-de-ouagadougou/",
+      "destination": "/news/appel-doffres-pour-la-realisation-dune-etude-pour-la-construction-dune-centrale-a-biomasse/",
+      "permanent": true
+    },
+    {
+      "source": "/renforcer-la-cooperation-regionale-dans-la-lutte-contre-le-changement-climatique-wascal-accueille-la-republique-de-guinee/",
+      "destination": "/news/renforcer-la-cooperation-regionale-dans-la-lutte-contre-le-changement-climatique-wascal-ac/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-scholarship-applications-phd-in-social-policy-studies/",
+      "destination": "/news/call-for-scholarship-applications-phd-in-social-policy-studies/",
+      "permanent": true
+    },
+    {
+      "source": "/expanding-regional-cooperation-to-fight-climate-change-wascal-welcomes-the-republic-of-guinea/",
+      "destination": "/news/expanding-regional-cooperation-to-fight-climate-change-wascal-welcomes-the-republic-of-gui/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-open-day-20223/",
+      "destination": "/news/wascal-open-day-20223/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-joins-wacren-as-the-third-premium-associate-member/",
+      "destination": "/news/wascal-joins-wacren-as-the-third-premium-associate-member/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-intensifies-road-map-for-cooperation-with-ecowas-on-climate-change/",
+      "destination": "/news/wascal-intensifies-road-map-for-cooperation-with-ecowas-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/recherche-dun-directeur-executif/",
+      "destination": "/news/recherche-dun-directeur-executif/",
+      "permanent": true
+    },
+    {
+      "source": "/a-search-for-executive-director/",
+      "destination": "/news/a-search-for-executive-director/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-builds-capacities-of-100-west-african-stakeholders-on-project-monitoring-evaluation-and-accountability/",
+      "destination": "/news/wascal-builds-capacities-of-100-west-african-stakeholders-on-project-monitoring-evaluation/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-january-december-2022/",
+      "destination": "/news/wascal-climate-news-january-december-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/ecowas-energy-ministers-adopt-green-hydrogen-policy/",
+      "destination": "/news/ecowas-energy-ministers-adopt-green-hydrogen-policy/",
+      "permanent": true
+    },
+    {
+      "source": "/stakeholders-review-climate-change-migration-nexus-in-west-africa/",
+      "destination": "/news/stakeholders-review-climate-change-migration-nexus-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/icera-2023/",
+      "destination": "/news/icera-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-finance-officer/",
+      "destination": "/news/wascal-is-hiring-finance-officer/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-abstract-2/",
+      "destination": "/news/call-for-abstract-2/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-application-youth4climate/",
+      "destination": "/news/call-for-application-youth4climate/",
+      "permanent": true
+    },
+    {
+      "source": "/aiccra/",
+      "destination": "/news/aiccra/",
+      "permanent": true
+    },
+    {
+      "source": "/abn/",
+      "destination": "/news/abn/",
+      "permanent": true
+    },
+    {
+      "source": "/rainca/",
+      "destination": "/news/rainca/",
+      "permanent": true
+    },
+    {
+      "source": "/we-should-stop-bush-burning-by-our-farmers-in-nigeria/",
+      "destination": "/news/we-should-stop-bush-burning-by-our-farmers-in-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/stakeholders-meet-to-shape-the-path-to-the-operationalization-of-the-west-africa-regional-hub-of-the-independent-global-stocktake-igst/",
+      "destination": "/news/stakeholders-meet-to-shape-the-path-to-the-operationalization-of-the-west-africa-regional-/",
+      "permanent": true
+    },
+    {
+      "source": "/adaptcoop/",
+      "destination": "/news/adaptcoop/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-research-and-politics-africa-and-germany-walking-the-path-together-bmbf-minister/",
+      "destination": "/news/climate-change-research-and-politics-africa-and-germany-walking-the-path-together-bmbf-min/",
+      "permanent": true
+    },
+    {
+      "source": "/african-ministers-engage-german-parliamentarians-in-bid-to-intensify-climate-change-partnership/",
+      "destination": "/news/african-ministers-engage-german-parliamentarians-in-bid-to-intensify-climate-change-partne/",
+      "permanent": true
+    },
+    {
+      "source": "/west-africa-southern-africa-and-germany-sign-pact-to-strengthen-climate-energy-partnership/",
+      "destination": "/news/west-africa-southern-africa-and-germany-sign-pact-to-strengthen-climate-energy-partnership/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-tenders-for-the-design-and-construction-of-energy-infrastructure-at-wascals-headquarters-in-accra-ghana-2/",
+      "destination": "/news/call-for-tenders-for-the-design-and-construction-of-energy-infrastructure-at-wascals-headq/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-eghoption-photovoltaic-systems-analysis-for-green-hydrogen/",
+      "destination": "/news/2023-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technol/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-eghmajor-bioenergy-biofuels-and-green-hydrogen-technology/",
+      "destination": "/news/2023-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technolo/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-eghspecialty-economics-policies-infrastructures-and-green-hydrogen-technology/",
+      "destination": "/news/2023-admissions-into-international-masters-programme-in-energy-and-green-hydrogen-technolo-9700/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technology-imp-eghoption-photovoltaics-for-green-hydrogen-technologies/",
+      "destination": "/news/2023-admission-in-the-international-masters-programme-in-energy-and-green-hydrogen-technol-9690/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology-imp-egh-ghpt/",
+      "destination": "/news/2023-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology-/",
+      "permanent": true
+    },
+    {
+      "source": "/2023-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology-imp-egh/",
+      "destination": "/news/2023-admissions-into-international-master-program-in-energy-and-green-hydrogen-technology--9666/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-migraware-project-builds-capacity-for-data-collection-strategies-on-climate-change-migration/",
+      "destination": "/news/wascals-migraware-project-builds-capacity-for-data-collection-strategies-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/celebrating-a-decade-of-climate-action-west-and-southern-african-climate-change-ministers-to-meet-in-germany/",
+      "destination": "/news/celebrating-a-decade-of-climate-action-west-and-southern-african-climate-change-ministers-/",
+      "permanent": true
+    },
+    {
+      "source": "/international-day-of-women-and-girls-in-science/",
+      "destination": "/news/international-day-of-women-and-girls-in-science/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-and-global-climate-action-so-far/",
+      "destination": "/news/climate-change-and-global-climate-action-so-far/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-congratulates-cames-director/",
+      "destination": "/news/wascal-congratulates-cames-director/",
+      "permanent": true
+    },
+    {
+      "source": "/ecowas-and-the-german-ministry-of-education-and-research-discuss-collaboration-on-climate-change-and-green-transition-during-a-working-visit/",
+      "destination": "/news/ecowas-and-the-german-ministry-of-education-and-research-discuss-collaboration-on-climate-/",
+      "permanent": true
+    },
+    {
+      "source": "/arona-diedhiou-est-nomme-expert-de-la-lutte-contre-la-desertification-aupres-des-nations-unies/",
+      "destination": "/news/arona-diedhiou-est-nomme-expert-de-la-lutte-contre-la-desertification-aupres-des-nations-u/",
+      "permanent": true
+    },
+    {
+      "source": "/catch-them-young-wascal-engages-school-children-on-climate-change-at-wass-2022/",
+      "destination": "/news/catch-them-young-wascal-engages-school-children-on-climate-change-at-wass-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/government-of-burkina-faso-ready-to-work-with-resolutions-from-wascal-science-symposium-to-meet-ndcs/",
+      "destination": "/news/government-of-burkina-faso-ready-to-work-with-resolutions-from-wascal-science-symposium-to/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-science-symposium-2022-calls-for-more-concrete-actions-in-the-fight-against-climate-change/",
+      "destination": "/news/wascal-science-symposium-2022-calls-for-more-concrete-actions-in-the-fight-against-climate/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-council-of-ministers-chairman-visits-the-competence-centre-in-ouagadougou/",
+      "destination": "/news/wascal-council-of-ministers-chairman-visits-the-competence-centre-in-ouagadougou/",
+      "permanent": true
+    },
+    {
+      "source": "/wass-2022-kicks-off-in-ouagadougou/",
+      "destination": "/news/wass-2022-kicks-off-in-ouagadougou/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-science-symposium-2022/",
+      "destination": "/news/wascal-science-symposium-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/wass-2022/",
+      "destination": "/news/wass-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/west-african-scientists-to-meet-in-ouagadougou-for-a-post-cop27-science-symposium/",
+      "destination": "/news/west-african-scientists-to-meet-in-ouagadougou-for-a-post-cop27-science-symposium/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-science-symposium/",
+      "destination": "/news/wascal-science-symposium/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-a-post-doctoral-scientist-social-learning-and-implementation-facilitator/",
+      "destination": "/news/wascal-is-hiring-a-post-doctoral-scientist-social-learning-and-implementation-facilitator/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-nouvelles-sur-le-climat-janvier-septembre-2022/",
+      "destination": "/news/wascal-nouvelles-sur-le-climat-janvier-septembre-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-tenders-for-the-design-and-construction-of-energy-infrastructure-at-wascals-headquarters-in-accra-ghana/",
+      "destination": "/news/call-for-tenders-for-the-design-and-construction-of-energy-infrastructure-at-wascals-headq-7771/",
+      "permanent": true
+    },
+    {
+      "source": "/avis-a-manifestation-dinteret-pour-la-conception-et-realisation-dinfrastructures-energetiques-au-siege-de-wascal-a-accra-ghana/",
+      "destination": "/news/avis-a-manifestation-dinteret-pour-la-conception-et-realisation-dinfrastructures-energetiq/",
+      "permanent": true
+    },
+    {
+      "source": "/wascalto-make-a-case-for-climate-change-and-artificial-intelligence-at-cop-27/",
+      "destination": "/news/wascalto-make-a-case-for-climate-change-and-artificial-intelligence-at-cop-27/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-signed-an-mou-with-two-german-universities-julich-rwth-for-joint-activites/",
+      "destination": "/news/wascal-signed-an-mou-with-two-german-universities-julich-rwth-for-joint-activites/",
+      "permanent": true
+    },
+    {
+      "source": "/artificial-intelligence-for-innovative-development-of-data-driven-and-predictive-climate-actions/",
+      "destination": "/news/artificial-intelligence-for-innovative-development-of-data-driven-and-predictive-climate-a/",
+      "permanent": true
+    },
+    {
+      "source": "/abuja-wascal-showcases-green-hydrogen-commitment-at-ecowas-sustainable-energy-forum/",
+      "destination": "/news/abuja-wascal-showcases-green-hydrogen-commitment-at-ecowas-sustainable-energy-forum/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-deadline-15-11-2022/",
+      "destination": "/news/procurement-notice-deadline-15-11-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-january-september-2022/",
+      "destination": "/news/wascal-climate-news-january-september-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-days-call-for-abstract/",
+      "destination": "/news/wascal-climate-days-call-for-abstract/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-reference-for-the-selection-of-one-student-enrolled-at-master-level-to-benefit-from-financial-support-for-their-masters-thesis/",
+      "destination": "/news/terms-of-reference-for-the-selection-of-one-student-enrolled-at-master-level-to-benefit-fr/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news-2/",
+      "destination": "/news/wascal-climate-news-2/",
+      "permanent": true
+    },
+    {
+      "source": "/showcasing-progress-in-the-production-of-the-west-africa-h2atlas/",
+      "destination": "/news/showcasing-progress-in-the-production-of-the-west-africa-h2atlas/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-abstract/",
+      "destination": "/news/call-for-abstract/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-funds-3-million-euro-green-hydrogen-programme-on-solar-pv-power-plants-in-west-africa/",
+      "destination": "/news/bmbf-funds-3-million-euro-green-hydrogen-programme-on-solar-pv-power-plants-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-regional-thematic-coordinator/",
+      "destination": "/news/wascal-is-hiring-regional-thematic-coordinator/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-deadline-5-09-2022/",
+      "destination": "/news/procurement-notice-deadline-5-09-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/optimizing-solar-pv-for-green-hydrogen-production-in-west-africa-pv2h/",
+      "destination": "/news/optimizing-solar-pv-for-green-hydrogen-production-in-west-africa-pv2h/",
+      "permanent": true
+    },
+    {
+      "source": "/h2atlas-project-results-for-west-africa/",
+      "destination": "/news/h2atlas-project-results-for-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/official-launch-of-pv2h-burkina-project-optimizing-solar-pv-for-green-hydrogen-production-in-west-africa/",
+      "destination": "/news/official-launch-of-pv2h-burkina-project-optimizing-solar-pv-for-green-hydrogen-production-/",
+      "permanent": true
+    },
+    {
+      "source": "/standing-together-against-the-consequences-of-climate-change-on-the-african-continent/",
+      "destination": "/news/standing-together-against-the-consequences-of-climate-change-on-the-african-continent/",
+      "permanent": true
+    },
+    {
+      "source": "/the-living-lab-of-west-africa-calls-sustainable-living-environment-in-ouaga/",
+      "destination": "/news/the-living-lab-of-west-africa-calls-sustainable-living-environment-in-ouaga/",
+      "permanent": true
+    },
+    {
+      "source": "/writing-the-success-story-of-informatics-for-climate-change-2nd-batch-of-wascal-scholars-graduate/",
+      "destination": "/news/writing-the-success-story-of-informatics-for-climate-change-2nd-batch-of-wascal-scholars-g/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-committed-to-building-partnerships-to-fight-the-dangers-of-pesticides-on-climate-change/",
+      "destination": "/news/wascal-is-committed-to-building-partnerships-to-fight-the-dangers-of-pesticides-on-climate/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-hiring-a-post-doctoral-scientist-associate/",
+      "destination": "/news/wascal-is-hiring-a-post-doctoral-scientist-associate/",
+      "permanent": true
+    },
+    {
+      "source": "/repgam-concludes-energy-data-collection/",
+      "destination": "/news/repgam-concludes-energy-data-collection/",
+      "permanent": true
+    },
+    {
+      "source": "/the-living-lab-of-west-africa-ouagadougou-llwa-strengthens-the-capacities-of-its-citizen-scientists-on-data-collection-tools/",
+      "destination": "/news/the-living-lab-of-west-africa-ouagadougou-llwa-strengthens-the-capacities-of-its-citizen-s/",
+      "permanent": true
+    },
+    {
+      "source": "/bridging-the-gap-between-academic-and-practicals-wascal-scholars-from-knust-on-study-visit-to-competence-centre/",
+      "destination": "/news/bridging-the-gap-between-academic-and-practicals-wascal-scholars-from-knust-on-study-visit/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-the-republic-of-niger-enhance-strategies-for-renewable-energy/",
+      "destination": "/news/wascal-and-the-republic-of-niger-enhance-strategies-for-renewable-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/memorandum-of-understanding-signing-ceremony-with-the-university-of-mittweida-wascal-and-sasscal-2/",
+      "destination": "/news/memorandum-of-understanding-signing-ceremony-with-the-university-of-mittweida-wascal-and-s/",
+      "permanent": true
+    },
+    {
+      "source": "/memorandum-of-understanding-signing-ceremony-with-the-university-of-mittweida-wascal-and-sasscal/",
+      "destination": "/news/memorandum-of-understanding-signing-ceremony-with-the-university-of-mittweida-wascal-and-s-7350/",
+      "permanent": true
+    },
+    {
+      "source": "/visit-of-delegation-from-wascal-and-sasscal/",
+      "destination": "/news/visit-of-delegation-from-wascal-and-sasscal/",
+      "permanent": true
+    },
+    {
+      "source": "/innovation-systems-and-agri-based-digital-technologies-for-improved-agricultural-productivity-in-burkina-faso/",
+      "destination": "/news/innovation-systems-and-agri-based-digital-technologies-for-improved-agricultural-productiv/",
+      "permanent": true
+    },
+    {
+      "source": "/cop15-abidjan-wascal-calls-for-robust-synergy-to-find-alternative-solution-to-land-degradationin-west-africa/",
+      "destination": "/news/cop15-abidjan-wascal-calls-for-robust-synergy-to-find-alternative-solution-to-land-degrada/",
+      "permanent": true
+    },
+    {
+      "source": "/celebrating-ten-years-of-combatting-climate-change-and-improving-livelihoods/",
+      "destination": "/news/celebrating-ten-years-of-combatting-climate-change-and-improving-livelihoods/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-a-decade-3/",
+      "destination": "/news/wascal-a-decade-3/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-gallery/",
+      "destination": "/news/wascal-gallery/",
+      "permanent": true
+    },
+    {
+      "source": "/10-years-of-building-a-climate-change-centre-of-excellence-wascal-celebrates-achievements-in-lome/",
+      "destination": "/news/10-years-of-building-a-climate-change-centre-of-excellence-wascal-celebrates-achievements-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-a-decade-2/",
+      "destination": "/news/wascal-a-decade-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-a-decade/",
+      "destination": "/news/wascal-a-decade/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-invests-up-to-11-million-euro-to-support-research-activities-at-wascal/",
+      "destination": "/news/bmbf-invests-up-to-11-million-euro-to-support-research-activities-at-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/exchange-among-researchers-kick-off-event-of-german-african-climate-protection-projects-in-west-africa/",
+      "destination": "/news/exchange-among-researchers-kick-off-event-of-german-african-climate-protection-projects-in/",
+      "permanent": true
+    },
+    {
+      "source": "/newly-nominated-wascal-scientifc-advisory-committee-hold-first-meeting-in-ouagadougou/",
+      "destination": "/news/newly-nominated-wascal-scientifc-advisory-committee-hold-first-meeting-in-ouagadougou/",
+      "permanent": true
+    },
+    {
+      "source": "/towards-the-implementation-of-paris-agreement-independent-global-stocktake-hub-project-launched/",
+      "destination": "/news/towards-the-implementation-of-paris-agreement-independent-global-stocktake-hub-project-lau/",
+      "permanent": true
+    },
+    {
+      "source": "/citizen-actions-on-climate-change-and-environment-the-living-lab-of-west-africa/",
+      "destination": "/news/citizen-actions-on-climate-change-and-environment-the-living-lab-of-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-funded-hybdrid-waste-to-energy-project-valued-at-6-2-million-euro-commissioned/",
+      "destination": "/news/bmbf-funded-hybdrid-waste-to-energy-project-valued-at-6-2-million-euro-commissioned/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-seven-7-automatic-hydro-sensors-to-benin-government/",
+      "destination": "/news/wascal-donates-seven-7-automatic-hydro-sensors-to-benin-government/",
+      "permanent": true
+    },
+    {
+      "source": "/germanys-foreign-minister-annalena-baerbock-visits-university-abdou-moumouni-in-niger/",
+      "destination": "/news/germanys-foreign-minister-annalena-baerbock-visits-university-abdou-moumouni-in-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/experts-meet-to-brainstorm-on-e-waste-management-in-west-africa/",
+      "destination": "/news/experts-meet-to-brainstorm-on-e-waste-management-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-admitted-as-an-observer-in-the-unfccc-process/",
+      "destination": "/news/wascal-admitted-as-an-observer-in-the-unfccc-process/",
+      "permanent": true
+    },
+    {
+      "source": "/official-launch-of-the-independent-global-stocktake-igst-west-africa-regional-hub-formation-project/",
+      "destination": "/news/official-launch-of-the-independent-global-stocktake-igst-west-africa-regional-hub-formatio/",
+      "permanent": true
+    },
+    {
+      "source": "/three-african-institutions-partner-to-use-artificial-intelligence-to-tackle-climate-change/",
+      "destination": "/news/three-african-institutions-partner-to-use-artificial-intelligence-to-tackle-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-financial-report-2020/",
+      "destination": "/news/wascal-financial-report-2020/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-five-automatic-hydro-sensors-to-cabo-verde/",
+      "destination": "/news/wascal-donates-five-automatic-hydro-sensors-to-cabo-verde/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-joins-ndc-partnership-a-global-climate-change-coalition-as-associate-member/",
+      "destination": "/news/wascal-joins-ndc-partnership-a-global-climate-change-coalition-as-associate-member/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-deadline-5-04-2022/",
+      "destination": "/news/procurement-notice-deadline-5-04-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter-january-february-2022/",
+      "destination": "/news/wascal-newsletter-january-february-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/regional-expert-workshop-on-e-waste-management-for-sustainable-environment-in-west-africa-co-designing-the-research-road-map-and-theory-of-change/",
+      "destination": "/news/regional-expert-workshop-on-e-waste-management-for-sustainable-environment-in-west-africa-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-change-and-informatics-scholars-visit-competence-centre/",
+      "destination": "/news/wascal-climate-change-and-informatics-scholars-visit-competence-centre/",
+      "permanent": true
+    },
+    {
+      "source": "/memorandum-of-understanding-between-wascal-and-ukceh-to-establish-cooperative-climate-change-activities/",
+      "destination": "/news/memorandum-of-understanding-between-wascal-and-ukceh-to-establish-cooperative-climate-chan/",
+      "permanent": true
+    },
+    {
+      "source": "/webinar-acting-on-cop-26-goals-and-outcomes-building-capacities-for-mitigation-adaptation-and-resilience-to-climate-change-in-west-africa/",
+      "destination": "/news/webinar-acting-on-cop-26-goals-and-outcomes-building-capacities-for-mitigation-adaptation-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-west-african-science-service-centre-lays-foundation-stone-for-new-research-building-in-mindelo-cape-verde/",
+      "destination": "/news/wascal-west-african-science-service-centre-lays-foundation-stone-for-new-research-building/",
+      "permanent": true
+    },
+    {
+      "source": "/open-agroclimatic-science-conference-crops-and-livestock-adaptation-options-under-climate-extremes/",
+      "destination": "/news/open-agroclimatic-science-conference-crops-and-livestock-adaptation-options-under-climate-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-donates-three-automatic-hydro-sensors-to-the-gambia-with-support-from-bmbf/",
+      "destination": "/news/wascal-donates-three-automatic-hydro-sensors-to-the-gambia-with-support-from-bmbf/",
+      "permanent": true
+    },
+    {
+      "source": "/lutte-contre-le-changement-climatique-et-promotion-de-lhydrogene-vert-en-afrique-de-louest-wascal-celebre-ses-dix-ans-dexistence/",
+      "destination": "/news/lutte-contre-le-changement-climatique-et-promotion-de-lhydrogene-vert-en-afrique-de-louest/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-a-decade-celebrating-10-years-of-providing-climate-change-and-green-hydrogen-solutions-in-west-africa/",
+      "destination": "/news/wascal-a-decade-celebrating-10-years-of-providing-climate-change-and-green-hydrogen-soluti/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-akademiya2063-partner-to-advance-policy-research-and-dialogue-on-climate-change/",
+      "destination": "/news/wascal-and-akademiya2063-partner-to-advance-policy-research-and-dialogue-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/ppedmas-precision-pest-and-disease-management-system-based-on-multidimensional-big-data/",
+      "destination": "/news/ppedmas-precision-pest-and-disease-management-system-based-on-multidimensional-big-data/",
+      "permanent": true
+    },
+    {
+      "source": "/independent-global-stocktake-igst-west-africa-regional-hub/",
+      "destination": "/news/independent-global-stocktake-igst-west-africa-regional-hub/",
+      "permanent": true
+    },
+    {
+      "source": "/i-change/",
+      "destination": "/news/i-change/",
+      "permanent": true
+    },
+    {
+      "source": "/60-masters-for-green-hydrogen-from-west-africa/",
+      "destination": "/news/60-masters-for-green-hydrogen-from-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/hybrid-waste-2-energy-flyer/",
+      "destination": "/news/hybrid-waste-2-energy-flyer/",
+      "permanent": true
+    },
+    {
+      "source": "/green-hydrogen-factsheet-2/",
+      "destination": "/news/green-hydrogen-factsheet-2/",
+      "permanent": true
+    },
+    {
+      "source": "/h2-atlas-flyer/",
+      "destination": "/news/h2-atlas-flyer/",
+      "permanent": true
+    },
+    {
+      "source": "/green-hydrogen-factsheet/",
+      "destination": "/news/green-hydrogen-factsheet/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-will-build-capacities-of-50-partcipants-through-wascal-and-its-partners-in-a-two-days-workshop-at-competence-centre/",
+      "destination": "/news/bmbf-will-build-capacities-of-50-partcipants-through-wascal-and-its-partners-in-a-two-days/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-bulletin-november-december-2021/",
+      "destination": "/news/wascal-bulletin-november-december-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/5th-ecowas-sustainable-energy-forum-esef2021/",
+      "destination": "/news/5th-ecowas-sustainable-energy-forum-esef2021/",
+      "permanent": true
+    },
+    {
+      "source": "/investments-into-science-and-education-are-key-to-sustainable-development-dr-karsten-hess-bmbf/",
+      "destination": "/news/investments-into-science-and-education-are-key-to-sustainable-development-dr-karsten-hess-/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-admits-132-west-african-climate-change-students-into-bmbf-funded-scholarship-programme/",
+      "destination": "/news/wascal-admits-132-west-african-climate-change-students-into-bmbf-funded-scholarship-progra/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-kfw-officially-sign-agreement-for-commenect-of-7-million-euoros-signs-competence-centre/",
+      "destination": "/news/wascal-and-kfw-officially-sign-agreement-for-commenect-of-7-million-euoros-signs-competenc/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-cop-26-participants-in-climate-change-migration-and-sustainability/",
+      "destination": "/news/wascal-engages-cop-26-participants-in-climate-change-migration-and-sustainability/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-monthly-bulletin-october-2021/",
+      "destination": "/news/wascal-monthly-bulletin-october-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/open-agroclimatic-science-conference/",
+      "destination": "/news/open-agroclimatic-science-conference/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-deadline-22-11-2021/",
+      "destination": "/news/procurement-notice-deadline-22-11-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/book-climate-change-and-food-security-in-west-africa/",
+      "destination": "/news/book-climate-change-and-food-security-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/energies-renouvelables-le-ghana-classe-1er-en-afrique-de-louest/",
+      "destination": "/news/energies-renouvelables-le-ghana-classe-1er-en-afrique-de-louest/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-deadline-14-11-2021/",
+      "destination": "/news/procurement-notice-deadline-14-11-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/fiche-dinformation-lab-togo/",
+      "destination": "/news/fiche-dinformation-lab-togo/",
+      "permanent": true
+    },
+    {
+      "source": "/lab-togo-factsheet/",
+      "destination": "/news/lab-togo-factsheet/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-monthly-bulletin-august-september/",
+      "destination": "/news/wascal-monthly-bulletin-august-september/",
+      "permanent": true
+    },
+    {
+      "source": "/young-specialists-for-green-hydrogen/",
+      "destination": "/news/young-specialists-for-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-factsheet-catalogue/",
+      "destination": "/news/wascal-factsheet-catalogue/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-2020-annual-report/",
+      "destination": "/news/wascal-2020-annual-report/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-is-taking-up-a-mega-topic-of-the-future-in-africas-green-hydrogen/",
+      "destination": "/news/wascal-is-taking-up-a-mega-topic-of-the-future-in-africas-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/au-palais-de-la-presidence-de-la-republique-le-programme-wascal-presente-au-chef-de-letat-lors-dune-rencontre-avec-une-delegation-allemande/",
+      "destination": "/news/au-palais-de-la-presidence-de-la-republique-le-programme-wascal-presente-au-chef-de-letat-/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-wascal-and-pik-to-validate-a-study-on-climate-risk-analysis/",
+      "destination": "/news/workshop-wascal-and-pik-to-validate-a-study-on-climate-risk-analysis/",
+      "permanent": true
+    },
+    {
+      "source": "/60-west-african-students-receive-full-german-government-scholarship-in-international-masters-in-green-hydrogen/",
+      "destination": "/news/60-west-african-students-receive-full-german-government-scholarship-in-international-maste/",
+      "permanent": true
+    },
+    {
+      "source": "/united-nations-endorses-wascal-cabo-verdes-ocean-science-for-sustainable-development-project/",
+      "destination": "/news/united-nations-endorses-wascal-cabo-verdes-ocean-science-for-sustainable-development-proje/",
+      "permanent": true
+    },
+    {
+      "source": "/official-launch-of-the-regional-training-research-programme-on-energy-and-green-hydrogen/",
+      "destination": "/news/official-launch-of-the-regional-training-research-programme-on-energy-and-green-hydrogen/",
+      "permanent": true
+    },
+    {
+      "source": "/symposium-on-west-african-capacity-development-and-research-ends-successfully-in-germany/",
+      "destination": "/news/symposium-on-west-african-capacity-development-and-research-ends-successfully-in-germany/",
+      "permanent": true
+    },
+    {
+      "source": "/developing-resilience-to-climate-change-and-achieving-food-security-in-west-africa-follow-up-action-from-the-un-food-systems-summit/",
+      "destination": "/news/developing-resilience-to-climate-change-and-achieving-food-security-in-west-africa-follow-/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-for-offices-laboratory-sorting-shed-compost-shed-of-waste-to-energy-project-deadline-16-10-2021/",
+      "destination": "/news/procurement-notice-for-offices-laboratory-sorting-shed-compost-shed-of-waste-to-energy-pro/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-hybrid-waste-to-ernergy-deadline-08-10-2021-2/",
+      "destination": "/news/procurement-notice-hybrid-waste-to-ernergy-deadline-08-10-2021-2/",
+      "permanent": true
+    },
+    {
+      "source": "/understanding-climate-change/",
+      "destination": "/news/understanding-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/vegetation-mapping-using-google-earth-engine/",
+      "destination": "/news/vegetation-mapping-using-google-earth-engine/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-hybrid-waste-to-ernergy-deadline-08-10-2021/",
+      "destination": "/news/procurement-notice-hybrid-waste-to-ernergy-deadline-08-10-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/symposium-on-research-capacity-development-in-west-africa-wascal-and-german-partners/",
+      "destination": "/news/symposium-on-research-capacity-development-in-west-africa-wascal-and-german-partners/",
+      "permanent": true
+    },
+    {
+      "source": "/kick-off-meeting-between-wascal-and-the-german-university-of-mittweida-for-a-cooperation-on-the-field-of-climate-change-africa-held/",
+      "destination": "/news/kick-off-meeting-between-wascal-and-the-german-university-of-mittweida-for-a-cooperation-o/",
+      "permanent": true
+    },
+    {
+      "source": "/prof-satyanarayana-narra-briefed-ghana-ministry-of-energy-officials-on-waste-2-energy-project/",
+      "destination": "/news/prof-satyanarayana-narra-briefed-ghana-ministry-of-energy-officials-on-waste-2-energy-proj/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-monthly-bulletin-june-july-2021/",
+      "destination": "/news/wascal-monthly-bulletin-june-july-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/federal-ministry-of-education-and-research-is-funding-new-building-of-the-competence-center-for-climate-change-and-adapted-land-management-in-burkina-faso/",
+      "destination": "/news/federal-ministry-of-education-and-research-is-funding-new-building-of-the-competence-cente/",
+      "permanent": true
+    },
+    {
+      "source": "/ecowas-wascal-hold-validation-workshop-on-impact-of-climate-change-on-agriculture-water-in-west-africa/",
+      "destination": "/news/ecowas-wascal-hold-validation-workshop-on-impact-of-climate-change-on-agriculture-water-in/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-has-invested-e120-million-in-wascal-for-climate-change-and-renewable-energy-in-west-africa/",
+      "destination": "/news/bmbf-has-invested-e120-million-in-wascal-for-climate-change-and-renewable-energy-in-west-a/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-and-wascal-pay-evaluation-visit-to-niger-on-green-hydrogen-programme/",
+      "destination": "/news/bmbf-and-wascal-pay-evaluation-visit-to-niger-on-green-hydrogen-programme/",
+      "permanent": true
+    },
+    {
+      "source": "/burkina-faso-wascal-to-build-a-competence-centre-in-ouagadougou/",
+      "destination": "/news/burkina-faso-wascal-to-build-a-competence-centre-in-ouagadougou/",
+      "permanent": true
+    },
+    {
+      "source": "/prof-christoph-rovekamp-visits-the-wascal-graduate-research-programme-in-climate-change-and-biodiversity/",
+      "destination": "/news/prof-christoph-rovekamp-visits-the-wascal-graduate-research-programme-in-climate-change-an/",
+      "permanent": true
+    },
+    {
+      "source": "/west-african-ministers-meet-on-climate-change-and-green-hydrogen-for-the-sub-region/",
+      "destination": "/news/west-african-ministers-meet-on-climate-change-and-green-hydrogen-for-the-sub-region/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-hybrid-waste-to-ernergy-deadline-31-07-2021/",
+      "destination": "/news/procurement-notice-hybrid-waste-to-ernergy-deadline-31-07-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-4th-ministerial-council-meeting-in-ouagadougou-burkina-faso-2/",
+      "destination": "/news/wascal-4th-ministerial-council-meeting-in-ouagadougou-burkina-faso-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-4th-ministerial-council-meeting-in-ouagadougou-burkina-faso/",
+      "destination": "/news/wascal-4th-ministerial-council-meeting-in-ouagadougou-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-partners-make-strides-in-climate-informationfor-integrated-renewable-electricity-generation/",
+      "destination": "/news/wascal-and-partners-make-strides-in-climate-informationfor-integrated-renewable-electricit/",
+      "permanent": true
+    },
+    {
+      "source": "/final-stakeholder-event-of-climate-information-for-integrated-renewable-electricity-generation-in-west-africa/",
+      "destination": "/news/final-stakeholder-event-of-climate-information-for-integrated-renewable-electricity-genera/",
+      "permanent": true
+    },
+    {
+      "source": "/capacity-building-in-support-of-weather-water-and-climate-services-in-mali-and-niger/",
+      "destination": "/news/capacity-building-in-support-of-weather-water-and-climate-services-in-mali-and-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/disaster-risk-reduction-practice-research-and-capacity-building-support-to-ecowas/",
+      "destination": "/news/disaster-risk-reduction-practice-research-and-capacity-building-support-to-ecowas/",
+      "permanent": true
+    },
+    {
+      "source": "/cireg/",
+      "destination": "/news/cireg/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-on-climate-change-and-economics/",
+      "destination": "/news/factsheet-doctoral-research-programme-on-climate-change-and-economics/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-programme-climate-change-and-disaster-risks-management/",
+      "destination": "/news/factsheet-doctoral-programme-climate-change-and-disaster-risks-management/",
+      "permanent": true
+    },
+    {
+      "source": "/karliczek-west-africa-can-become-the-climate-friendly-energy-powerhouse-of-the-world/",
+      "destination": "/news/karliczek-west-africa-can-become-the-climate-friendly-energy-powerhouse-of-the-world/",
+      "permanent": true
+    },
+    {
+      "source": "/cabes/",
+      "destination": "/news/cabes/",
+      "permanent": true
+    },
+    {
+      "source": "/parades/",
+      "destination": "/news/parades/",
+      "permanent": true
+    },
+    {
+      "source": "/wwcs-mali-and-niger/",
+      "destination": "/news/wwcs-mali-and-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/agrica/",
+      "destination": "/news/agrica/",
+      "permanent": true
+    },
+    {
+      "source": "/green-builders/",
+      "destination": "/news/green-builders/",
+      "permanent": true
+    },
+    {
+      "source": "/drr-ecowas/",
+      "destination": "/news/drr-ecowas/",
+      "permanent": true
+    },
+    {
+      "source": "/agrain/",
+      "destination": "/news/agrain/",
+      "permanent": true
+    },
+    {
+      "source": "/enershelf/",
+      "destination": "/news/enershelf/",
+      "permanent": true
+    },
+    {
+      "source": "/ramses-ii/",
+      "destination": "/news/ramses-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/join-the-wascal-5th-batch-scholarship-open-day/",
+      "destination": "/news/join-the-wascal-5th-batch-scholarship-open-day/",
+      "permanent": true
+    },
+    {
+      "source": "/ghana-minister-for-environment-tours-bmbf-funded-waste-to-energy-project-site/",
+      "destination": "/news/ghana-minister-for-environment-tours-bmbf-funded-waste-to-energy-project-site/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-association-of-african-universities-sign-pact-to-expand-climate-change-training-of-west-african-scientists/",
+      "destination": "/news/wascal-and-association-of-african-universities-sign-pact-to-expand-climate-change-training/",
+      "permanent": true
+    },
+    {
+      "source": "/100-scholarship-in-any-of-our-11-west-african-countries-of-your-choice/",
+      "destination": "/news/100-scholarship-in-any-of-our-11-west-african-countries-of-your-choice/",
+      "permanent": true
+    },
+    {
+      "source": "/training-on-drones-as-a-new-working-tool-for-biologists-and-conservationists-held-at-wascal-cabo-verde/",
+      "destination": "/news/training-on-drones-as-a-new-working-tool-for-biologists-and-conservationists-held-at-wasca/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-first-green-hydrogen-scholarship-applicants/",
+      "destination": "/news/wascal-engages-first-green-hydrogen-scholarship-applicants/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-scholarship-opportunities-download-the-gambia-call-for-application/",
+      "destination": "/news/wascal-scholarship-opportunities-download-the-gambia-call-for-application/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-on-climate-change-related-risks-and-other-degradation-factors-in-view-of-achieving-integrated-ecosystems-management-in-the-volta-mono-niger-and-senegal-sub-basins-and-in-fouta-djalon-massif/",
+      "destination": "/news/workshop-on-climate-change-related-risks-and-other-degradation-factors-in-view-of-achievin/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-online-free-trainings-to-celebrate-international-open-data-day-2021/",
+      "destination": "/news/wascals-online-free-trainings-to-celebrate-international-open-data-day-2021/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-graduate-school-directors-delibrate-on-innovative-ways-to-build-climate-change-capacities-in-west-africa/",
+      "destination": "/news/wascal-graduate-school-directors-delibrate-on-innovative-ways-to-build-climate-change-capa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-students-in-marine-sciences-visit-shrimp-cultivation-farm-in-cabo-verde/",
+      "destination": "/news/wascal-students-in-marine-sciences-visit-shrimp-cultivation-farm-in-cabo-verde/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-ecowas-deepen-partnerships-to-fight-climate-change/",
+      "destination": "/news/wascal-and-ecowas-deepen-partnerships-to-fight-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/invitation-to-tender/",
+      "destination": "/news/invitation-to-tender/",
+      "permanent": true
+    },
+    {
+      "source": "/gofc-warn-regional-workshop/",
+      "destination": "/news/gofc-warn-regional-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/underwater-ecology-observation/",
+      "destination": "/news/underwater-ecology-observation/",
+      "permanent": true
+    },
+    {
+      "source": "/ecowas-wascals-virtual-kick-off-workshop-at-the-comptence-center/",
+      "destination": "/news/ecowas-wascals-virtual-kick-off-workshop-at-the-comptence-center/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-launches-new-scholarship-scheme-on-energy-and-green-hydrogen-for-ecowas-students/",
+      "destination": "/news/wascal-launches-new-scholarship-scheme-on-energy-and-green-hydrogen-for-ecowas-students/",
+      "permanent": true
+    },
+    {
+      "source": "/international-master-programme-in-energy-and-green-hydrogen-technology-imp-egh/",
+      "destination": "/news/international-master-programme-in-energy-and-green-hydrogen-technology-imp-egh/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-with-full-scholarship-available-cote-divoire/",
+      "destination": "/news/call-for-applications-with-full-scholarship-available-cote-divoire/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-with-full-scholarship-available-niger/",
+      "destination": "/news/call-for-applications-with-full-scholarship-available-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-with-full-scholarship-available-ucad/",
+      "destination": "/news/call-for-applications-with-full-scholarship-available-ucad/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-with-full-scholarship-available/",
+      "destination": "/news/call-for-applications-with-full-scholarship-available/",
+      "permanent": true
+    },
+    {
+      "source": "/working-together-in-the-interest-of-the-forests-and-sustainability/",
+      "destination": "/news/working-together-in-the-interest-of-the-forests-and-sustainability/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-assesses-its-colloboration-with-national-meteorological-services-and-agencies/",
+      "destination": "/news/wascal-assesses-its-colloboration-with-national-meteorological-services-and-agencies/",
+      "permanent": true
+    },
+    {
+      "source": "/hybrid-waste-to-energy-project-can-control-ghanas-energy-sanitation-problems-dr-julius-ahiekpor/",
+      "destination": "/news/hybrid-waste-to-energy-project-can-control-ghanas-energy-sanitation-problems-dr-julius-ahi/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-in-climate-change-and-land-use-ghana/",
+      "destination": "/news/factsheet-doctoral-research-programme-in-climate-change-and-land-use-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-in-climate-change-and-education-the-gambia/",
+      "destination": "/news/factsheet-doctoral-research-programme-in-climate-change-and-education-the-gambia/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-on-climate-change-and-energy/",
+      "destination": "/news/factsheet-doctoral-research-programme-on-climate-change-and-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-in-climate-change-and-agriculture-mali/",
+      "destination": "/news/factsheet-doctoral-research-programme-in-climate-change-and-agriculture-mali/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-in-west-african-climate-systems-akure-nigeria/",
+      "destination": "/news/factsheet-doctoral-research-programme-in-west-african-climate-systems-akure-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-celebrates-international-day-for-women-and-girls-in-science/",
+      "destination": "/news/wascal-celebrates-international-day-for-women-and-girls-in-science/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-4th-quarter-newsletter-2020/",
+      "destination": "/news/wascal-4th-quarter-newsletter-2020/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-master-research-programme-in-climate-change-and-marine-sciences-cabo-verde/",
+      "destination": "/news/factsheet-master-research-programme-in-climate-change-and-marine-sciences-cabo-verde/",
+      "permanent": true
+    },
+    {
+      "source": "/master-research-programme-in-informatics-for-climate-change-burkina-faso/",
+      "destination": "/news/master-research-programme-in-informatics-for-climate-change-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/doctoral-research-programme-in-climate-change-and-human-habitat-futmina-nigeria/",
+      "destination": "/news/doctoral-research-programme-in-climate-change-and-human-habitat-futmina-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheets-doctoral-research-programme-in-climate-and-biodiversity-cote-divoire/",
+      "destination": "/news/factsheets-doctoral-research-programme-in-climate-and-biodiversity-cote-divoire/",
+      "permanent": true
+    },
+    {
+      "source": "/factsheet-doctoral-research-programme-climate-change-and-water-resources-benin/",
+      "destination": "/news/factsheet-doctoral-research-programme-climate-change-and-water-resources-benin/",
+      "permanent": true
+    },
+    {
+      "source": "/official-handing-over-of-automatic-sensors/",
+      "destination": "/news/official-handing-over-of-automatic-sensors/",
+      "permanent": true
+    },
+    {
+      "source": "/waste-to-energy/",
+      "destination": "/news/waste-to-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-graduates/",
+      "destination": "/news/wascal-graduates/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-announcement-annonce-datelier-mapping-conceptual-models-of-migration-in-west-africa-cartographie-des-modeles-conceptuels-en-matiere-de-migration-en-afrique-de-louest/",
+      "destination": "/news/workshop-announcement-annonce-datelier-mapping-conceptual-models-of-migration-in-west-afri/",
+      "permanent": true
+    },
+    {
+      "source": "/overview-of-the-coordination-project/",
+      "destination": "/news/overview-of-the-coordination-project/",
+      "permanent": true
+    },
+    {
+      "source": "/seasons-greetings/",
+      "destination": "/news/seasons-greetings/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-cabo-verde-welcomes-2nd-batch-of-masters-students-in-climate-change-and-marine-sciences/",
+      "destination": "/news/wascal-cabo-verde-welcomes-2nd-batch-of-masters-students-in-climate-change-and-marine-scie/",
+      "permanent": true
+    },
+    {
+      "source": "/procurement-notice-acquisition-of-solar-pv-system-deadline-31-12-2020/",
+      "destination": "/news/procurement-notice-acquisition-of-solar-pv-system-deadline-31-12-2020/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-postdoc-fellowships-daad-climapafrica-africans-in-climate-research-deadline-15-02-2021/",
+      "destination": "/news/call-for-applications-postdoc-fellowships-daad-climapafrica-africans-in-climate-research-d/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-west-african-vice-chancellors-stregthen-partnerships-to-fight-climate-change/",
+      "destination": "/news/wascal-and-west-african-vice-chancellors-stregthen-partnerships-to-fight-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/advertisement-for-a-co-operator-of-a-400-kw-hybrid-waste-to-energy-facility-at-gyankobaa/",
+      "destination": "/news/advertisement-for-a-co-operator-of-a-400-kw-hybrid-waste-to-energy-facility-at-gyankobaa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-presents-60-automatic-hydrological-sensors-to-seven-west-african-countries-with-support-from-germany/",
+      "destination": "/news/wascal-presents-60-automatic-hydrological-sensors-to-seven-west-african-countries-with-sup/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-centre-fellows/",
+      "destination": "/news/call-for-applications-centre-fellows/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-science-comptence-centre-engages-west-african-players-in-meteorological-observation-network/",
+      "destination": "/news/wascal-science-comptence-centre-engages-west-african-players-in-meteorological-observation/",
+      "permanent": true
+    },
+    {
+      "source": "/cireg-policy-briefs/",
+      "destination": "/news/cireg-policy-briefs/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-annual-report-2019/",
+      "destination": "/news/wascal-annual-report-2019/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter-2nd-quarter/",
+      "destination": "/news/wascal-newsletter-2nd-quarter/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-fatou-gueye-becomes-first-female-professor-of-economics-at-the-university-of-cheikh-anta-diop-ucad-senegal/",
+      "destination": "/news/wascals-fatou-gueye-becomes-first-female-professor-of-economics-at-the-university-of-cheik/",
+      "permanent": true
+    },
+    {
+      "source": "/fighting-covid-19-wascal-staff-in-federal-univ-of-technology-akure-donate-to-50-families-in-nigeria/",
+      "destination": "/news/fighting-covid-19-wascal-staff-in-federal-univ-of-technology-akure-donate-to-50-families-i/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-congratulates-germany-on-its-30th-unity-day/",
+      "destination": "/news/wascal-congratulates-germany-on-its-30th-unity-day/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-cote-divoire-partners-climate-leadership-programme-for-women-in-west-africa/",
+      "destination": "/news/wascal-cote-divoire-partners-climate-leadership-programme-for-women-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-and-ecowas-sign-mou-to-explore-potentials-of-renewable-energies/",
+      "destination": "/news/wascal-and-ecowas-sign-mou-to-explore-potentials-of-renewable-energies/",
+      "permanent": true
+    },
+    {
+      "source": "/zef-wascal-pauwes-cooperation/",
+      "destination": "/news/zef-wascal-pauwes-cooperation/",
+      "permanent": true
+    },
+    {
+      "source": "/wabes/",
+      "destination": "/news/wabes/",
+      "permanent": true
+    },
+    {
+      "source": "/green-spaces-and-repurposing-waste-building-capacities-for-resilience-in-urban-and-peri-urban-west-africa-green-builders/",
+      "destination": "/news/green-spaces-and-repurposing-waste-building-capacities-for-resilience-in-urban-and-peri-ur/",
+      "permanent": true
+    },
+    {
+      "source": "/upscalers/",
+      "destination": "/news/upscalers/",
+      "permanent": true
+    },
+    {
+      "source": "/apte21/",
+      "destination": "/news/apte21/",
+      "permanent": true
+    },
+    {
+      "source": "/generia/",
+      "destination": "/news/generia/",
+      "permanent": true
+    },
+    {
+      "source": "/waste-2-energy/",
+      "destination": "/news/waste-2-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/german-african-partnership-for-sustainable-energy-solution-through-green-hydrogen-2/",
+      "destination": "/news/german-african-partnership-for-sustainable-energy-solution-through-green-hydrogen-2/",
+      "permanent": true
+    },
+    {
+      "source": "/speech-delivered-by-dr-moumini-savadogo-at-the-virtual-kick-off-meeting-biomas-project-on-friday-17th-july-2020/",
+      "destination": "/news/speech-delivered-by-dr-moumini-savadogo-at-the-virtual-kick-off-meeting-biomas-project-on-/",
+      "permanent": true
+    },
+    {
+      "source": "/mrs-anja-karliczek-hydrogen-partnership-with-africa-planned/",
+      "destination": "/news/mrs-anja-karliczek-hydrogen-partnership-with-africa-planned/",
+      "permanent": true
+    },
+    {
+      "source": "/the-ongoing-process-of-collecting-meteorological-data/",
+      "destination": "/news/the-ongoing-process-of-collecting-meteorological-data/",
+      "permanent": true
+    },
+    {
+      "source": "/togo-biogas-reference-laboratory-to-be-built-at-lome-university/",
+      "destination": "/news/togo-biogas-reference-laboratory-to-be-built-at-lome-university/",
+      "permanent": true
+    },
+    {
+      "source": "/230000-euros-set-aside-for-renewable-energy-development-in-ghana/",
+      "destination": "/news/230000-euros-set-aside-for-renewable-energy-development-in-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/solar-system-for-the-local-economy/",
+      "destination": "/news/solar-system-for-the-local-economy/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-funded-biogas-laboratory-project-in-togo/",
+      "destination": "/news/bmbf-funded-biogas-laboratory-project-in-togo/",
+      "permanent": true
+    },
+    {
+      "source": "/potential-analysis-biogas-lab-and-pyrolysis-cooker-dbfz-starts-foreign-procject-in-togo/",
+      "destination": "/news/potential-analysis-biogas-lab-and-pyrolysis-cooker-dbfz-starts-foreign-procject-in-togo/",
+      "permanent": true
+    },
+    {
+      "source": "/womens-group-boosts-resilience-in-the-face-of-crisis/",
+      "destination": "/news/womens-group-boosts-resilience-in-the-face-of-crisis/",
+      "permanent": true
+    },
+    {
+      "source": "/moderniser-linformel-pour-creer-les-conditions-de-la-relance-post-covid-19-en-afrique-le-cas-un-senegal/",
+      "destination": "/news/moderniser-linformel-pour-creer-les-conditions-de-la-relance-post-covid-19-en-afrique-le-c/",
+      "permanent": true
+    },
+    {
+      "source": "/university-abdou-moumini-niger-appoints-christoph-rovekamp-as-associate-professor/",
+      "destination": "/news/university-abdou-moumini-niger-appoints-christoph-rovekamp-as-associate-professor/",
+      "permanent": true
+    },
+    {
+      "source": "/university-abdou-moumouni-niger-appoints-christoph-rovekamp-as-associate-professor/",
+      "destination": "/news/university-abdou-moumouni-niger-appoints-christoph-rovekamp-as-associate-professor/",
+      "permanent": true
+    },
+    {
+      "source": "/green-hydrogen-made-in-africa-2/",
+      "destination": "/news/green-hydrogen-made-in-africa-2/",
+      "permanent": true
+    },
+    {
+      "source": "/green-hydrogen-made-in-africa/",
+      "destination": "/news/green-hydrogen-made-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/vacancy-for-data-technician-renewable-energy-project/",
+      "destination": "/news/vacancy-for-data-technician-renewable-energy-project/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-climate-news/",
+      "destination": "/news/wascal-climate-news/",
+      "permanent": true
+    },
+    {
+      "source": "/leveraging-on-covid-19-response-funds-to-support-livelihoods-in-africa/",
+      "destination": "/news/leveraging-on-covid-19-response-funds-to-support-livelihoods-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/apply-for-a-massive-open-online-coursemooc-in-social-innovation-in-water-and-climate-change-in-africa/",
+      "destination": "/news/apply-for-a-massive-open-online-coursemooc-in-social-innovation-in-water-and-climate-chang/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-to-wascal-climate-masters-programmes-in-cabo-verde-and-burkina-faso-2020-2021-academic-year/",
+      "destination": "/news/call-for-applications-to-wascal-climate-masters-programmes-in-cabo-verde-and-burkina-faso-/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-application-for-the-second-batch-of-masters-students/",
+      "destination": "/news/call-for-application-for-the-second-batch-of-masters-students/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-proposals-the-environmental-social-and-economic-impact-of-waste-to-energy-wte-project/",
+      "destination": "/news/call-for-proposals-the-environmental-social-and-economic-impact-of-waste-to-energy-wte-pro/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-congratulates-all-women-in-climate-change/",
+      "destination": "/news/wascal-congratulates-all-women-in-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/speech-by-h-e-ms-marie-odile-attanasso-benin-minister-of-higher-education/",
+      "destination": "/news/speech-by-h-e-ms-marie-odile-attanasso-benin-minister-of-higher-education/",
+      "permanent": true
+    },
+    {
+      "source": "/minister-of-environment-science-technology-and-innovations-speech/",
+      "destination": "/news/minister-of-environment-science-technology-and-innovations-speech/",
+      "permanent": true
+    },
+    {
+      "source": "/german-ambassadors-speech/",
+      "destination": "/news/german-ambassadors-speech/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-professor-kehinde-ogunjobi-as-new-director-of-research/",
+      "destination": "/news/wascal-appoints-professor-kehinde-ogunjobi-as-new-director-of-research/",
+      "permanent": true
+    },
+    {
+      "source": "/tomorrows-oil-germany-seeks-hydrogen-export-deal-with-west-african-states/",
+      "destination": "/news/tomorrows-oil-germany-seeks-hydrogen-export-deal-with-west-african-states/",
+      "permanent": true
+    },
+    {
+      "source": "/karliczek-hydrogen-partnership-with-africa-planned/",
+      "destination": "/news/karliczek-hydrogen-partnership-with-africa-planned/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-funded-project-on-400-kw-hybrid-waste-to-energy-power-plant-kicks-off-in-ghana/",
+      "destination": "/news/bmbf-funded-project-on-400-kw-hybrid-waste-to-energy-power-plant-kicks-off-in-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/professor-daouda-kone-is-new-director-of-capacity-building-at-wascal/",
+      "destination": "/news/professor-daouda-kone-is-new-director-of-capacity-building-at-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-application-climapafrica/",
+      "destination": "/news/call-for-application-climapafrica/",
+      "permanent": true
+    },
+    {
+      "source": "/production-of-green-hydrogen-in-west-africa-to-explore-renewable-energy-sources/",
+      "destination": "/news/production-of-green-hydrogen-in-west-africa-to-explore-renewable-energy-sources/",
+      "permanent": true
+    },
+    {
+      "source": "/the-best-federal-university-of-technology-in-nigeria-confers-doctor-honoris-causa-on-mr-gabin-ananou/",
+      "destination": "/news/the-best-federal-university-of-technology-in-nigeria-confers-doctor-honoris-causa-on-mr-ga/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-particpates-in-dialogue-on-climate-change-in-west-africa-at-cop/",
+      "destination": "/news/wascal-particpates-in-dialogue-on-climate-change-in-west-africa-at-cop/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-services-for-a-renewable-future-in-west-africa/",
+      "destination": "/news/climate-services-for-a-renewable-future-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-reference-tor-internship-programme-with-wascal/",
+      "destination": "/news/terms-of-reference-tor-internship-programme-with-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-staff-build-capacity-in-climate-change-events-management-and-protocol-services/",
+      "destination": "/news/wascal-staff-build-capacity-in-climate-change-events-management-and-protocol-services/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-full-climate-change-scholarships-to-132-west-african-phd-students/",
+      "destination": "/news/wascal-offers-full-climate-change-scholarships-to-132-west-african-phd-students/",
+      "permanent": true
+    },
+    {
+      "source": "/3rd-zef-wascal-pauwes-workshop-on-students-capacity-building/",
+      "destination": "/news/3rd-zef-wascal-pauwes-workshop-on-students-capacity-building/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-pauwes-zef-cooperation-trained-its-students-on-climate-change-and-water-resources/",
+      "destination": "/news/wascal-pauwes-zef-cooperation-trained-its-students-on-climate-change-and-water-resources/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-pauwes-zef-mid-term-cooperation-meeting-organized-at-the-university-of-abdou-moumouni-in-niamey-niger/",
+      "destination": "/news/wascal-pauwes-zef-mid-term-cooperation-meeting-organized-at-the-university-of-abdou-moumou/",
+      "permanent": true
+    },
+    {
+      "source": "/clapafrica-call-for-application/",
+      "destination": "/news/clapafrica-call-for-application/",
+      "permanent": true
+    },
+    {
+      "source": "/global-warming-in-africa/",
+      "destination": "/news/global-warming-in-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/poste-vacant-directeur-de-la-recherche/",
+      "destination": "/news/poste-vacant-directeur-de-la-recherche/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-dlr-pt-sign-grant-agreement-on-behalf-of-the-federal-ministry-of-research-and-education-germany/",
+      "destination": "/news/wascal-dlr-pt-sign-grant-agreement-on-behalf-of-the-federal-ministry-of-research-and-educa/",
+      "permanent": true
+    },
+    {
+      "source": "/german-federal-minister-for-education-and-research-visits-wascal/",
+      "destination": "/news/german-federal-minister-for-education-and-research-visits-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/german-west-african-ministers-meet-to-deliberate-on-climate-change-in-west-africa/",
+      "destination": "/news/german-west-african-ministers-meet-to-deliberate-on-climate-change-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/third-wascal-ministerial-council-meeting-slated-for-30th-july-in-accra/",
+      "destination": "/news/third-wascal-ministerial-council-meeting-slated-for-30th-july-in-accra/",
+      "permanent": true
+    },
+    {
+      "source": "/german-parliamentarians-visit-wascal/",
+      "destination": "/news/german-parliamentarians-visit-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-so-far/",
+      "destination": "/news/wascal-so-far/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter-3rd-quarter-2018/",
+      "destination": "/news/wascal-newsletter-3rd-quarter-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter-2nd-quarter-2018/",
+      "destination": "/news/wascal-newsletter-2nd-quarter-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter_-jan-march-2018-3/",
+      "destination": "/news/wascal-newsletter-jan-march-2018-3/",
+      "permanent": true
+    },
+    {
+      "source": "/three-international-institutions-launch-clap-africa-project-to-develop-climate-change-capacities-in-africa/",
+      "destination": "/news/three-international-institutions-launch-clap-africa-project-to-develop-climate-change-capa/",
+      "permanent": true
+    },
+    {
+      "source": "/government-of-germany-wascal-engage-media-on-climate-change/",
+      "destination": "/news/government-of-germany-wascal-engage-media-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-outdoors-west-african-climate-change-book-series-on-floods/",
+      "destination": "/news/wascal-outdoors-west-african-climate-change-book-series-on-floods/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-engage-stakeholders-on-paris-agreement-at-africa-climate-week/",
+      "destination": "/news/wascal-to-engage-stakeholders-on-paris-agreement-at-africa-climate-week/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-celebrates-women-in-climate-change/",
+      "destination": "/news/wascal-celebrates-women-in-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-ii-research-call-for-proposal-wrap-2-0/",
+      "destination": "/news/wascal-ii-research-call-for-proposal-wrap-2-0/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-call-for-applications-for-graduate-studies-programme/",
+      "destination": "/news/wascal-call-for-applications-for-graduate-studies-programme/",
+      "permanent": true
+    },
+    {
+      "source": "/the-gambian-president-and-the-university-of-the-gambia-are-thankful-to-bmbf/",
+      "destination": "/news/the-gambian-president-and-the-university-of-the-gambia-are-thankful-to-bmbf/",
+      "permanent": true
+    },
+    {
+      "source": "/world-symposium-on-climate-change-adaptatio-akure-nigeria/",
+      "destination": "/news/world-symposium-on-climate-change-adaptatio-akure-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/weather-forecasting-experts-converge-for-a-write-shop/",
+      "destination": "/news/weather-forecasting-experts-converge-for-a-write-shop/",
+      "permanent": true
+    },
+    {
+      "source": "/multi-dimensional-approach-for-evaluating-land-degradation/",
+      "destination": "/news/multi-dimensional-approach-for-evaluating-land-degradation/",
+      "permanent": true
+    },
+    {
+      "source": "/hydrological-system-analysis-and-modelling-of-the-kara-river-basin-west-africa-using-a-lumped-metric-conceptual-model/",
+      "destination": "/news/hydrological-system-analysis-and-modelling-of-the-kara-river-basin-west-africa-using-a-lum/",
+      "permanent": true
+    },
+    {
+      "source": "/coarse-scale-remote-sensing-and-gis-evaluation/",
+      "destination": "/news/coarse-scale-remote-sensing-and-gis-evaluation/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-amma-2050-set-roadmap-to-activate-science-policy-links-in-west-africa/",
+      "destination": "/news/wascal-amma-2050-set-roadmap-to-activate-science-policy-links-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/doctoral-programme-climate-change-and-water-resources/",
+      "destination": "/news/doctoral-programme-climate-change-and-water-resources-22/",
+      "permanent": true
+    },
+    {
+      "source": "/welcome-to-wascal/",
+      "destination": "/news/welcome-to-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-to-support-the-gambia-in-climate-change-and-renewable-energy-2/",
+      "destination": "/news/bmbf-to-support-the-gambia-in-climate-change-and-renewable-energy-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-participates-in-the-7th-conference-on-climate-change/",
+      "destination": "/news/wascal-participates-in-the-7th-conference-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-participates-in-the-7th-conference-on-climate-change-2/",
+      "destination": "/news/wascal-participates-in-the-7th-conference-on-climate-change-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-supports-the-scientific-pillar-of-the-alliance-sahel-2/",
+      "destination": "/news/wascal-supports-the-scientific-pillar-of-the-alliance-sahel-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-loses-former-board-chair/",
+      "destination": "/news/wascal-loses-former-board-chair/",
+      "permanent": true
+    },
+    {
+      "source": "/230000-euros-set-aside-for-renewable-energy-development-in-ghana-2-2/",
+      "destination": "/news/230000-euros-set-aside-for-renewable-energy-development-in-ghana-2-2/",
+      "permanent": true
+    },
+    {
+      "source": "/230000-euros-set-aside-for-renewable-energy-development-in-ghana-2/",
+      "destination": "/news/230000-euros-set-aside-for-renewable-energy-development-in-ghana-2/",
+      "permanent": true
+    },
+    {
+      "source": "/deepening-african-german-partnership-to-combat-climate-change/",
+      "destination": "/news/deepening-african-german-partnership-to-combat-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/cheikh-anta-diop-university-of-dakar-confers-honoris-causa-award-on-dr-wilfried-kraus/",
+      "destination": "/news/cheikh-anta-diop-university-of-dakar-confers-honoris-causa-award-on-dr-wilfried-kraus/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-alumni-homecoming-call-for-application/",
+      "destination": "/news/wascal-alumni-homecoming-call-for-application/",
+      "permanent": true
+    },
+    {
+      "source": "/opportunity-to-be-part-of-wascal-alumni-internship-program-2018-2019/",
+      "destination": "/news/opportunity-to-be-part-of-wascal-alumni-internship-program-2018-2019/",
+      "permanent": true
+    },
+    {
+      "source": "/science-symposium-call-for-participation-2/",
+      "destination": "/news/science-symposium-call-for-participation-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-visiting-scholars-programme-2018-2019-call-for-application/",
+      "destination": "/news/wascal-visiting-scholars-programme-2018-2019-call-for-application/",
+      "permanent": true
+    },
+    {
+      "source": "/germanys-offer-for-a-cooperation-on-renewable-energies-in-ghana-takes-off/",
+      "destination": "/news/germanys-offer-for-a-cooperation-on-renewable-energies-in-ghana-takes-off/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-senior-scientist-involved-in-the-next-ipcc-assessment-report/",
+      "destination": "/news/wascal-senior-scientist-involved-in-the-next-ipcc-assessment-report/",
+      "permanent": true
+    },
+    {
+      "source": "/9th-meeting-of-the-scientific-and-advisory-committee/",
+      "destination": "/news/9th-meeting-of-the-scientific-and-advisory-committee/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-and-energy-graduands-of-wascal-tasked/",
+      "destination": "/news/climate-change-and-energy-graduands-of-wascal-tasked/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-deepens-ties-with-burkina-faso/",
+      "destination": "/news/wascal-deepens-ties-with-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/lul-decerne-son-1er-diplome-docteur-honoris-causa-a-lallemand-wilfried-kraus-directeur-adjoint-du-departement-developpement-durable-climat-et-energie-au-ministere/",
+      "destination": "/news/lul-decerne-son-1er-diplome-docteur-honoris-causa-a-lallemand-wilfried-kraus-directeur-adj/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-to-continue-supporting-wascal-for-the-next-decade/",
+      "destination": "/news/bmbf-to-continue-supporting-wascal-for-the-next-decade/",
+      "permanent": true
+    },
+    {
+      "source": "/university-of-lome-confers-honoris-causa-on-dr-wilfried-kraus-of-bmbf/",
+      "destination": "/news/university-of-lome-confers-honoris-causa-on-dr-wilfried-kraus-of-bmbf/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-dr-moumini-savadogo-as-substantive-executive-director/",
+      "destination": "/news/wascal-appoints-dr-moumini-savadogo-as-substantive-executive-director/",
+      "permanent": true
+    },
+    {
+      "source": "/director-of-sustainable-development-goals-center-for-africa-visits-wascal/",
+      "destination": "/news/director-of-sustainable-development-goals-center-for-africa-visits-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/bmbf-ready-to-fund-4th-batch-of-graduate-studies-programme-of-wascal/",
+      "destination": "/news/bmbf-ready-to-fund-4th-batch-of-graduate-studies-programme-of-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-research-results-must-be-practical-prof-rene-haak-of-bmbf/",
+      "destination": "/news/climate-research-results-must-be-practical-prof-rene-haak-of-bmbf/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-co-organize-world-cafe-at-cop-23-in-germany/",
+      "destination": "/news/wascal-co-organize-world-cafe-at-cop-23-in-germany/",
+      "permanent": true
+    },
+    {
+      "source": "/tribute-to-professor-abdourahamane-konare/",
+      "destination": "/news/tribute-to-professor-abdourahamane-konare/",
+      "permanent": true
+    },
+    {
+      "source": "/hommage-au-professeur-abdourahamane-konare/",
+      "destination": "/news/hommage-au-professeur-abdourahamane-konare/",
+      "permanent": true
+    },
+    {
+      "source": "/ghana-to-benefit-from-new-regional-weather-stations/",
+      "destination": "/news/ghana-to-benefit-from-new-regional-weather-stations/",
+      "permanent": true
+    },
+    {
+      "source": "/ghana-to-benefit-from-new-regional-weather-stations-2/",
+      "destination": "/news/ghana-to-benefit-from-new-regional-weather-stations-2/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-international-workshop-on-high-performance-computing-hpc/",
+      "destination": "/news/call-for-applications-international-workshop-on-high-performance-computing-hpc/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-participates-in-germany-ghana-60th-anniversary-event/",
+      "destination": "/news/wascal-participates-in-germany-ghana-60th-anniversary-event/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-hires-new-director-of-finance-and-administration/",
+      "destination": "/news/wascal-hires-new-director-of-finance-and-administration/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-collaborates-with-nasa-to-school-west-african-climate-students/",
+      "destination": "/news/wascal-collaborates-with-nasa-to-school-west-african-climate-students/",
+      "permanent": true
+    },
+    {
+      "source": "/minister-of-environment-assures-wascal-of-ghana-governments-support/",
+      "destination": "/news/minister-of-environment-assures-wascal-of-ghana-governments-support/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-newsletter-july-sep-2017/",
+      "destination": "/news/wascal-newsletter-july-sep-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/cospar-capacity-building-workshop-2017/",
+      "destination": "/news/cospar-capacity-building-workshop-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-on-earth-observation-technology-for-effective-natural-resources-management-with-focus-on-water-for-agriculture/",
+      "destination": "/news/workshop-on-earth-observation-technology-for-effective-natural-resources-management-with-f/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-on-earth-observation-technology-for-effective-natural-resources-management-with-focus-on-water-for-agriculture-2/",
+      "destination": "/news/workshop-on-earth-observation-technology-for-effective-natural-resources-management-with-f-2507/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-gets-new-scientific-advisory-committee-chairman/",
+      "destination": "/news/wascal-gets-new-scientific-advisory-committee-chairman/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-professor-jimmy-adegoke-as-new-interim-executive-director/",
+      "destination": "/news/wascal-appoints-professor-jimmy-adegoke-as-new-interim-executive-director/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-appoints-professor-jimmy-adegoke-as-new-interim-executive-director-2/",
+      "destination": "/news/wascal-appoints-professor-jimmy-adegoke-as-new-interim-executive-director-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-wins-excellence-and-productivity-award-in-nigeria/",
+      "destination": "/news/wascal-wins-excellence-and-productivity-award-in-nigeria/",
+      "permanent": true
+    },
+    {
+      "source": "/nine-doctoral-students-from-wascal-graduate-in-climate-change-and-biodversity/",
+      "destination": "/news/nine-doctoral-students-from-wascal-graduate-in-climate-change-and-biodversity/",
+      "permanent": true
+    },
+    {
+      "source": "/first-batch-of-climate-change-and-agriculture-phd-students-graduate/",
+      "destination": "/news/first-batch-of-climate-change-and-agriculture-phd-students-graduate/",
+      "permanent": true
+    },
+    {
+      "source": "/searching-for-rain-in-burkina-faso-2/",
+      "destination": "/news/searching-for-rain-in-burkina-faso-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-committed-to-providing-innovative-solutions-to-climate-change-and-water-related-needs-in-africa/",
+      "destination": "/news/wascal-committed-to-providing-innovative-solutions-to-climate-change-and-water-related-nee/",
+      "permanent": true
+    },
+    {
+      "source": "/searching-for-rain-in-burkina-faso/",
+      "destination": "/news/searching-for-rain-in-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-career-scientists-2/",
+      "destination": "/news/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-care/",
+      "permanent": true
+    },
+    {
+      "source": "/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-career-scientists-3/",
+      "destination": "/news/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-care-2512/",
+      "permanent": true
+    },
+    {
+      "source": "/international-climate-change-research-methodology-workshop-and-networking-sessions-ongoing-in-benin-and-niger/",
+      "destination": "/news/international-climate-change-research-methodology-workshop-and-networking-sessions-ongoing/",
+      "permanent": true
+    },
+    {
+      "source": "/men-and-women-farmers-in-benin-are-responding-differently-to-climate-change/",
+      "destination": "/news/men-and-women-farmers-in-benin-are-responding-differently-to-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/atelier-de-mise-en-reseau-et-validation-des-protocoles-du-projet-apte-21/",
+      "destination": "/news/atelier-de-mise-en-reseau-et-validation-des-protocoles-du-projet-apte-21/",
+      "permanent": true
+    },
+    {
+      "source": "/sage-mir-wann-der-regen-kommt/",
+      "destination": "/news/sage-mir-wann-der-regen-kommt/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-schools-west-african-climate-managers-scientists-2/",
+      "destination": "/news/wascal-schools-west-african-climate-managers-scientists-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-schools-west-african-climate-managers-scientists-3/",
+      "destination": "/news/wascal-schools-west-african-climate-managers-scientists-3/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-schools-west-african-climate-managers-and-scientists/",
+      "destination": "/news/wascal-schools-west-african-climate-managers-and-scientists/",
+      "permanent": true
+    },
+    {
+      "source": "/call-for-applications-for-cospar-capacity-building-workshop-2017/",
+      "destination": "/news/call-for-applications-for-cospar-capacity-building-workshop-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-career-scientists/",
+      "destination": "/news/hydro-climate-and-remote-sensing-training-opportunity-for-west-african-students-early-care-1290/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-signs-mou-with-government-of-burkina-faso/",
+      "destination": "/news/wascal-signs-mou-with-government-of-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/african-countries-urged-to-seek-pathways-for-climate-resilient-growth/",
+      "destination": "/news/african-countries-urged-to-seek-pathways-for-climate-resilient-growth/",
+      "permanent": true
+    },
+    {
+      "source": "/scaling-up-climate-policy-and-solutions-requires-enabling-environment/",
+      "destination": "/news/scaling-up-climate-policy-and-solutions-requires-enabling-environment/",
+      "permanent": true
+    },
+    {
+      "source": "/scaling-up-climate-policy-and-solutions-requires-enabling-environment-2/",
+      "destination": "/news/scaling-up-climate-policy-and-solutions-requires-enabling-environment-2/",
+      "permanent": true
+    },
+    {
+      "source": "/four-phd-students-graduate-in-climate-change-and-biodiversity/",
+      "destination": "/news/four-phd-students-graduate-in-climate-change-and-biodiversity/",
+      "permanent": true
+    },
+    {
+      "source": "/18-non-wascal-sponsored-students-win-theses-grant-awards/",
+      "destination": "/news/18-non-wascal-sponsored-students-win-theses-grant-awards/",
+      "permanent": true
+    },
+    {
+      "source": "/government-of-hungary-pledges-support-for-wascal/",
+      "destination": "/news/government-of-hungary-pledges-support-for-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-showcases-its-operations-at-wacee-2016/",
+      "destination": "/news/wascal-showcases-its-operations-at-wacee-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/entretien-avec-le-dr-laurent-sedogo-directeur-executif-de-wascal-sur-la-question-du-changement-climatique/",
+      "destination": "/news/entretien-avec-le-dr-laurent-sedogo-directeur-executif-de-wascal-sur-la-question-du-change/",
+      "permanent": true
+    },
+    {
+      "source": "/semaine-wascal-2016-les-acteurs-du-changement-climatique-de-la-sous-region-en-reflexion/",
+      "destination": "/news/semaine-wascal-2016-les-acteurs-du-changement-climatique-de-la-sous-region-en-reflexion/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-une-conference-scientifique-regionale-pour-mieux-cerner-le-phenomene-des-changements-climatiques-2/",
+      "destination": "/news/wascal-une-conference-scientifique-regionale-pour-mieux-cerner-le-phenomene-des-changement/",
+      "permanent": true
+    },
+    {
+      "source": "/semaine-wascal-2016-le-ministre-filiga-sur-le-site-du-nouveau-siege/",
+      "destination": "/news/semaine-wascal-2016-le-ministre-filiga-sur-le-site-du-nouveau-siege/",
+      "permanent": true
+    },
+    {
+      "source": "/semaine-wascal-2016-les-acteurs-du-changement-climatique-de-la-sous-region-en-reflexion-2/",
+      "destination": "/news/semaine-wascal-2016-les-acteurs-du-changement-climatique-de-la-sous-region-en-reflexion-2/",
+      "permanent": true
+    },
+    {
+      "source": "/enseignement-superieur-wascal-ouvrira-un-master-en-changement-climatique-et-informatique-a-luo1-pr-joseph-ki-zerbo/",
+      "destination": "/news/enseignement-superieur-wascal-ouvrira-un-master-en-changement-climatique-et-informatique-a/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-des-journees-portes-ouvertes-pour-mieux-se-faire-connaitre/",
+      "destination": "/news/wascal-des-journees-portes-ouvertes-pour-mieux-se-faire-connaitre/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-une-conference-scientifique-regionale-pour-mieux-cerner-le-phenomene-des-changements-climatiques/",
+      "destination": "/news/wascal-une-conference-scientifique-regionale-pour-mieux-cerner-le-phenomene-des-changement-2184/",
+      "permanent": true
+    },
+    {
+      "source": "/formations-et-recherche-sur-les-changements-climatiques-wascal-souvre-au-public-burkinabe/",
+      "destination": "/news/formations-et-recherche-sur-les-changements-climatiques-wascal-souvre-au-public-burkinabe/",
+      "permanent": true
+    },
+    {
+      "source": "/vice-chancellor-of-knust-acknowledges-wascals-contributions-to-post-graduate-education/",
+      "destination": "/news/vice-chancellor-of-knust-acknowledges-wascals-contributions-to-post-graduate-education/",
+      "permanent": true
+    },
+    {
+      "source": "/cote-divoire-inter-lafrique-a-la-merci-dune-insecurite-alimentaire-dici-2050-magazine/",
+      "destination": "/news/cote-divoire-inter-lafrique-a-la-merci-dune-insecurite-alimentaire-dici-2050-magazine/",
+      "permanent": true
+    },
+    {
+      "source": "/lafrique-a-la-merci-dune-insecurite-alimentaire-dici-2050/",
+      "destination": "/news/lafrique-a-la-merci-dune-insecurite-alimentaire-dici-2050/",
+      "permanent": true
+    },
+    {
+      "source": "/kpalime-outing-and-closing-dinner-for-the-31-wascal-students/",
+      "destination": "/news/kpalime-outing-and-closing-dinner-for-the-31-wascal-students/",
+      "permanent": true
+    },
+    {
+      "source": "/bilateral-workshop-between-wascal-and-nasa-held/",
+      "destination": "/news/bilateral-workshop-between-wascal-and-nasa-held/",
+      "permanent": true
+    },
+    {
+      "source": "/capacity-building-training-for-accountants-held-in-accra/",
+      "destination": "/news/capacity-building-training-for-accountants-held-in-accra/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-sasscal-showcase-climate-works-in-africa-at-adaptation-futures-in-the-netherlands/",
+      "destination": "/news/wascal-sasscal-showcase-climate-works-in-africa-at-adaptation-futures-in-the-netherlands/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-receives-230000-euro-grant-for-climate-change-research-for-a-three-year-period/",
+      "destination": "/news/wascal-receives-230000-euro-grant-for-climate-change-research-for-a-three-year-period/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-co-organizes-presao-2016-of-the-world-meteorological-organization/",
+      "destination": "/news/wascal-co-organizes-presao-2016-of-the-world-meteorological-organization/",
+      "permanent": true
+    },
+    {
+      "source": "/new-wascal-logo/",
+      "destination": "/news/new-wascal-logo/",
+      "permanent": true
+    },
+    {
+      "source": "/joint-courses-for-wascal-students/",
+      "destination": "/news/joint-courses-for-wascal-students/",
+      "permanent": true
+    },
+    {
+      "source": "/new-book-on-adaptation-to-climate-change-and-variability-in-rural-west-africa-published/",
+      "destination": "/news/new-book-on-adaptation-to-climate-change-and-variability-in-rural-west-africa-published/",
+      "permanent": true
+    },
+    {
+      "source": "/there-is-no-other-institution-in-west-africa-tackling-research-capacity-building-and-service-provision-for-climate-change-in-this-way/",
+      "destination": "/news/there-is-no-other-institution-in-west-africa-tackling-research-capacity-building-and-servi/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-anglophone-ecowas-countries-3/",
+      "destination": "/news/wascal-engages-anglophone-ecowas-countries-3/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-anglophone-ecowas-countries-2/",
+      "destination": "/news/wascal-engages-anglophone-ecowas-countries-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-engages-anglophone-ecowas-countries/",
+      "destination": "/news/wascal-engages-anglophone-ecowas-countries/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-has-a-new-governing-board/",
+      "destination": "/news/wascal-has-a-new-governing-board/",
+      "permanent": true
+    },
+    {
+      "source": "/graduate-students-get-scholarships/",
+      "destination": "/news/graduate-students-get-scholarships/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-graduate-students-2/",
+      "destination": "/news/wascal-offers-scholarships-to-graduate-students-2/",
+      "permanent": true
+    },
+    {
+      "source": "/graduate-students-get-wascal-scholarships/",
+      "destination": "/news/graduate-students-get-wascal-scholarships/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-graduate-students/",
+      "destination": "/news/wascal-offers-scholarships-to-graduate-students/",
+      "permanent": true
+    },
+    {
+      "source": "/regional-consultation-to-build-regional-research-in-climate-change/",
+      "destination": "/news/regional-consultation-to-build-regional-research-in-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-train-3000-african-scientists-3/",
+      "destination": "/news/wascal-to-train-3000-african-scientists-3/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-train-3000-african-scientists/",
+      "destination": "/news/wascal-to-train-3000-african-scientists/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-to-train-3000-african-scientists-2/",
+      "destination": "/news/wascal-to-train-3000-african-scientists-2/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-centre-offers-scholarships-to-100-west-africans/",
+      "destination": "/news/climate-change-centre-offers-scholarships-to-100-west-africans/",
+      "permanent": true
+    },
+    {
+      "source": "/maximize-opportunity-offered-by-wascal-executive-director-tells-students/",
+      "destination": "/news/maximize-opportunity-offered-by-wascal-executive-director-tells-students/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-100-west-african-graduate-students-3/",
+      "destination": "/news/wascal-offers-scholarships-to-100-west-african-graduate-students-3/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-100-west-african-graduate-students-2/",
+      "destination": "/news/wascal-offers-scholarships-to-100-west-african-graduate-students-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-100-west-african-graduate-students/",
+      "destination": "/news/wascal-offers-scholarships-to-100-west-african-graduate-students/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-offers-scholarships-to-100-west-african-graduate-student-ths-on-climate-change-thematic-programs/",
+      "destination": "/news/wascal-offers-scholarships-to-100-west-african-graduate-student-ths-on-climate-change-them/",
+      "permanent": true
+    },
+    {
+      "source": "/un-universitaire-allemand-donne-les-cles-de-la-lutte-contre-les-changements-climatiques/",
+      "destination": "/news/un-universitaire-allemand-donne-les-cles-de-la-lutte-contre-les-changements-climatiques/",
+      "permanent": true
+    },
+    {
+      "source": "/un-universitaire-allemand-donne-les-cles-de-la-lutte-contre-les-changements-climatiques-2/",
+      "destination": "/news/un-universitaire-allemand-donne-les-cles-de-la-lutte-contre-les-changements-climatiques-2/",
+      "permanent": true
+    },
+    {
+      "source": "/fut-minna-produces-second-batch-of-wascal-graduates/",
+      "destination": "/news/fut-minna-produces-second-batch-of-wascal-graduates/",
+      "permanent": true
+    },
+    {
+      "source": "/fut-minna-produces-second-batch-of-wascal-graduates-2/",
+      "destination": "/news/fut-minna-produces-second-batch-of-wascal-graduates-2/",
+      "permanent": true
+    },
+    {
+      "source": "/government-of-burkina-faso-pledges-support-for-wascal/",
+      "destination": "/news/government-of-burkina-faso-pledges-support-for-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/5th-scientific-advisory-committee-meeting-held-in-ouagadougou/",
+      "destination": "/news/5th-scientific-advisory-committee-meeting-held-in-ouagadougou/",
+      "permanent": true
+    },
+    {
+      "source": "/postponed-deadline-for-the-thesis-research-awards-for-non-wascal-sponsored-west-african-nationals/",
+      "destination": "/news/postponed-deadline-for-the-thesis-research-awards-for-non-wascal-sponsored-west-african-na/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-wascal-canvasses-capacity-building/",
+      "destination": "/news/climate-change-wascal-canvasses-capacity-building/",
+      "permanent": true
+    },
+    {
+      "source": "/nigeria-govt-seeks-partnership-with-varisties-on-climate-change/",
+      "destination": "/news/nigeria-govt-seeks-partnership-with-varisties-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-wascal-canvasses-capacity-building-3/",
+      "destination": "/news/climate-change-wascal-canvasses-capacity-building-3/",
+      "permanent": true
+    },
+    {
+      "source": "/nigeria-govt-seeks-partnership-with-varisties-on-climate-change-2/",
+      "destination": "/news/nigeria-govt-seeks-partnership-with-varisties-on-climate-change-2/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-wascal-canvasses-capacity-building-2/",
+      "destination": "/news/climate-change-wascal-canvasses-capacity-building-2/",
+      "permanent": true
+    },
+    {
+      "source": "/audience-mesrsi-wascal-west-african-science-service-center-on-climate-change-and-adapted-land/",
+      "destination": "/news/audience-mesrsi-wascal-west-african-science-service-center-on-climate-change-and-adapted-l/",
+      "permanent": true
+    },
+    {
+      "source": "/audience-mesrsi-wascal-west-african-science-service-center-on-climate-change-and-adapted-land-2/",
+      "destination": "/news/audience-mesrsi-wascal-west-african-science-service-center-on-climate-change-and-adapted-l-2595/",
+      "permanent": true
+    },
+    {
+      "source": "/mohammed-urges-wascal-to-key-into-indc-change-agenda/",
+      "destination": "/news/mohammed-urges-wascal-to-key-into-indc-change-agenda/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-des-propositions-pour-reduire-les-effets-du-changement-climatique/",
+      "destination": "/news/wascal-des-propositions-pour-reduire-les-effets-du-changement-climatique/",
+      "permanent": true
+    },
+    {
+      "source": "/mohammed-urges-wascal-to-key-into-indc-change-agenda-2/",
+      "destination": "/news/mohammed-urges-wascal-to-key-into-indc-change-agenda-2/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-des-propositions-pour-reduire-les-effets-du-changement-climatique-3/",
+      "destination": "/news/wascal-des-propositions-pour-reduire-les-effets-du-changement-climatique-3/",
+      "permanent": true
+    },
+    {
+      "source": "/nigeria-fg-to-review-all-environmental-laws/",
+      "destination": "/news/nigeria-fg-to-review-all-environmental-laws/",
+      "permanent": true
+    },
+    {
+      "source": "/knust-wascal-holds-consultative-workshop-on-climate-change/",
+      "destination": "/news/knust-wascal-holds-consultative-workshop-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-forum-to-kick-start-sub-continental-climate-research-agenda/",
+      "destination": "/news/wascal-forum-to-kick-start-sub-continental-climate-research-agenda/",
+      "permanent": true
+    },
+    {
+      "source": "/announcement-application-process-for-doctoral-and-masters-fellowships-at-the-graduate-studies-program-has-been-extended/",
+      "destination": "/news/announcement-application-process-for-doctoral-and-masters-fellowships-at-the-graduate-stud/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-forum-to-kick-start-sub-continental-climate-research-agenda-2/",
+      "destination": "/news/wascal-forum-to-kick-start-sub-continental-climate-research-agenda-2/",
+      "permanent": true
+    },
+    {
+      "source": "/effects-of-climate-change-devastating-prof-otoo-ellis-2/",
+      "destination": "/news/effects-of-climate-change-devastating-prof-otoo-ellis-2/",
+      "permanent": true
+    },
+    {
+      "source": "/effects-of-climate-change-devastating-prof-otoo-ellis/",
+      "destination": "/news/effects-of-climate-change-devastating-prof-otoo-ellis/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-a-real-threat-to-africas-development-prof-omotosho/",
+      "destination": "/news/climate-change-a-real-threat-to-africas-development-prof-omotosho/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-a-real-threat-to-africas-development-prof-omotosho-2/",
+      "destination": "/news/climate-change-a-real-threat-to-africas-development-prof-omotosho-2/",
+      "permanent": true
+    },
+    {
+      "source": "/kunst-wascal-phd-scholarships-in-climate-change-land-use-2016/",
+      "destination": "/news/kunst-wascal-phd-scholarships-in-climate-change-land-use-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/kunst-wascal-phd-scholarships-in-climate-change-land-use-2016-2/",
+      "destination": "/news/kunst-wascal-phd-scholarships-in-climate-change-land-use-2016-2/",
+      "permanent": true
+    },
+    {
+      "source": "/liberia-vulnerable-to-climate-change-says-dr-slawon/",
+      "destination": "/news/liberia-vulnerable-to-climate-change-says-dr-slawon/",
+      "permanent": true
+    },
+    {
+      "source": "/changement-climatique-wascal-mali-au-coeur-de-la-lutte/",
+      "destination": "/news/changement-climatique-wascal-mali-au-coeur-de-la-lutte/",
+      "permanent": true
+    },
+    {
+      "source": "/gambia-utg-holds-climate-change-research-agenda-workshop/",
+      "destination": "/news/gambia-utg-holds-climate-change-research-agenda-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/gambia-utg-holds-climate-change-research-agenda-workshop-2/",
+      "destination": "/news/gambia-utg-holds-climate-change-research-agenda-workshop-2/",
+      "permanent": true
+    },
+    {
+      "source": "/utg-holds-climate-change-research-agenda-workshop/",
+      "destination": "/news/utg-holds-climate-change-research-agenda-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/consultation-nationale-sur-les-changements-climatiques-au-togo-au-centre-wascal/",
+      "destination": "/news/consultation-nationale-sur-les-changements-climatiques-au-togo-au-centre-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/klimawandel-in-afrika-wissenschaftliche-unterstutzung-aus-garmisch/",
+      "destination": "/news/klimawandel-in-afrika-wissenschaftliche-unterstutzung-aus-garmisch/",
+      "permanent": true
+    },
+    {
+      "source": "/consultation-nationale-sur-les-changements-climatiques-au-togo-au-centre-wascal-2/",
+      "destination": "/news/consultation-nationale-sur-les-changements-climatiques-au-togo-au-centre-wascal-2/",
+      "permanent": true
+    },
+    {
+      "source": "/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-problemes-des-acteurs-3/",
+      "destination": "/news/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-proble/",
+      "permanent": true
+    },
+    {
+      "source": "/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-problemes-des-acteurs-2/",
+      "destination": "/news/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-proble-1562/",
+      "permanent": true
+    },
+    {
+      "source": "/afrique-de-louest-agenda-2020-du-wascal-orienter-les-recherches-vers-les-domaines-de-developpement/",
+      "destination": "/news/afrique-de-louest-agenda-2020-du-wascal-orienter-les-recherches-vers-les-domaines-de-devel/",
+      "permanent": true
+    },
+    {
+      "source": "/changement-climatiques-%d7%83-le-centre-wascal-lance-ses-consultations-2/",
+      "destination": "/news/changement-climatiques-le-centre-wascal-lance-ses-consultations-2/",
+      "permanent": true
+    },
+    {
+      "source": "/changement-climatiques-%d7%83-le-centre-wascal-lance-ses-consultations/",
+      "destination": "/news/changement-climatiques-le-centre-wascal-lance-ses-consultations/",
+      "permanent": true
+    },
+    {
+      "source": "/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-problemes-des-acteurs/",
+      "destination": "/news/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-proble-1547/",
+      "permanent": true
+    },
+    {
+      "source": "/changement-climatiques-le-centre-wascal-lance-ses-consultations-rts-2/",
+      "destination": "/news/changement-climatiques-le-centre-wascal-lance-ses-consultations-rts-2/",
+      "permanent": true
+    },
+    {
+      "source": "/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-problemes-des-acteurs-5/",
+      "destination": "/news/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-proble-2642/",
+      "permanent": true
+    },
+    {
+      "source": "/afrique-de-louest-agenda-2020-du-wascal-orienter-les-recherches-vers-les-domaines-de-developpement-2/",
+      "destination": "/news/afrique-de-louest-agenda-2020-du-wascal-orienter-les-recherches-vers-les-domaines-de-devel-2640/",
+      "permanent": true
+    },
+    {
+      "source": "/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-problemes-des-acteurs-4/",
+      "destination": "/news/consequences-du-changement-climatique-le-wascal-prone-la-recherche-de-solutions-aux-proble-2633/",
+      "permanent": true
+    },
+    {
+      "source": "/des-consultations-sur-le-programme-wascal-se-tiennent-ce-lundi-a-lucad/",
+      "destination": "/news/des-consultations-sur-le-programme-wascal-se-tiennent-ce-lundi-a-lucad/",
+      "permanent": true
+    },
+    {
+      "source": "/des-consultations-sur-le-programme-wascal-se-tiennent-ce-lundi-a-lucad-2/",
+      "destination": "/news/des-consultations-sur-le-programme-wascal-se-tiennent-ce-lundi-a-lucad-2/",
+      "permanent": true
+    },
+    {
+      "source": "/graduation-of-master-students-of-the-wascal-master-research-program-climate-change-and-education/",
+      "destination": "/news/graduation-of-master-students-of-the-wascal-master-research-program-climate-change-and-edu/",
+      "permanent": true
+    },
+    {
+      "source": "/demarrage-des-consultations-sur-le-changement-climatique-lundi-2/",
+      "destination": "/news/demarrage-des-consultations-sur-le-changement-climatique-lundi-2/",
+      "permanent": true
+    },
+    {
+      "source": "/in-the-midst-of-global-climate-change-negotiations-wascal-at-cop21-in-paris/",
+      "destination": "/news/in-the-midst-of-global-climate-change-negotiations-wascal-at-cop21-in-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/unsere-klimaforscher-sind-weltweit-fuhrend-2/",
+      "destination": "/news/unsere-klimaforscher-sind-weltweit-fuhrend-2/",
+      "permanent": true
+    },
+    {
+      "source": "/side-events-der-bmbf-klimaforschung-beim-21-klimagipfel-cop-21-in-paris/",
+      "destination": "/news/side-events-der-bmbf-klimaforschung-beim-21-klimagipfel-cop-21-in-paris/",
+      "permanent": true
+    },
+    {
+      "source": "/thesis-research-awards-for-non-wascal-sponsored-west-african-nationals/",
+      "destination": "/news/thesis-research-awards-for-non-wascal-sponsored-west-african-nationals/",
+      "permanent": true
+    },
+    {
+      "source": "/announcement-application-process-for-doctoral-and-masters-fellowships-at-the-graduate-studies-program-started/",
+      "destination": "/news/announcement-application-process-for-doctoral-and-masters-fellowships-at-the-graduate-stud-1354/",
+      "permanent": true
+    },
+    {
+      "source": "/die-moglichmacher-teil-1-mit-afrika-gemeinsam-gegen-den-klimawandel/",
+      "destination": "/news/die-moglichmacher-teil-1-mit-afrika-gemeinsam-gegen-den-klimawandel/",
+      "permanent": true
+    },
+    {
+      "source": "/first-graduates-in-climate-change-and-energy/",
+      "destination": "/news/first-graduates-in-climate-change-and-energy/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-celebrates-graduation-at-the-master-program-climate-change-and-human-security-university-of-lome/",
+      "destination": "/news/wascal-celebrates-graduation-at-the-master-program-climate-change-and-human-security-unive/",
+      "permanent": true
+    },
+    {
+      "source": "/the-grazing-game-playing-climate-change-in-west-africa-2/",
+      "destination": "/news/the-grazing-game-playing-climate-change-in-west-africa-2/",
+      "permanent": true
+    },
+    {
+      "source": "/workshop-climate-information-for-adaptation-and-policy-development/",
+      "destination": "/news/workshop-climate-information-for-adaptation-and-policy-development/",
+      "permanent": true
+    },
+    {
+      "source": "/futa-workshop-examines-climate-change-causes-consequences/",
+      "destination": "/news/futa-workshop-examines-climate-change-causes-consequences/",
+      "permanent": true
+    },
+    {
+      "source": "/untersuchungen-in-bonn-der-klimakiller-aus-den-reisfeldern/",
+      "destination": "/news/untersuchungen-in-bonn-der-klimakiller-aus-den-reisfeldern/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-research-in-africa-for-africa/",
+      "destination": "/news/climate-change-research-in-africa-for-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/soutenir-la-recherche-sur-le-climat-en-afrique-nouvelle-dynamique-pour-le-programme-wascal/",
+      "destination": "/news/soutenir-la-recherche-sur-le-climat-en-afrique-nouvelle-dynamique-pour-le-programme-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/the-grazing-game-goes-online/",
+      "destination": "/news/the-grazing-game-goes-online/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-umfasst-bald-alle-westafrikanischen-staaten/",
+      "destination": "/news/wascal-umfasst-bald-alle-westafrikanischen-staaten/",
+      "permanent": true
+    },
+    {
+      "source": "/klimawandel-westafrika-fuhrt-forschungszentrum-in-eigenregie-weiter/",
+      "destination": "/news/klimawandel-westafrika-fuhrt-forschungszentrum-in-eigenregie-weiter/",
+      "permanent": true
+    },
+    {
+      "source": "/the-first-ten-students-of-the-master-program-climate-change-and-adapted-land-use-received-their-masters-degree-at-the-federal-university-of-technology-minna-nigeria-on-october-13-2014-th/",
+      "destination": "/news/the-first-ten-students-of-the-master-program-climate-change-and-adapted-land-use-received-/",
+      "permanent": true
+    },
+    {
+      "source": "/westafrikas-klimaforschung-wachst/",
+      "destination": "/news/westafrikas-klimaforschung-wachst/",
+      "permanent": true
+    },
+    {
+      "source": "/klimaforschungszentrum-in-westafrika-wissenschaft-fur-die-felder/",
+      "destination": "/news/klimaforschungszentrum-in-westafrika-wissenschaft-fur-die-felder/",
+      "permanent": true
+    },
+    {
+      "source": "/westafrika-investiert-in-forschung-zum-klimawandel/",
+      "destination": "/news/westafrika-investiert-in-forschung-zum-klimawandel/",
+      "permanent": true
+    },
+    {
+      "source": "/second-wascal-ministerial-conference/",
+      "destination": "/news/second-wascal-ministerial-conference/",
+      "permanent": true
+    },
+    {
+      "source": "/forschungsministerin-wanka-empfangt-delegationen-aus-13-westafrikanischen-landern/",
+      "destination": "/news/forschungsministerin-wanka-empfangt-delegationen-aus-13-westafrikanischen-landern/",
+      "permanent": true
+    },
+    {
+      "source": "/interview-mit-herrn-dr-manfred-denich-vom-zentrum-fur-entwicklungsforschung-zef/",
+      "destination": "/news/interview-mit-herrn-dr-manfred-denich-vom-zentrum-fur-entwicklungsforschung-zef/",
+      "permanent": true
+    },
+    {
+      "source": "/first-meeting-of-wascals-scientific-advisory-committee/",
+      "destination": "/news/first-meeting-of-wascals-scientific-advisory-committee/",
+      "permanent": true
+    },
+    {
+      "source": "/award-for-paper-field-facts-for-crop-insurance-design/",
+      "destination": "/news/award-for-paper-field-facts-for-crop-insurance-design/",
+      "permanent": true
+    },
+    {
+      "source": "/policy-implementation-is-key-for-africas-development/",
+      "destination": "/news/policy-implementation-is-key-for-africas-development/",
+      "permanent": true
+    },
+    {
+      "source": "/conference-scientifique-la-cooperation-franco-allemande-en-afrique-dans-les-domaines-du-changement-climatique/",
+      "destination": "/news/conference-scientifique-la-cooperation-franco-allemande-en-afrique-dans-les-domaines-du-ch/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-at-global-development-conference/",
+      "destination": "/news/wascal-at-global-development-conference/",
+      "permanent": true
+    },
+    {
+      "source": "/germany-invests-e-50-million-into-wascal/",
+      "destination": "/news/germany-invests-e-50-million-into-wascal/",
+      "permanent": true
+    },
+    {
+      "source": "/germany-invests-e50m-into-west-african-science-centre-on-climate-change/",
+      "destination": "/news/germany-invests-e50m-into-west-african-science-centre-on-climate-change/",
+      "permanent": true
+    },
+    {
+      "source": "/farmers-innovation-contest-focal-point-of-innovation-fair-in-burkina-faso-2/",
+      "destination": "/news/farmers-innovation-contest-focal-point-of-innovation-fair-in-burkina-faso-2/",
+      "permanent": true
+    },
+    {
+      "source": "/farmers-innovation-contest-focal-point-of-innovation-fair-in-burkina-faso/",
+      "destination": "/news/farmers-innovation-contest-focal-point-of-innovation-fair-in-burkina-faso/",
+      "permanent": true
+    },
+    {
+      "source": "/how-fut-minna-produced-first-wascal-graduates/",
+      "destination": "/news/how-fut-minna-produced-first-wascal-graduates/",
+      "permanent": true
+    },
+    {
+      "source": "/focus-on-young-researchers-farmer-innovation-in-rural-ghana-determinants-impacts-and-identification/",
+      "destination": "/news/focus-on-young-researchers-farmer-innovation-in-rural-ghana-determinants-impacts-and-ident/",
+      "permanent": true
+    },
+    {
+      "source": "/nine-new-graduates-at-the-doctoral-program-climate-change-and-land-use/",
+      "destination": "/news/nine-new-graduates-at-the-doctoral-program-climate-change-and-land-use/",
+      "permanent": true
+    },
+    {
+      "source": "/ucad-un-programme-doctorale-sur-leconomie-des-changement-climatique/",
+      "destination": "/news/ucad-un-programme-doctorale-sur-leconomie-des-changement-climatique/",
+      "permanent": true
+    },
+    {
+      "source": "/can-commercial-cellphone-providers-help-to-gather-high-quality-rainfall-information/",
+      "destination": "/news/can-commercial-cellphone-providers-help-to-gather-high-quality-rainfall-information/",
+      "permanent": true
+    },
+    {
+      "source": "/new-project-invest-in-water/",
+      "destination": "/news/new-project-invest-in-water/",
+      "permanent": true
+    },
+    {
+      "source": "/table-ronde-sur-les-changements-climatiques-en-afrique/",
+      "destination": "/news/table-ronde-sur-les-changements-climatiques-en-afrique/",
+      "permanent": true
+    },
+    {
+      "source": "/first-batch-of-phd-students-graduated-at-climate-change-economics-school-in-dakar/",
+      "destination": "/news/first-batch-of-phd-students-graduated-at-climate-change-economics-school-in-dakar/",
+      "permanent": true
+    },
+    {
+      "source": "/ucad-un-programme-doctoral-en-economie-du-changement-climatique-a-la-faseg/",
+      "destination": "/news/ucad-un-programme-doctoral-en-economie-du-changement-climatique-a-la-faseg/",
+      "permanent": true
+    },
+    {
+      "source": "/l-sedogo-et-r-zougmoure-au-sahel-agriculture-et-changement-climatique-vont-de-pair-depuis-des-annees/",
+      "destination": "/news/l-sedogo-et-r-zougmoure-au-sahel-agriculture-et-changement-climatique-vont-de-pair-depuis-/",
+      "permanent": true
+    },
+    {
+      "source": "/mit-wissenschaft-gegen-den-klimawandel/",
+      "destination": "/news/mit-wissenschaft-gegen-den-klimawandel/",
+      "permanent": true
+    },
+    {
+      "source": "/suivi-des-pluies-rain-cell-africa-veut-experimenter-une-nouvelle-technique-en-afrique/",
+      "destination": "/news/suivi-des-pluies-rain-cell-africa-veut-experimenter-une-nouvelle-technique-en-afrique/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-graduates-10-phd-students/",
+      "destination": "/news/wascal-graduates-10-phd-students/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-centre-inaugurated-in-ghana-2/",
+      "destination": "/news/climate-change-centre-inaugurated-in-ghana-2/",
+      "permanent": true
+    },
+    {
+      "source": "/climate-change-centre-inaugurated-in-ghana/",
+      "destination": "/news/climate-change-centre-inaugurated-in-ghana/",
+      "permanent": true
+    },
+    {
+      "source": "/inauguration-of-the-wascal-headquarters/",
+      "destination": "/news/inauguration-of-the-wascal-headquarters/",
+      "permanent": true
+    },
+    {
+      "source": "/futa-produces-first-set-of-wascal-doctoral-graduates/",
+      "destination": "/news/futa-produces-first-set-of-wascal-doctoral-graduates/",
+      "permanent": true
+    },
+    {
+      "source": "/populations-natural-resources-and-rural-resiliencies-to-climate-change-in-the-north-benin-workshop/",
+      "destination": "/news/populations-natural-resources-and-rural-resiliencies-to-climate-change-in-the-north-benin-/",
+      "permanent": true
+    },
+    {
+      "source": "/nouvelle-expertise-sur-le-changement-climatique-en-afrique-lapport-du-ccafs/",
+      "destination": "/news/nouvelle-expertise-sur-le-changement-climatique-en-afrique-lapport-du-ccafs/",
+      "permanent": true
+    },
+    {
+      "source": "/rehcons-workshop-connecting-west-africas-meteorological-and-hydrological-services-in-a-regional-observation-network/",
+      "destination": "/news/rehcons-workshop-connecting-west-africas-meteorological-and-hydrological-services-in-a-reg/",
+      "permanent": true
+    },
+    {
+      "source": "/changement-climatique-un-observatoire-pour-partager-linformation/",
+      "destination": "/news/changement-climatique-un-observatoire-pour-partager-linformation/",
+      "permanent": true
+    },
+    {
+      "source": "/tv-report-afriksoir-about-the-rehcons-workshop/",
+      "destination": "/news/tv-report-afriksoir-about-the-rehcons-workshop/",
+      "permanent": true
+    },
+    {
+      "source": "/rehcons-workshop-connecting-west-africas-meteorological-and-hydrological-services-in-a-regional-observation-network-2/",
+      "destination": "/news/rehcons-workshop-connecting-west-africas-meteorological-and-hydrological-services-in-a-reg-2743/",
+      "permanent": true
+    },
+    {
+      "source": "/studieren-in-togo-eine-erfahrung-furs-leben/",
+      "destination": "/news/studieren-in-togo-eine-erfahrung-furs-leben/",
+      "permanent": true
+    },
+    {
+      "source": "/the-wascal-master-programme-on-climate-change-and-human-security/",
+      "destination": "/news/the-wascal-master-programme-on-climate-change-and-human-security/",
+      "permanent": true
+    },
+    {
+      "source": "/our-climate-think-act-change-inauguration-of-the-climate-change-awareness-park-for-children/",
+      "destination": "/news/our-climate-think-act-change-inauguration-of-the-climate-change-awareness-park-for-childre/",
+      "permanent": true
+    },
+    {
+      "source": "/first-master-students-graduated-in-climate-change-and-human-security-at-the-univesity-of-lome/",
+      "destination": "/news/first-master-students-graduated-in-climate-change-and-human-security-at-the-univesity-of-l/",
+      "permanent": true
+    },
+    {
+      "source": "/wascals-first-graduates-ten-students-successfully-completed-their-masters-degree-in-climate-change-and-adapted-land-use-at-fut-minna/",
+      "destination": "/news/wascals-first-graduates-ten-students-successfully-completed-their-masters-degree-in-climat/",
+      "permanent": true
+    },
+    {
+      "source": "/mesurer-la-pluviometrie-grace-a-la-telephonie-mobile/",
+      "destination": "/news/mesurer-la-pluviometrie-grace-a-la-telephonie-mobile/",
+      "permanent": true
+    },
+    {
+      "source": "/2014-world-agriculture-prize-awarded-to-world-renowned-soil-scientist-paul-vlek-former-executive-director-of-wascal/",
+      "destination": "/news/2014-world-agriculture-prize-awarded-to-world-renowned-soil-scientist-paul-vlek-former-exe/",
+      "permanent": true
+    },
+    {
+      "source": "/programme-de-master-wascal-en-changements-climatiques-et-energie/",
+      "destination": "/news/programme-de-master-wascal-en-changements-climatiques-et-energie/",
+      "permanent": true
+    },
+    {
+      "source": "/cote-divoire-changement-climatique-les-membres-du-programme-wascal-consolident-leurs-acquis-2/",
+      "destination": "/news/cote-divoire-changement-climatique-les-membres-du-programme-wascal-consolident-leurs-acqui/",
+      "permanent": true
+    },
+    {
+      "source": "/cote-divoire-changement-climatique-les-membres-du-programme-wascal-consolident-leurs-acquis-3/",
+      "destination": "/news/cote-divoire-changement-climatique-les-membres-du-programme-wascal-consolident-leurs-acqui-2969/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-officially-becomes-an-international-organization-of-west-african-states/",
+      "destination": "/news/wascal-officially-becomes-an-international-organization-of-west-african-states/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-at-the-africa-days-of-the-federal-ministry-of-education-and-research/",
+      "destination": "/news/wascal-at-the-africa-days-of-the-federal-ministry-of-education-and-research/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-annual-board-meeting-2014/",
+      "destination": "/news/wascal-annual-board-meeting-2014/",
+      "permanent": true
+    },
+    {
+      "source": "/wascal-welcomes-its-new-executive-director-dr-laurent-sedogo/",
+      "destination": "/news/wascal-welcomes-its-new-executive-director-dr-laurent-sedogo/",
+      "permanent": true
+    },
+    {
+      "source": "/the-winner-is-second-farmer-innovation-contest-awards-ghanaian-farmer/",
+      "destination": "/news/the-winner-is-second-farmer-innovation-contest-awards-ghanaian-farmer/",
+      "permanent": true
+    },
+    {
+      "source": "/deutsch-westafrikanisches-forschungsprojekt-wascal-ist-eine-internationale-organisation-koordination-der-deutschen-partner-liegt-beim-zentrum-fur-entwicklungsforschung/",
+      "destination": "/news/deutsch-westafrikanisches-forschungsprojekt-wascal-ist-eine-internationale-organisation-ko/",
+      "permanent": true
+    },
+    {
+      "source": "/expert-workshop-mobile-pastoralism-environmental-change-and-conflict-in-west-africa/",
+      "destination": "/news/expert-workshop-mobile-pastoralism-environmental-change-and-conflict-in-west-africa/",
+      "permanent": true
+    },
+    {
+      "source": "/etudier-et-comprendre-les-changements-climatiques/",
+      "destination": "/news/etudier-et-comprendre-les-changements-climatiques/",
+      "permanent": true
+    },
+    {
+      "source": "/togo-finalisation-du-projet-de-centre-ouest-africain-de-recherches-wascal-sur-les-changements-climatiques/",
+      "destination": "/news/togo-finalisation-du-projet-de-centre-ouest-africain-de-recherches-wascal-sur-les-changeme/",
+      "permanent": true
+    },
+    {
+      "source": "/our-partners/",
+      "destination": "/partners/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/news/category/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/testpage/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home3/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/competence-centre-projects-test/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/newsletters-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/management-2/",
+      "destination": "/executive-management-team/",
+      "permanent": true
+    },
+    {
+      "source": "/capacity-building-projects-2/",
+      "destination": "/capacity-building-projects/",
+      "permanent": true
+    },
+    {
+      "source": "/sample-page-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/board/",
+      "destination": "/new-board-members/",
+      "permanent": true
+    },
+    {
+      "source": "/sac/",
+      "destination": "/new-sac-members/",
+      "permanent": true
+    },
+    {
+      "source": "/home-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-yacouba-zerbo/",
+      "destination": "/people/prof-yacouba-zerbo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-rene-haak/",
+      "destination": "/people/prof-rene-haak/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-a-narcisse-komenan/",
+      "destination": "/people/dr-a-narcisse-komenan/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-momodou-njie/",
+      "destination": "/people/dr-momodou-njie/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-arona-diedhiou/",
+      "destination": "/people/dr-arona-diedhiou/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-adeniyi-osuntogun/",
+      "destination": "/people/prof-adeniyi-osuntogun/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-brice-sinsin/",
+      "destination": "/people/prof-brice-sinsin/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-mouhamadou-hassirou/",
+      "destination": "/people/prof-mouhamadou-hassirou/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-aminata-ndiaye/",
+      "destination": "/people/prof-aminata-ndiaye/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-akossiwa-quashie/",
+      "destination": "/people/prof-akossiwa-quashie/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-johnson-boanuh/",
+      "destination": "/people/dr-johnson-boanuh/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-arona-diedhiou-2/",
+      "destination": "/people/dr-arona-diedhiou-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-anna-creti/",
+      "destination": "/people/prof-anna-creti/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-janos-bogardi/",
+      "destination": "/people/prof-janos-bogardi/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-daniela-jacob/",
+      "destination": "/people/dr-daniela-jacob/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-adrian-tompkins/",
+      "destination": "/people/prof-adrian-tompkins/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-ardjouma-thiombiano/",
+      "destination": "/people/dr-ardjouma-thiombiano/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-adama-traore/",
+      "destination": "/people/prof-adama-traore/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-hassan-virji/",
+      "destination": "/people/dr-hassan-virji/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-moumini-savadogo/",
+      "destination": "/people/dr-moumini-savadogo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/peter-dery-2/",
+      "destination": "/people/peter-dery-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/issakha-youm/",
+      "destination": "/people/issakha-youm/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/board-chair-prof-hassirou-mouhamadou-niger/",
+      "destination": "/people/board-chair-prof-hassirou-mouhamadou-niger/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-moumini-savadogo-2/",
+      "destination": "/people/dr-moumini-savadogo-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-ir-flora-chadare/",
+      "destination": "/people/dr-ir-flora-chadare/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/mariam-khan-senghore/",
+      "destination": "/people/mariam-khan-senghore/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-vafi-doumbia-cote-d-ivoire/",
+      "destination": "/people/prof-vafi-doumbia-cote-d-ivoire/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/barro-nicolas/",
+      "destination": "/people/barro-nicolas/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/fatou-lamin-faye/",
+      "destination": "/people/fatou-lamin-faye/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/arona-diedhiou/",
+      "destination": "/people/arona-diedhiou/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/tabo-ramadjita/",
+      "destination": "/people/tabo-ramadjita/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-chinedum-nwajiuba/",
+      "destination": "/people/prof-chinedum-nwajiuba/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/francis-boateng-agyenim/",
+      "destination": "/people/francis-boateng-agyenim/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-moumini-savadog/",
+      "destination": "/people/dr-moumini-savadog/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-douda-kone/",
+      "destination": "/people/prof-douda-kone/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-kehinde-o-ogunjobi/",
+      "destination": "/people/prof-kehinde-o-ogunjobi/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-karsten-hess/",
+      "destination": "/people/dr-karsten-hess/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/profr-moussa-djire/",
+      "destination": "/people/profr-moussa-djire/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/hon-dr-fatou-lamin-faye/",
+      "destination": "/people/hon-dr-fatou-lamin-faye/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/mr-alain-sy-traore/",
+      "destination": "/people/mr-alain-sy-traore/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-hortense-atta-diallo/",
+      "destination": "/people/prof-hortense-atta-diallo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-jakob-rhyner/",
+      "destination": "/people/prof-jakob-rhyner/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-ahmed-tritah/",
+      "destination": "/people/prof-ahmed-tritah/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-sandrine-anquetin/",
+      "destination": "/people/dr-sandrine-anquetin/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-amadou-thierno-gaye/",
+      "destination": "/people/prof-amadou-thierno-gaye/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-dr-martin-visbeck/",
+      "destination": "/people/prof-dr-martin-visbeck/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-dr-ing-michael-sterner/",
+      "destination": "/people/prof-dr-ing-michael-sterner/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-angela-maria-pereira-barreto-da-veiga-moreno/",
+      "destination": "/people/dr-angela-maria-pereira-barreto-da-veiga-moreno/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-brice-augustin-sinsin/",
+      "destination": "/people/prof-brice-augustin-sinsin/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/mrs-harriet-apoley-baffoe/",
+      "destination": "/people/mrs-harriet-apoley-baffoe/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/daniel-ofori/",
+      "destination": "/people/daniel-ofori/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/theresa-aniagyei-bonsu/",
+      "destination": "/people/theresa-aniagyei-bonsu/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/nii-commey/",
+      "destination": "/people/nii-commey/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/mrs-harriet-apoley-baffoe-2/",
+      "destination": "/people/mrs-harriet-apoley-baffoe-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-oble-neya/",
+      "destination": "/people/dr-oble-neya/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-safietou-sanfo/",
+      "destination": "/people/dr-safietou-sanfo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-bruno-korgo/",
+      "destination": "/people/dr-bruno-korgo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-jesse-b-naab/",
+      "destination": "/people/dr-jesse-b-naab/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/sonia-semedo/",
+      "destination": "/people/sonia-semedo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-elhadj-m-ramadan-diallo/",
+      "destination": "/people/dr-elhadj-m-ramadan-diallo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-ali-mahamane/",
+      "destination": "/people/prof-ali-mahamane/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-awa-niang-fall/",
+      "destination": "/people/prof-awa-niang-fall/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-aboudou-raoufou-pierre-radji/",
+      "destination": "/people/prof-aboudou-raoufou-pierre-radji/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-emmanuel-ramde/",
+      "destination": "/people/prof-emmanuel-ramde/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-emmanuel-ramde-2/",
+      "destination": "/people/prof-emmanuel-ramde-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/sie-sylvestre-da/",
+      "destination": "/people/sie-sylvestre-da/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-belko-abdoul-aziz-diallo/",
+      "destination": "/people/dr-belko-abdoul-aziz-diallo/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-kwame-oppong-hackman/",
+      "destination": "/people/dr-kwame-oppong-hackman/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/dr-seyni-salack-2/",
+      "destination": "/people/dr-seyni-salack-2/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/isabel-vogler-de-orellana/",
+      "destination": "/people/isabel-vogler-de-orellana/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/ass-prof-mounkaila-saley-moussa/",
+      "destination": "/people/ass-prof-mounkaila-saley-moussa/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/prof-benjamin-l-lamptey/",
+      "destination": "/people/prof-benjamin-l-lamptey/",
+      "permanent": true
+    },
+    {
+      "source": "/zt_team/professor-anthonia-ifeyinwa-achike/",
+      "destination": "/people/professor-anthonia-ifeyinwa-achike/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/",
+      "destination": "/news/category/:slug/",
+      "permanent": true
+    }
+  ]
+}

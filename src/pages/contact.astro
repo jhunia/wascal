@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Icon from '../components/Icon.astro';
+import { contact } from '../data/nav';
+const mapUrl = 'https://www.google.com/maps/search/?api=1&query=CSIR+Office+Complex+Agostino+Neto+Road+Accra';
+---
+<Base title="Contact" description="Contact WASCAL headquarters in Accra, Ghana." current="/contact/">
+  <PageHeader title="Contact us" crumbs={[{ label: 'Contact' }]} lead="Reach WASCAL headquarters in Accra, or the Competence Centre in Ouagadougou." />
+  <div class="wrap contact">
+    <section class="card">
+      <h2>Headquarters</h2>
+      <p class="line"><Icon name="pin" size={20} /><span>{contact.address.map((l) => <>{l}<br /></>)}</span></p>
+      <p class="line"><Icon name="phone" size={20} /><span>{contact.phone}</span></p>
+      <p class="line"><Icon name="mail" size={20} /><a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+      <a class="btn btn-outline" href={mapUrl} rel="noopener">Open in Google Maps <Icon name="external" size={15} /></a>
+    </section>
+    <section class="card">
+      <h2>Send us a message</h2>
+      <form data-contact-form>
+        <label for="c-name">Your name</label>
+        <input id="c-name" name="name" autocomplete="name" required />
+        <label for="c-email">Email address</label>
+        <input id="c-email" name="email" type="email" autocomplete="email" required />
+        <label for="c-topic">Topic</label>
+        <select id="c-topic" name="topic">
+          <option>General enquiry</option><option>Graduate programmes</option><option>Partnerships</option><option>Media</option><option>Procurement</option>
+        </select>
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" name="message" rows="5" required></textarea>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="note" role="status" hidden>Thanks. In this preview the form is not connected yet; please email {contact.email}.</p>
+      </form>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 32px; padding-block: 48px 80px; align-items: start; }
+  .card { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 3vw, 36px); display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  h2 { font-size: 24px; }
+  .line { display: flex; gap: 12px; align-items: flex-start; color: var(--ink-2); }
+  .line :global(svg) { color: var(--blue); flex: none; margin-top: 3px; }
+  form { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+  label { font-weight: 600; font-size: 15px; margin-top: 6px; }
+  input, select, textarea { font: inherit; padding: 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); width: 100%; }
+  input, select { min-height: 48px; }
+  form .btn { margin-top: 12px; align-self: flex-start; }
+  .note { color: var(--blue-deep); font-weight: 600; }
+</style>
+
+<script>
+  document.querySelector<HTMLFormElement>('[data-contact-form]')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = (e.target as HTMLFormElement).querySelector<HTMLElement>('.note');
+    if (note) note.hidden = false;
+  });
+</script>

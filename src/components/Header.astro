@@ -1,0 +1,255 @@
+---
+import Icon from './Icon.astro';
+import { mainNav, social, type NavItem } from '../data/nav';
+import { posts, postUrl } from '../lib/content';
+
+interface Props { current?: string }
+const { current = '/' } = Astro.props;
+const headlines = posts.slice(0, 5);
+
+const isActive = (item: NavItem): boolean =>
+  item.href === current || (item.href !== '/' && !!item.href && current.startsWith(item.href)) || !!item.children?.some(isActive);
+---
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Top bar: latest update, language, search, social -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="ticker">
+      <span class="ticker-tag">Updates</span>
+      <div class="ticker-window" aria-label="Latest updates">
+        <div class="ticker-track">
+          {[0, 1].map((copy) => (
+            <ul class="ticker-list" aria-hidden={copy === 1 ? 'true' : undefined}>
+              {headlines.map((p) => <li><a href={postUrl(p)} tabindex={copy === 1 ? -1 : undefined}>{p.title}</a></li>)}
+            </ul>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="topbar-tools">
+      <div class="lang notranslate" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" lang="en" aria-pressed="true">English</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-set-lang="fr" lang="fr" aria-pressed="false">Français</button>
+      </div>
+      <a class="topbar-search" href="/search/"><Icon name="search" size={16} /><span>Search</span></a>
+      <nav class="topbar-social" aria-label="WASCAL on social media">
+        {social.map((s) => <a href={s.href} aria-label={s.label} rel="noopener"><Icon name={s.icon} size={15} /></a>)}
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- Brand row: logo, tagline, funder -->
+<header class="brand">
+  <div class="wrap brand-inner">
+    <a href="/" class="brand-logo notranslate" aria-label="WASCAL home">
+      <img src="/images/wascal-logo.png" width="420" height="255" alt="WASCAL — West African Science Service Centre on Climate Change and Adapted Land Use" />
+    </a>
+    <p class="tagline">Combating Climate Change.<br /><span>Improving Livelihoods.</span></p>
+    <a class="funder notranslate" href="https://www.bmftr.bund.de/" target="_blank" rel="noopener noreferrer">
+      <span class="funder-label" data-fr-html="Financé<br />par">Funded<br />by</span>
+      <img src="/images/bmftr-logo.png" width="420" height="180" alt="Federal Ministry of Research, Technology and Space" />
+    </a>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">
+      <Icon name="menu" size={22} /><span>Menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- Main navigation: one line on desktop -->
+<nav class="mainnav" aria-label="Main">
+  <div class="wrap mainnav-inner">
+    <ul class="nav-list">
+      {mainNav.map((item, i) => (
+        <li class:list={['nav-item', { active: isActive(item), 'has-menu': !!item.children }]}>
+          {item.children ? (
+            <>
+              <button type="button" class="nav-link nav-trigger" aria-expanded="false" aria-controls={`menu-${i}`}>
+                <span class="notranslate" data-fr={item.fr}>{item.label}</span><Icon name="chevron-down" size={12} />
+              </button>
+              <div class="dropdown" id={`menu-${i}`}>
+                <ul>
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href} class:list={['dd-link', { 'dd-parent': !!child.children }]} aria-current={child.href === current ? 'page' : undefined} rel={child.external ? 'noopener' : undefined}>
+                        {child.label}{child.external && <Icon name="external" size={13} label="(external site)" />}
+                      </a>
+                      {child.children && (
+                        <ul class="dd-sub">
+                          {child.children.map((g) => <li><a href={g.href} class="dd-link" aria-current={g.href === current ? 'page' : undefined}>{g.label}</a></li>)}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          ) : (
+            <a href={item.href} class="nav-link" aria-current={item.href === current ? 'page' : undefined}><span class="notranslate" data-fr={item.fr}>{item.label}</span></a>
+          )}
+        </li>
+      ))}
+    </ul>
+    <a href="/contact/" class="nav-contact" aria-current={current === '/contact/' ? 'page' : undefined}><span class="notranslate" data-fr="Contact">Contact</span></a>
+  </div>
+</nav>
+
+<!-- Mobile navigation drawer -->
+<div id="mobile-nav" class="mobile-nav" hidden>
+  <div class="wrap">
+    <a href="/search/" class="m-search"><Icon name="search" size={18} /> Search the site</a>
+    <ul class="m-list">
+      {mainNav.map((item) => (
+        <li>
+          {item.children ? (
+            <details>
+              <summary><span class="notranslate" data-fr={item.fr}>{item.label}</span><Icon name="chevron-down" size={16} /></summary>
+              <ul>
+                {item.children.map((child) => (
+                  <li>
+                    <a href={child.href}>{child.label}</a>
+                    {child.children && <ul class="m-sub">{child.children.map((g) => <li><a href={g.href}>{g.label}</a></li>)}</ul>}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ) : <a href={item.href} class="m-top"><span class="notranslate" data-fr={item.fr}>{item.label}</span></a>}
+        </li>
+      ))}
+      <li><a href="/contact/" class="m-top">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .topbar { background: var(--blue-deep); color: var(--on-dark); font-size: 13.5px; }
+  .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 40px; }
+  .ticker { display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1 1 auto; }
+  .ticker-tag { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 7px; border-radius: 4px; background: var(--ochre); color: var(--ink); }
+  /* Scrolling headlines, moving left to right. Two copies of the list make the loop seamless. */
+  .ticker-window { flex: 1 1 auto; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+  .ticker-track { display: flex; width: max-content; animation: ticker 70s linear infinite; }
+  .ticker-window:hover .ticker-track, .ticker-window:focus-within .ticker-track { animation-play-state: paused; }
+  @keyframes ticker { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .ticker-list { display: flex; list-style: none; margin: 0; padding: 0; }
+  .ticker-list li { white-space: nowrap; font-size: 12.5px; padding-right: 28px; }
+  .ticker-list li::after { content: '•'; color: var(--ochre); margin-left: 28px; }
+  .ticker-list a { color: var(--white); text-decoration: none; }
+  .ticker-list a:hover { text-decoration: underline; }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+    .ticker-list[aria-hidden] { display: none; }
+  }
+  .topbar-tools { display: flex; align-items: center; gap: 18px; flex: none; }
+  .lang { display: flex; gap: 6px; align-items: center; color: #7f96b8; }
+  .lang button { color: var(--on-dark-2); background: none; border: 0; padding: 6px 4px; cursor: pointer; font-size: inherit; }
+  .lang button:hover { color: var(--white); text-decoration: underline; }
+  .lang button[aria-pressed='true'] { color: var(--white); font-weight: 600; }
+  .topbar-search { display: inline-flex; align-items: center; gap: 6px; color: var(--white); text-decoration: none; padding: 6px 10px; border-radius: 6px; background: rgba(255,255,255,0.08); }
+  .topbar-search:hover { background: rgba(255,255,255,0.16); color: var(--white); }
+  .topbar-social { display: flex; }
+  .topbar-social a { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; color: var(--on-dark); border-radius: 6px; }
+  .topbar-social a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+
+  .brand { background: var(--white); }
+  .brand-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 12px; }
+  .brand-logo { flex: none; display: flex; }
+  .brand-logo img { height: 84px; width: auto; display: block; }
+  .tagline { flex: 1 1 auto; text-align: center; font-size: clamp(20px, 2.1vw, 28px); line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; color: var(--blue); }
+  .tagline span { font-weight: 400; color: var(--ink-2); }
+  .funder { flex: none; display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .funder-label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border-right: 1px solid var(--line-2); padding-right: 14px; line-height: 1.3; }
+  .funder img { height: 62px; width: auto; display: block; }
+  .menu-toggle { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); font-weight: 600; cursor: pointer; }
+
+  .mainnav { background: var(--blue); position: relative; z-index: 40; }
+  .mainnav-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .nav-list { display: flex; flex-wrap: nowrap; align-items: stretch; list-style: none; margin: 0; padding: 0; min-width: 0; }
+  .nav-item { position: relative; display: flex; }
+  .nav-link { display: inline-flex; align-items: center; gap: 6px; min-height: 54px; padding: 0 clamp(7px, 0.85vw, 13px); color: var(--white); text-decoration: none; font-size: 15px; font-weight: 600; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .nav-link:hover, .nav-item:hover > .nav-link, .nav-trigger[aria-expanded='true'] { background: rgba(255,255,255,0.12); color: var(--white); }
+  .nav-item.active > .nav-link { box-shadow: inset 0 -3px 0 var(--ochre); }
+  .nav-trigger :global(svg) { transition: transform 0.2s; }
+  .nav-trigger[aria-expanded='true'] :global(svg) { transform: rotate(180deg); }
+  .nav-contact { flex: none; display: inline-flex; align-items: center; min-height: 40px; padding: 0 20px; border-radius: 8px; background: var(--ochre); color: var(--ink); font-weight: 700; font-size: 15px; text-decoration: none; }
+  .nav-contact:hover { background: #d0922a; color: var(--ink); }
+
+  .dropdown { position: absolute; top: 100%; left: 0; min-width: 280px; background: var(--white); border-radius: 0 0 12px 12px; box-shadow: 0 18px 40px rgba(11,35,67,0.22); padding: 10px; display: none; }
+  .nav-item:nth-last-child(-n+3) .dropdown { left: auto; right: 0; }
+  .dropdown ul { list-style: none; margin: 0; padding: 0; }
+  .dd-link { display: flex; align-items: center; gap: 6px; padding: 9px 12px; border-radius: 8px; color: var(--ink); text-decoration: none; font-size: 15px; line-height: 1.35; }
+  .dd-link:hover, .dd-link[aria-current='page'] { background: var(--blue-tint); color: var(--blue-deep); }
+  .dd-parent { font-weight: 600; }
+  .dd-sub { margin: 0 0 6px 12px !important; padding-left: 10px !important; border-left: 2px solid var(--line); }
+  .dd-sub .dd-link { font-size: 14.5px; color: var(--ink-2); padding-block: 7px; }
+  .nav-item.open > .dropdown { display: block; }
+  @media (hover: hover) and (pointer: fine) { .nav-item.has-menu:hover > .dropdown { display: block; } }
+
+  .mobile-nav { background: var(--white); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(11,35,67,0.12); position: relative; z-index: 45; }
+  .m-search { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 10px; color: var(--muted); text-decoration: none; }
+  .m-list { list-style: none; margin: 8px 0 16px; padding: 0; }
+  .m-list > li { border-bottom: 1px solid var(--line); }
+  .m-list summary, .m-top { display: flex; justify-content: space-between; align-items: center; min-height: 52px; font-weight: 600; color: var(--ink); text-decoration: none; cursor: pointer; list-style: none; }
+  .m-list summary::-webkit-details-marker { display: none; }
+  .m-list details[open] summary :global(svg) { transform: rotate(180deg); }
+  .m-list details ul { list-style: none; margin: 0 0 12px; padding: 0 0 0 12px; }
+  .m-list details a { display: block; padding: 9px 0; color: var(--ink-2); text-decoration: none; }
+  .m-sub { padding-left: 14px !important; border-left: 2px solid var(--line); margin: 0 0 6px !important; }
+
+  @media (max-width: 1150px) {
+    .mainnav { display: none; }
+    .menu-toggle { display: inline-flex; }
+  }
+  /* French labels are longer: tighten the menu, and switch to the Menu button sooner. */
+  :global(html.lang-fr) .nav-link { font-size: 14px; padding: 0 clamp(6px, 0.6vw, 9px); }
+  :global(html.lang-fr) .nav-contact { padding: 0 14px; font-size: 14px; }
+  @media (max-width: 1420px) {
+    :global(html.lang-fr) .mainnav { display: none; }
+    :global(html.lang-fr) .menu-toggle { display: inline-flex; }
+  }
+  @media (max-width: 900px) {
+    .tagline, .funder-label { display: none; }
+    .funder img { height: 48px; }
+    .brand-logo img { height: 64px; }
+    .topbar-social { display: none; }
+  }
+  @media (max-width: 640px) {
+    .ticker { display: none; }
+    .topbar-inner { justify-content: flex-end; }
+    .funder { display: none; }
+  }
+</style>
+
+<script>
+  const triggers = document.querySelectorAll<HTMLButtonElement>('.nav-trigger');
+  const closeAll = (except?: Element) => triggers.forEach((t) => {
+    if (t === except) return;
+    t.setAttribute('aria-expanded', 'false');
+    t.parentElement?.classList.remove('open');
+  });
+  triggers.forEach((t) => t.addEventListener('click', () => {
+    const open = t.getAttribute('aria-expanded') !== 'true';
+    closeAll(t);
+    t.setAttribute('aria-expanded', String(open));
+    t.parentElement?.classList.toggle('open', open);
+  }));
+  document.addEventListener('click', (e) => { if (!(e.target as Element).closest('.nav-item')) closeAll(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const open = document.querySelector<HTMLButtonElement>('.nav-trigger[aria-expanded="true"]');
+    closeAll(); open?.focus();
+  });
+  document.querySelectorAll('.nav-item').forEach((li) => li.addEventListener('focusout', (e) => {
+    if (!li.contains((e as FocusEvent).relatedTarget as Node)) { li.classList.remove('open'); li.querySelector('.nav-trigger')?.setAttribute('aria-expanded', 'false'); }
+  }));
+
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const drawer = document.getElementById('mobile-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    if (drawer) drawer.hidden = !open;
+  });
+</script>

@@ -1,0 +1,81 @@
+---
+import Icon from './Icon.astro';
+import { contact, social } from '../data/nav';
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <form class="newsletter" action="https://wascal.org/" method="get" data-preview-form>
+        <h2>Our newsletter</h2>
+        <p>Subscribe to receive updates on WASCAL.</p>
+        <label for="nl-email">Email address</label>
+        <div class="nl-row">
+          <input id="nl-email" name="email" type="email" autocomplete="email" placeholder="you@example.org" required />
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </div>
+        <p class="nl-note" role="status" hidden>Thanks. Newsletter sign-up will be connected when the new site goes live.</p>
+      </form>
+      <div>
+        <h2>About us</h2>
+        <p>WASCAL seeks to become one of Africa's leading science-based institutions in the provision of climate services in and for West Africa.</p>
+        <nav class="f-social" aria-label="WASCAL on social media">
+          {social.map((s) => <a href={s.href} aria-label={s.label} rel="noopener"><Icon name={s.icon} size={17} /></a>)}
+        </nav>
+      </div>
+      <nav aria-label="Quick links">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="/alumni/">Alumni</a></li>
+          <li><a href="/faqs/">FAQs</a></li>
+          <li><a href="/gallery/">Gallery</a></li>
+          <li><a href="/reports/">Reports</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <address>
+          {contact.address.map((l) => <span>{l}</span>)}
+        </address>
+        <p class="f-line"><Icon name="phone" size={16} /> <span>{contact.phone}</span></p>
+        <p class="f-line"><Icon name="mail" size={16} /> <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© WASCAL 2020. All rights reserved.</span>
+      <span class="bottom-links notranslate"><button type="button" data-set-lang="en" lang="en">English</button><button type="button" data-set-lang="fr" lang="fr">Français</button></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--blue-ink); color: var(--on-dark); padding-block: 64px 28px; font-size: 15px; margin-top: auto; }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; }
+  h2 { font-size: 18px; color: var(--white); margin-bottom: 12px; }
+  .cols > * { display: flex; flex-direction: column; gap: 10px; }
+  .cols > * > h2 { margin-bottom: 2px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  a { color: var(--on-dark); }
+  a:hover { color: var(--white); }
+  nav ul a { text-decoration: none; }
+  label { font-size: 14px; }
+  .nl-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .nl-row input { flex: 1 1 150px; min-height: 48px; padding: 0 12px; border-radius: 8px; border: 1px solid #3a5884; background: #12305a; color: var(--white); font: inherit; }
+  .nl-row input::placeholder { color: #9fb2cf; }
+  .nl-note { color: var(--white); font-size: 14px; }
+  address { font-style: normal; display: flex; flex-direction: column; }
+  .f-line { display: flex; align-items: center; gap: 8px; }
+  .f-social { display: flex; gap: 6px; margin-top: 6px; }
+  .f-social a { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #23406a; border-radius: 8px; }
+  .bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid #23406a; padding-top: 24px; margin-top: 48px; font-size: 14px; }
+  .bottom-links { display: flex; gap: 20px; align-items: center; }
+  .bottom-links button { background: none; border: 0; padding: 4px 0; color: var(--on-dark); text-decoration: underline; cursor: pointer; font-size: inherit; }
+  .bottom-links button[aria-pressed='true'] { color: var(--white); font-weight: 600; text-decoration: none; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form[data-preview-form]').forEach((f) => f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = f.querySelector<HTMLElement>('.nl-note');
+    if (note) note.hidden = false;
+  }));
+</script>

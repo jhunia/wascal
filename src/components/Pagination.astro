@@ -1,0 +1,34 @@
+---
+import Icon from './Icon.astro';
+interface Props { current: number; last: number; base: string }
+const { current, last, base } = Astro.props;
+const href = (n: number) => (n === 1 ? base : `${base}page/${n}/`);
+const pages: (number | '…')[] = [];
+for (let n = 1; n <= last; n++) {
+  if (n === 1 || n === last || Math.abs(n - current) <= 1) pages.push(n);
+  else if (pages[pages.length - 1] !== '…') pages.push('…');
+}
+---
+{last > 1 && (
+  <nav class="pager" aria-label="Pagination">
+    {current > 1 ? <a href={href(current - 1)} class="pg-btn" rel="prev"><Icon name="chevron-left" size={16} /> Newer</a> : <span class="pg-btn off" aria-hidden="true"><Icon name="chevron-left" size={16} /> Newer</span>}
+    <ol>
+      {pages.map((p) => p === '…' ? <li class="gap" aria-hidden="true">…</li> : (
+        <li><a href={href(p)} aria-current={p === current ? 'page' : undefined} aria-label={`Page ${p}`}>{p}</a></li>
+      ))}
+    </ol>
+    {current < last ? <a href={href(current + 1)} class="pg-btn" rel="next">Older <Icon name="chevron-right" size={16} /></a> : <span class="pg-btn off" aria-hidden="true">Older <Icon name="chevron-right" size={16} /></span>}
+  </nav>
+)}
+
+<style>
+  .pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; margin-top: 48px; }
+  ol { list-style: none; margin: 0; padding: 0; display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+  ol a { min-width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--line-2); color: var(--ink); text-decoration: none; font-weight: 600; font-variant-numeric: tabular-nums; }
+  ol a:hover { border-color: var(--blue); color: var(--blue); }
+  ol a[aria-current='page'] { background: var(--blue); border-color: var(--blue); color: var(--white); }
+  .gap { min-width: 24px; display: inline-flex; align-items: center; justify-content: center; color: var(--muted); }
+  .pg-btn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--line-2); color: var(--ink); text-decoration: none; font-weight: 600; }
+  .pg-btn:hover { border-color: var(--blue); color: var(--blue); }
+  .off { opacity: 0.4; }
+</style>

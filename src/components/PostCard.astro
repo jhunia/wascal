@@ -1,0 +1,45 @@
+---
+import { formatDate, categoryName, postUrl, bestImage, type Post } from '../lib/content';
+interface Props { post: Post; variant?: 'card' | 'row' | 'lead'; headingLevel?: 'h2' | 'h3' }
+const { post, variant = 'card', headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+const img = bestImage(post.image, variant === 'lead' ? 'large' : 'card');
+const cat = post.categories[0];
+---
+<article class:list={['post', variant, { 'no-img': !img }]}>
+  {img ? (
+    <img src={img} alt={post.image?.alt || ''} loading="lazy" decoding="async" />
+  ) : (
+    <div class="ph" aria-hidden="true"><img src="/images/wascal-logo.png" alt="" loading="lazy" /></div>
+  )}
+  <div class="body">
+    <p class="meta">{cat && <span>{categoryName(cat)} · </span>}<time datetime={post.date}>{formatDate(post.date, 'short')}</time></p>
+    <H class="title"><a href={postUrl(post)}>{post.title}</a></H>
+    {variant !== 'row' && post.excerpt && <p class="excerpt">{post.excerpt}</p>}
+  </div>
+</article>
+
+<style>
+  .post { position: relative; background: var(--white); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); transition: box-shadow 0.2s, transform 0.2s; }
+  .post:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .post > img, .ph { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--surface); }
+  .ph { display: flex; align-items: center; justify-content: center; }
+  .ph img { width: 40%; opacity: 0.5; }
+  .body { padding: 18px 22px 22px; display: flex; flex-direction: column; gap: 8px; }
+  .meta { font-size: 12.5px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.05em; }
+  .title { font-size: 19px; line-height: 1.32; }
+  .title a { color: var(--ink); text-decoration: none; }
+  .title a::after { content: ''; position: absolute; inset: 0; }
+  .title a:hover { color: var(--blue); }
+  .excerpt { color: var(--muted); font-size: 15.5px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  .lead .title { font-size: clamp(22px, 2.2vw, 27px); }
+  .lead > img, .lead .ph { aspect-ratio: 16 / 10; }
+  .lead .body { padding: 24px 28px 28px; }
+
+  .row { display: grid; grid-template-columns: 38% 1fr; }
+  .row > img, .row .ph { aspect-ratio: auto; height: 100%; min-height: 130px; }
+  .row .body { padding: 16px 20px; justify-content: center; gap: 6px; }
+  .row .title { font-size: 17px; }
+  @media (max-width: 480px) { .row { grid-template-columns: 1fr; } .row > img, .row .ph { aspect-ratio: 16 / 9; } }
+</style>

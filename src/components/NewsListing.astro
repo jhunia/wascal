@@ -1,0 +1,26 @@
+---
+import PostCard from './PostCard.astro';
+import Pagination from './Pagination.astro';
+import { categories, type Post } from '../lib/content';
+interface Props { posts: Post[]; current: number; last: number; base: string; activeCategory?: string }
+const { posts, current, last, base, activeCategory } = Astro.props;
+const topics = categories.filter((c) => c.count >= 8).slice(0, 14);
+---
+<div class="wrap listing">
+  <nav class="topics" aria-label="Filter news by topic">
+    <a href="/news/" class="chip" aria-current={!activeCategory ? 'page' : undefined}>All news</a>
+    {topics.map((c) => <a href={`/news/category/${c.slug}/`} class="chip" aria-current={activeCategory === c.slug ? 'page' : undefined}>{c.name}</a>)}
+  </nav>
+  <div class="card-grid">
+    {posts.map((p) => <PostCard post={p} headingLevel="h2" />)}
+  </div>
+  <Pagination current={current} last={last} base={base} />
+</div>
+
+<style>
+  .listing { padding-block: 40px 72px; }
+  .topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .topics .chip { min-height: 40px; padding: 0 14px; background: var(--white); border: 1px solid var(--line-2); color: var(--ink); font-size: 14px; }
+  .topics .chip:hover { border-color: var(--blue); color: var(--blue); background: var(--white); }
+  .topics .chip[aria-current='page'] { background: var(--blue); border-color: var(--blue); color: var(--white); }
+</style>

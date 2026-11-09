@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+<Base title="Search" current="/search/">
+  <PageHeader title="Search" crumbs={[{ label: 'Search' }]} lead="Search news, pages and people across the WASCAL website." />
+  <div class="wrap search">
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+    <div id="search"></div>
+    <noscript><p>Search needs JavaScript. You can browse <a href="/news/">all news</a> instead.</p></noscript>
+  </div>
+</Base>
+
+<style>
+  .search { padding-block: 40px 80px; max-width: 900px; }
+  .search :global(.pagefind-ui) { --pagefind-ui-primary: #1b539b; --pagefind-ui-text: #1a1f2b; --pagefind-ui-border: #d5dbe5; --pagefind-ui-border-radius: 8px; --pagefind-ui-font: inherit; }
+</style>
+
+<script is:inline>
+  (function () {
+    var s = document.createElement('script');
+    s.src = '/pagefind/pagefind-ui.js';
+    s.onload = function () {
+      var ui = new PagefindUI({ element: '#search', showSubResults: true, showImages: false, autofocus: true });
+      var q = new URLSearchParams(location.search).get('q');
+      if (q) ui.triggerSearch(q);
+    };
+    s.onerror = function () {
+      document.getElementById('search').innerHTML = '<p>The search index is created when the site is built (npm run build). It is not available in development mode.</p>';
+    };
+    document.body.appendChild(s);
+  })();
+</script>

@@ -1,0 +1,344 @@
+[
+ {
+  "id": 2,
+  "slug": "news",
+  "name": "News",
+  "count": 425
+ },
+ {
+  "id": 11,
+  "slug": "wascal-in-the-news",
+  "name": "WASCAL in the News",
+  "count": 169
+ },
+ {
+  "id": 14,
+  "slug": "blog",
+  "name": "Blog",
+  "count": 159
+ },
+ {
+  "id": 28,
+  "slug": "events",
+  "name": "Events",
+  "count": 56
+ },
+ {
+  "id": 29,
+  "slug": "press-release",
+  "name": "Press Release",
+  "count": 50
+ },
+ {
+  "id": 22,
+  "slug": "burkina-faso",
+  "name": "Burkina Faso",
+  "count": 48
+ },
+ {
+  "id": 146,
+  "slug": "wascal",
+  "name": "WASCAL",
+  "count": 37
+ },
+ {
+  "id": 31,
+  "slug": "newsletters",
+  "name": "Newsletters",
+  "count": 36
+ },
+ {
+  "id": 142,
+  "slug": "competence-projects",
+  "name": "Competence Projects",
+  "count": 35
+ },
+ {
+  "id": 3,
+  "slug": "project",
+  "name": "Project",
+  "count": 30
+ },
+ {
+  "id": 134,
+  "slug": "factsheet",
+  "name": "Factsheet",
+  "count": 26
+ },
+ {
+  "id": 144,
+  "slug": "renewable-energies",
+  "name": "Renewable Energies",
+  "count": 25
+ },
+ {
+  "id": 130,
+  "slug": "renewable-energy-coordination-project",
+  "name": "RENEWABLE ENERGY COORDINATION PROJECT",
+  "count": 24
+ },
+ {
+  "id": 21,
+  "slug": "west-africa",
+  "name": "West Africa",
+  "count": 24
+ },
+ {
+  "id": 19,
+  "slug": "nigeria",
+  "name": "Nigeria",
+  "count": 21
+ },
+ {
+  "id": 37,
+  "slug": "publications",
+  "name": "Publications",
+  "count": 21
+ },
+ {
+  "id": 20,
+  "slug": "ghana",
+  "name": "Ghana",
+  "count": 20
+ },
+ {
+  "id": 30,
+  "slug": "special",
+  "name": "Special",
+  "count": 20
+ },
+ {
+  "id": 15,
+  "slug": "cabo-verde",
+  "name": "Cabo Verde",
+  "count": 18
+ },
+ {
+  "id": 18,
+  "slug": "togo",
+  "name": "Togo",
+  "count": 18
+ },
+ {
+  "id": 127,
+  "slug": "advertisement",
+  "name": "Advertisement",
+  "count": 17
+ },
+ {
+  "id": 25,
+  "slug": "cote-divoire",
+  "name": "Côte d'Ivoire",
+  "count": 17
+ },
+ {
+  "id": 352,
+  "slug": "green-hydrogen",
+  "name": "GREEN HYDROGEN",
+  "count": 17
+ },
+ {
+  "id": 133,
+  "slug": "resources",
+  "name": "Resources",
+  "count": 17
+ },
+ {
+  "id": 27,
+  "slug": "niger",
+  "name": "Niger",
+  "count": 16
+ },
+ {
+  "id": 17,
+  "slug": "benin",
+  "name": "Bénin",
+  "count": 13
+ },
+ {
+  "id": 24,
+  "slug": "gambia",
+  "name": "Gambia",
+  "count": 13
+ },
+ {
+  "id": 132,
+  "slug": "renewable-energy-cpprdicatiom-project",
+  "name": "RENEWABLE ENERGY CPPRDICATIOM PROJECT",
+  "count": 13
+ },
+ {
+  "id": 23,
+  "slug": "senegal",
+  "name": "Sénégal",
+  "count": 13
+ },
+ {
+  "id": 16,
+  "slug": "general",
+  "name": "General",
+  "count": 12
+ },
+ {
+  "id": 145,
+  "slug": "germany",
+  "name": "Germany",
+  "count": 11
+ },
+ {
+  "id": 710,
+  "slug": "journal-article",
+  "name": "Journal Article",
+  "count": 11
+ },
+ {
+  "id": 129,
+  "slug": "procurement-notice",
+  "name": "Procurement Notice",
+  "count": 11
+ },
+ {
+  "id": 717,
+  "slug": "wascal-publishing",
+  "name": "WASCAL Publishing",
+  "count": 11
+ },
+ {
+  "id": 125,
+  "slug": "report",
+  "name": "Report",
+  "count": 10
+ },
+ {
+  "id": 179,
+  "slug": "capacity-building-projects",
+  "name": "Capacity Building Projects",
+  "count": 7
+ },
+ {
+  "id": 26,
+  "slug": "mali",
+  "name": "Mali",
+  "count": 7
+ },
+ {
+  "id": 621,
+  "slug": "journal-articles",
+  "name": "Journal Articles",
+  "count": 6
+ },
+ {
+  "id": 124,
+  "slug": "senegal-2",
+  "name": "Senegal",
+  "count": 5
+ },
+ {
+  "id": 39,
+  "slug": "book-chapters",
+  "name": "Book Chapters",
+  "count": 4
+ },
+ {
+  "id": 619,
+  "slug": "ppedmas",
+  "name": "PPEDMAS",
+  "count": 4
+ },
+ {
+  "id": 34,
+  "slug": "speeches",
+  "name": "Speeches",
+  "count": 4
+ },
+ {
+  "id": 178,
+  "slug": "tender",
+  "name": "Tender",
+  "count": 4
+ },
+ {
+  "id": 128,
+  "slug": "waste-to-energy",
+  "name": "Waste-to-Energy",
+  "count": 4
+ },
+ {
+  "id": 131,
+  "slug": "workshop",
+  "name": "Workshop",
+  "count": 3
+ },
+ {
+  "id": 147,
+  "slug": "south-africa",
+  "name": "South Africa",
+  "count": 2
+ },
+ {
+  "id": 43,
+  "slug": "theses",
+  "name": "Theses",
+  "count": 2
+ },
+ {
+  "id": 150,
+  "slug": "uk",
+  "name": "UK",
+  "count": 2
+ },
+ {
+  "id": 40,
+  "slug": "doctoral-theses",
+  "name": "Doctoral Theses",
+  "count": 1
+ },
+ {
+  "id": 151,
+  "slug": "financial-report",
+  "name": "Financial Report",
+  "count": 1
+ },
+ {
+  "id": 135,
+  "slug": "inforgraphs",
+  "name": "Inforgraphs",
+  "count": 1
+ },
+ {
+  "id": 530,
+  "slug": "investment",
+  "name": "Investment",
+  "count": 1
+ },
+ {
+  "id": 41,
+  "slug": "master-theses",
+  "name": "Master Theses",
+  "count": 1
+ },
+ {
+  "id": 143,
+  "slug": "other-projects",
+  "name": "Other Projects",
+  "count": 1
+ },
+ {
+  "id": 42,
+  "slug": "peer-reviewed-articles",
+  "name": "Peer Reviewed Articles",
+  "count": 1
+ },
+ {
+  "id": 126,
+  "slug": "policy-brief",
+  "name": "Policy Brief",
+  "count": 1
+ },
+ {
+  "id": 13,
+  "slug": "vacancies",
+  "name": "Vacancies",
+  "count": 1
+ }
+]

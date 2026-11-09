@@ -1,0 +1,229 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PostCard from '../components/PostCard.astro';
+import Icon from '../components/Icon.astro';
+import { posts, pages, memberCountries, postUrl, formatDate } from '../lib/content';
+import { contact, social } from '../data/nav';
+
+// Alumni news: stories about WASCAL graduates, newest first.
+const stories = posts.filter((p) => /alumn/i.test(p.title)).slice(0, 4);
+const opportunities = posts
+  .filter((p) => /alumn|climapafrica|clapafrica|homecoming|postdoc/i.test(p.title) && !stories.includes(p))
+  .slice(0, 6);
+
+// Programme options for the registration form, from the programme pages.
+const programmes = pages
+  .filter((p) => /^(doctoral|master)/.test(p.slug))
+  .map((p) => ({ title: p.title.replace(/Pogramme/, 'Programme'), type: p.slug.startsWith('doctoral') ? 'Doctoral' : "Master's" }))
+  .sort((a, b) => a.type.localeCompare(b.type) || a.title.localeCompare(b.title));
+const linkedin = social.find((s) => s.icon === 'linkedin')!.href;
+---
+<Base title="Alumni" description="The WASCAL alumni network: more than 700 doctoral and master's graduates working on climate change across West Africa." current="/alumni/">
+  <PageHeader title="WASCAL Alumni" eyebrow="Capacity building" crumbs={[{ label: 'Capacity building' }, { label: 'Alumni' }]}
+    lead="A network of more than 700 doctoral and master's graduates leading climate research, policy and innovation across West Africa." />
+
+  <!-- Key figures (from the WASCAL at a glance infographic) -->
+  <section class="figures" aria-label="Alumni in numbers">
+    <div class="wrap fig-row">
+      <div><strong>700+</strong><span>Alumni</span></div>
+      <div><strong>11</strong><span>Doctoral programmes</span></div>
+      <div><strong>8</strong><span>Master's programmes</span></div>
+      <div><strong>13</strong><span>Member countries</span></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="wrap about" data-pagefind-body>
+      <div class="about-text">
+        <p class="eyebrow">About the network</p>
+        <h2 class="section-title">Stronger together, long after graduation</h2>
+        <p>The purpose of WASCAL Alumni is to foster a spirit of loyalty and to promote the general welfare of our organisation.</p>
+        <p>It exists to support WASCAL's goals, and to strengthen the ties between alumni in West Africa, the wider community, WASCAL and its partners.</p>
+      </div>
+      <ul class="benefits">
+        <li><h3>Stay connected</h3><p>Keep in touch with fellow graduates, supervisors and WASCAL staff across all 13 member countries.</p></li>
+        <li><h3>Hear about opportunities</h3><p>Receive calls for fellowships, postdoctoral positions, grants and vacancies first.</p></li>
+        <li><h3>Share your work</h3><p>Have your research, awards and career milestones featured in WASCAL news.</p></li>
+        <li><h3>Give back</h3><p>Mentor current students, speak at seminars and help shape WASCAL's programmes.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Alumni stories -->
+  {stories.length > 0 && (
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Alumni stories</h2>
+            <p class="section-lead">WASCAL graduates making a difference in climate science and policy.</p>
+          </div>
+          <a href="/search/?q=alumni" class="more-link">More alumni news <Icon name="arrow-right" size={16} /></a>
+        </div>
+        <div class="card-grid">{stories.map((p) => <PostCard post={p} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <!-- Registration -->
+  <section class="section" id="register">
+    <div class="wrap reg">
+      <div class="reg-intro">
+        <p class="eyebrow">Alumni information form</p>
+        <h2 class="section-title">Register as a WASCAL alumnus</h2>
+        <p>Kindly register below so we can keep your details up to date, share opportunities with you and connect you with other graduates.</p>
+        <p class="small">Fields marked * are required. Your details are used only by WASCAL to manage the alumni network.</p>
+        <div class="reg-alt">
+          <p><strong>Also join us on LinkedIn</strong></p>
+          <a href={linkedin} class="btn btn-outline" target="_blank" rel="noopener noreferrer"><Icon name="linkedin" size={16} /> Follow WASCAL</a>
+          <p class="small">Questions? Email <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+        </div>
+      </div>
+
+      <form class="reg-form" data-alumni-form novalidate>
+        <fieldset>
+          <legend>About you</legend>
+          <div class="grid2">
+            <div class="field"><label for="a-first">First name *</label><input id="a-first" name="first_name" autocomplete="given-name" required /></div>
+            <div class="field"><label for="a-last">Last name *</label><input id="a-last" name="last_name" autocomplete="family-name" required /></div>
+            <div class="field"><label for="a-email">Email address *</label><input id="a-email" name="email" type="email" autocomplete="email" required /></div>
+            <div class="field"><label for="a-phone">Phone (with country code)</label><input id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="+233…" /></div>
+            <div class="field"><label for="a-gender">Gender</label>
+              <select id="a-gender" name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option></select></div>
+            <div class="field"><label for="a-country">Nationality *</label>
+              <select id="a-country" name="country" required>
+                <option value="">Select a country</option>
+                {memberCountries.map((c) => <option class="notranslate">{c.name}</option>)}
+                <option>Other</option>
+              </select></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your WASCAL programme</legend>
+          <div class="grid2">
+            <div class="field full"><label for="a-prog">Programme *</label>
+              <select id="a-prog" name="programme" required>
+                <option value="">Select your programme</option>
+                <optgroup label="Doctoral programmes">{programmes.filter((p) => p.type === 'Doctoral').map((p) => <option>{p.title}</option>)}</optgroup>
+                <optgroup label="Master's programmes">{programmes.filter((p) => p.type !== 'Doctoral').map((p) => <option>{p.title}</option>)}</optgroup>
+                <option>Other / not listed</option>
+              </select></div>
+            <div class="field"><label for="a-start">Year started</label><input id="a-start" name="year_start" inputmode="numeric" pattern="(19|20)\d{2}" placeholder="e.g. 2014" /></div>
+            <div class="field"><label for="a-grad">Year graduated *</label><input id="a-grad" name="year_graduated" inputmode="numeric" pattern="(19|20)\d{2}" placeholder="e.g. 2018" required /></div>
+            <div class="field full"><label for="a-thesis">Thesis title</label><input id="a-thesis" name="thesis" /></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Where you are now</legend>
+          <div class="grid2">
+            <div class="field"><label for="a-position">Current position</label><input id="a-position" name="position" autocomplete="organization-title" /></div>
+            <div class="field"><label for="a-org">Organisation</label><input id="a-org" name="organisation" autocomplete="organization" /></div>
+            <div class="field"><label for="a-sector">Sector</label>
+              <select id="a-sector" name="sector"><option value="">Select</option><option>Academia / research</option><option>Government / public sector</option><option>International organisation</option><option>NGO / civil society</option><option>Private sector</option><option>Other</option></select></div>
+            <div class="field"><label for="a-live">Country of residence</label><input id="a-live" name="residence" autocomplete="country-name" /></div>
+            <div class="field full"><label for="a-li">LinkedIn or profile link</label><input id="a-li" name="profile" type="url" placeholder="https://" /></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Staying involved</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="mentor" /> I would like to mentor current WASCAL students</label>
+            <label><input type="checkbox" name="speaker" /> I am happy to speak at WASCAL seminars or events</label>
+            <label><input type="checkbox" name="newsletter" checked /> Send me the WASCAL newsletter</label>
+            <label><input type="checkbox" name="consent" required /> I agree that WASCAL may store and use these details to manage the alumni network *</label>
+          </div>
+        </fieldset>
+
+        <p class="form-error" role="alert" hidden>Please fill in the required fields marked *.</p>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="form-ok" role="status" hidden>Thank you for registering. In this preview the form is not connected yet; it will send to WASCAL when the site goes live.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Past opportunities -->
+  {opportunities.length > 0 && (
+    <section class="section section-alt">
+      <div class="wrap">
+        <h2 class="section-title opp-title">Opportunities for alumni</h2>
+        <ul class="opps">
+          {opportunities.map((p) => (
+            <li><a href={postUrl(p)}>{p.title}</a><time datetime={p.date}>{formatDate(p.date, 'short')}</time></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .figures { background: var(--blue); color: var(--white); }
+  .fig-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; padding-block: 32px; }
+  .fig-row div { display: flex; flex-direction: column; border-left: 3px solid var(--ochre); padding-left: 16px; }
+  .fig-row strong { font-size: 40px; line-height: 1.1; }
+  .fig-row span { color: var(--on-dark); font-size: 15px; }
+
+  .about { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 48px; align-items: start; }
+  .about-text { display: flex; flex-direction: column; gap: 14px; color: var(--ink-2); }
+  .about-text .section-title { color: var(--ink); }
+  .benefits { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .benefits li { border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .benefits h3 { font-size: 17px; margin-bottom: 6px; color: var(--blue-deep); }
+  .benefits p { font-size: 15.5px; color: var(--muted); }
+
+  .reg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 48px; align-items: start; }
+  .reg-intro { display: flex; flex-direction: column; gap: 14px; color: var(--ink-2); position: sticky; top: 16px; }
+  .reg-intro .section-title { color: var(--ink); }
+  .small { font-size: 14.5px; color: var(--muted); }
+  .reg-alt { margin-top: 12px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .reg-form { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; gap: 22px; background: var(--white); box-shadow: var(--shadow); }
+  fieldset { border: 0; padding: 0; margin: 0; }
+  legend { font-weight: 700; font-size: 18px; color: var(--ink); margin-bottom: 12px; padding: 0; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 16px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .full { grid-column: 1 / -1; }
+  .field label { font-weight: 600; font-size: 14.5px; }
+  input, select { font: inherit; font-size: 16px; min-height: 48px; padding: 0 12px; border: 1px solid var(--line-2); border-radius: 8px; background: var(--white); color: var(--ink); width: 100%; }
+  input:focus, select:focus { border-color: var(--blue); }
+  input[aria-invalid='true'], select[aria-invalid='true'] { border-color: #b42318; }
+  .checks { display: flex; flex-direction: column; gap: 10px; }
+  .checks label { display: flex; gap: 10px; align-items: flex-start; font-size: 15.5px; color: var(--ink-2); }
+  .checks input { width: 20px; height: 20px; min-height: 0; margin-top: 2px; flex: none; accent-color: var(--blue); }
+  .reg-form .btn { align-self: flex-start; }
+  .form-error { color: #b42318; font-weight: 600; }
+  .form-ok { color: var(--blue-deep); font-weight: 600; background: var(--blue-tint); padding: 12px 14px; border-radius: 8px; }
+
+  .opp-title { margin-bottom: 20px; }
+  .opps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: 900px; }
+  .opps li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .opps a { font-weight: 600; color: var(--ink); text-decoration: none; }
+  .opps a:hover { color: var(--blue); }
+  .opps time { color: var(--muted); font-size: 14px; white-space: nowrap; }
+
+  @media (max-width: 900px) { .reg { grid-template-columns: 1fr; } .reg-intro { position: static; } }
+  @media (max-width: 560px) { .grid2 { grid-template-columns: 1fr; } .opps li { flex-direction: column; gap: 4px; } }
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-alumni-form]');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fields = [...form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select')];
+    let first: HTMLElement | null = null;
+    fields.forEach((f) => {
+      const bad = !f.checkValidity();
+      f.setAttribute('aria-invalid', String(bad));
+      if (bad && !first) first = f;
+    });
+    const err = form.querySelector<HTMLElement>('.form-error');
+    const ok = form.querySelector<HTMLElement>('.form-ok');
+    if (first) { if (err) err.hidden = false; if (ok) ok.hidden = true; (first as HTMLElement).focus(); return; }
+    if (err) err.hidden = true;
+    if (ok) ok.hidden = false;
+  });
+</script>

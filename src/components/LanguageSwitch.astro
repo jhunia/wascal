@@ -1,0 +1,64 @@
+---
+// In-page French translation (machine translation by Google Translate).
+// Any element with data-set-lang="en" | "fr" switches language. The choice is kept in the
+// standard `googtrans` cookie, so it carries across pages. English is the original content.
+---
+<div id="gt-element" hidden></div>
+
+<style is:global>
+  /* Hide Google Translate's own banner, tooltip and spinner; our switch replaces them. */
+  body > .skiptranslate, iframe.skiptranslate, .goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame, .goog-te-spinner-pos { display: none !important; }
+  body { top: 0 !important; position: static !important; }
+  font[style*='background-color'] { background: none !important; box-shadow: none !important; }
+</style>
+
+<script is:inline>
+  (function () {
+    var COOKIE = 'googtrans';
+    function current() {
+      var m = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/(\w+)/);
+      return m ? m[1] : 'en';
+    }
+    function setCookie(value) {
+      var host = location.hostname;
+      var expires = value ? '' : '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      var v = value ? '/en/' + value : '';
+      document.cookie = COOKIE + '=' + v + '; path=/' + expires;
+      // Google also sets the cookie on the parent domain; clear/set it there too.
+      if (host.indexOf('.') > 0 && !/^\d+\.\d+\.\d+\.\d+$/.test(host)) {
+        document.cookie = COOKIE + '=' + v + '; path=/; domain=.' + host.split('.').slice(-2).join('.') + expires;
+      }
+    }
+    function mark(lang) {
+      document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set-lang') === lang));
+      });
+    }
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('[data-set-lang]');
+      if (!b) return;
+      e.preventDefault();
+      var lang = b.getAttribute('data-set-lang');
+      if (lang === current()) return;
+      setCookie(lang === 'en' ? '' : lang);
+      location.reload();
+    });
+
+    var lang = current();
+    mark(lang);
+    if (lang !== 'en') {
+      document.documentElement.lang = lang;
+      document.documentElement.classList.add('lang-' + lang);
+      // Fixed French labels for the menu (shorter and more accurate than machine translation).
+      document.querySelectorAll('[data-fr]').forEach(function (el) { el.textContent = el.getAttribute('data-fr'); });
+      document.querySelectorAll('[data-fr-html]').forEach(function (el) { el.innerHTML = el.getAttribute('data-fr-html'); });
+      window.gtInit = function () {
+        new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'fr', autoDisplay: false }, 'gt-element');
+      };
+      var s = document.createElement('script');
+      s.src = 'https://translate.google.com/translate_a/element.js?cb=gtInit';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  })();
+</script>

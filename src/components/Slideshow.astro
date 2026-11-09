@@ -1,0 +1,126 @@
+---
+import Icon from './Icon.astro';
+import { formatDate, categoryName, postUrl, bestImage, type Post } from '../lib/content';
+
+interface Props { posts: Post[] }
+const { posts } = Astro.props;
+
+const slides = [
+  {
+    image: '/images/station.jpg', alt: '', position: '60% 40%',
+    eyebrow: 'Welcome to WASCAL',
+    title: 'Climate science for a resilient West Africa',
+    text: 'From weather stations in the field to doctoral programmes and policy advice, WASCAL turns climate evidence into action across 13 member countries.',
+    href: '/our-story/', caption: 'Automatic weather station, WASCAL observation network',
+  },
+  ...posts.map((p) => ({
+    image: bestImage(p.image, 'large')!, alt: p.image?.alt || '', position: '50% 30%',
+    eyebrow: `${p.categories[0] ? categoryName(p.categories[0]) + ' · ' : ''}${formatDate(p.date, 'short')}`,
+    title: p.title, text: '', href: postUrl(p), caption: '',
+  })),
+];
+---
+<section class="slideshow" aria-roledescription="carousel" aria-label="Highlights" data-slideshow>
+  {slides.map((s, i) => (
+    <div class="slide" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${slides.length}`} hidden={i !== 0} data-slide>
+      <img src={s.image} alt={s.alt} style={`object-position: ${s.position}`} loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'} decoding="async" />
+      <div class="shade" aria-hidden="true"></div>
+      {s.caption && <p class="caption">{s.caption}</p>}
+      <div class="wrap slide-body">
+        <div class="slide-text">
+          <p class="slide-eyebrow">{s.eyebrow}</p>
+          {i === 0 ? <h1>{s.title}</h1> : <h2>{s.title}</h2>}
+          {s.text && <p class="slide-lead">{s.text}</p>}
+          <a href={s.href} class="btn btn-accent">Read more <Icon name="arrow-right" size={16} /></a>
+        </div>
+      </div>
+    </div>
+  ))}
+
+  <button type="button" class="arrow prev" aria-label="Previous slide" data-prev><Icon name="chevron-left" size={22} /></button>
+  <button type="button" class="arrow next" aria-label="Next slide" data-next><Icon name="chevron-right" size={22} /></button>
+
+  <div class="dots-row">
+    <div class="dots">
+      {slides.map((_, i) => <button type="button" class="dot" aria-label={`Go to slide ${i + 1}`} aria-current={i === 0 ? 'true' : undefined} data-dot={i}><span></span></button>)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .slideshow { position: relative; height: clamp(480px, 44vw, 640px); overflow: hidden; background: var(--blue-ink); }
+  .slide { position: absolute; inset: 0; animation: fade 0.6s ease; }
+  @keyframes fade { from { opacity: 0.3; } to { opacity: 1; } }
+  .slide img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11,35,67,0.94) 0%, rgba(11,35,67,0.72) 36%, rgba(11,35,67,0.12) 70%, rgba(11,35,67,0) 100%); }
+  .caption { position: absolute; right: 24px; top: 16px; font-size: 12.5px; color: var(--white); background: rgba(11,35,67,0.6); padding: 4px 10px; border-radius: 4px; }
+  .slide-body { position: absolute; left: 0; right: 0; bottom: 76px; padding-inline: max(96px, var(--gutter)); }
+  .slide-text { max-width: 820px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; color: var(--white); }
+  .slide-eyebrow { font-size: 13.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ochre); }
+  .slide-text h1, .slide-text h2 { font-size: clamp(28px, 3.6vw, 48px); line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; }
+  .slide-lead { font-size: 18px; line-height: 1.55; color: var(--on-dark); max-width: 640px; }
+  .slide-text .btn { margin-top: 6px; }
+
+  .arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid rgba(255,255,255,0.6); background: rgba(11,35,67,0.45); color: var(--white); cursor: pointer; z-index: 2; transition: background 0.2s; }
+  .arrow:hover { background: rgba(11,35,67,0.8); }
+  .prev { left: 24px; }
+  .next { right: 24px; }
+
+  .dots-row { position: absolute; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; z-index: 2; }
+  .dots { display: flex; align-items: center; }
+  .dot { width: 36px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; padding: 0; cursor: pointer; }
+  .dot span { display: block; width: 10px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.6); transition: width 0.25s, background 0.25s; }
+  .dot[aria-current='true'] span { width: 28px; background: var(--ochre); }
+
+  @media (max-width: 720px) {
+    .slideshow { height: 560px; }
+    .slide-body { padding-inline: var(--gutter); bottom: 72px; }
+    .arrow { top: auto; bottom: 14px; transform: none; width: 44px; height: 44px; }
+    .prev { left: 12px; }
+    .next { right: 12px; }
+    .slide-lead { font-size: 16px; }
+    .caption { display: none; }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-slideshow]').forEach((root) => {
+    const slides = [...root.querySelectorAll<HTMLElement>('[data-slide]')];
+    const dots = [...root.querySelectorAll<HTMLButtonElement>('[data-dot]')];
+    let i = 0;
+    let timer: number | undefined;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let stopped = reduce; // autoplay stops for good once someone uses the controls
+
+    const show = (n: number) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => { s.hidden = k !== i; });
+      dots.forEach((d, k) => (k === i ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current')));
+    };
+    const play = () => { clearInterval(timer); if (!stopped) timer = window.setInterval(() => show(i + 1), 7000); };
+    const pause = () => clearInterval(timer);
+    const userGo = (n: number) => { stopped = true; pause(); show(n); };
+
+    root.querySelector('[data-prev]')?.addEventListener('click', () => userGo(i - 1));
+    root.querySelector('[data-next]')?.addEventListener('click', () => userGo(i + 1));
+    dots.forEach((d, k) => d.addEventListener('click', () => userGo(k)));
+    root.addEventListener('mouseenter', pause);
+    root.addEventListener('mouseleave', play);
+    root.addEventListener('focusin', pause);
+    root.addEventListener('focusout', (e) => { if (!root.contains((e as FocusEvent).relatedTarget as Node)) play(); });
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') userGo(i - 1);
+      if (e.key === 'ArrowRight') userGo(i + 1);
+    });
+    let x0: number | null = null;
+    root.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) userGo(dx < 0 ? i + 1 : i - 1);
+      x0 = null;
+    });
+    document.addEventListener('visibilitychange', () => (document.hidden ? pause() : play()));
+    play();
+  });
+</script>

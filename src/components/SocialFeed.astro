@@ -1,0 +1,105 @@
+---
+import Icon from './Icon.astro';
+import { social } from '../data/nav';
+import { formatDate } from '../lib/content';
+import videos from '../data/youtube.json';
+
+const latest = (videos as { id: string; title: string; published: string; url: string; thumb: string }[]).slice(0, 3);
+const youtube = social.find((s) => s.icon === 'youtube')!.href;
+const facebook = social.find((s) => s.icon === 'facebook')!.href;
+const xUrl = social.find((s) => s.icon === 'x')!.href;
+const fbSrc = `https://www.facebook.com/plugins/page.php?href=${encodeURIComponent('https://www.facebook.com/wascalclimate')}&tabs=timeline&width=500&height=560&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false`;
+---
+<section class="section social-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title"><span class="notranslate" data-fr="Suivez-nous">We are social</span></h2>
+        <p class="section-lead">Follow @wascalclimate for news from the field, events and calls.</p>
+      </div>
+      <ul class="social-links">
+        {social.map((s) => <li><a href={s.href} target="_blank" rel="noopener noreferrer"><Icon name={s.icon} size={17} />{s.label.replace(' (Twitter)', '')}</a></li>)}
+      </ul>
+    </div>
+
+    <div class="feeds">
+      <!-- Latest videos from the WASCAL YouTube channel (refreshed on every content sync) -->
+      <div class="feed">
+        <h3 class="feed-title"><Icon name="youtube" size={20} /> Latest on YouTube</h3>
+        <ul class="videos">
+          {latest.map((v) => (
+            <li>
+              <a href={v.url} class="video" target="_blank" rel="noopener noreferrer">
+                <span class="thumb"><img src={v.thumb} alt="" loading="lazy" decoding="async" /><span class="play" aria-hidden="true"></span></span>
+                <span class="v-body">
+                  <span class="v-title">{v.title}</span>
+                  <span class="v-date">{formatDate(v.published, 'short')}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a href={youtube} class="more-link" target="_blank" rel="noopener noreferrer">All videos on YouTube <Icon name="external" size={14} /></a>
+      </div>
+
+      <!-- Recent posts from the WASCAL Facebook page (Facebook's public page widget, loaded on scroll). -->
+      <div class="feed">
+        <h3 class="feed-title"><Icon name="facebook" size={18} /> Latest on Facebook</h3>
+        <div class="fb-box" data-fb-feed data-src={fbSrc}>
+          <p class="fb-fallback">Recent posts from WASCAL's Facebook page appear here.</p>
+        </div>
+        <div class="feed-actions">
+          <a href={facebook} class="more-link" target="_blank" rel="noopener noreferrer">Open on Facebook <Icon name="external" size={14} /></a>
+          <a href={xUrl} class="more-link" target="_blank" rel="noopener noreferrer">Posts on X <Icon name="external" size={14} /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .social-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .social-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 16px; border: 1px solid var(--line-2); border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .social-links a:hover { border-color: var(--blue); color: var(--blue); }
+  .social-links :global(svg) { color: var(--blue); }
+
+  .feeds { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 32px; align-items: start; margin-top: 8px; }
+  .feed { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .feed-title { font-size: 18px; display: flex; align-items: center; gap: 8px; }
+  .feed-title :global(svg) { color: var(--blue); }
+  .videos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 16px; }
+  .video { display: flex; flex-direction: column; gap: 10px; color: var(--ink); text-decoration: none; }
+  .thumb { position: relative; display: block; border-radius: 10px; overflow: hidden; background: var(--surface); }
+  .thumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; transition: transform 0.3s; }
+  .video:hover .thumb img { transform: scale(1.04); }
+  .play { position: absolute; left: 50%; top: 50%; width: 48px; height: 34px; margin: -17px 0 0 -24px; border-radius: 9px; background: rgba(11,35,67,0.85); }
+  .play::after { content: ''; position: absolute; left: 19px; top: 10px; border-style: solid; border-width: 7px 0 7px 12px; border-color: transparent transparent transparent #fff; }
+  .v-body { display: flex; flex-direction: column; gap: 4px; }
+  .v-title { font-weight: 600; font-size: 15px; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .video:hover .v-title { color: var(--blue); }
+  .v-date { font-size: 13px; color: var(--muted); }
+  .fb-box { min-height: 200px; display: flex; justify-content: center; }
+  .fb-box :global(iframe) { width: 100%; max-width: 500px; height: 560px; border: 0; overflow: hidden; }
+  .fb-fallback { color: var(--muted); font-size: 15px; align-self: center; }
+  .feed-actions { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  @media (max-width: 900px) { .feeds { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  // Load the Facebook page widget only when it scrolls into view (keeps the homepage fast).
+  const box = document.querySelector<HTMLElement>('[data-fb-feed]');
+  const load = () => {
+    if (!box || box.querySelector('iframe')) return;
+    const f = document.createElement('iframe');
+    f.src = box.dataset.src || '';
+    f.title = 'Recent posts from the WASCAL Facebook page';
+    f.loading = 'lazy';
+    f.setAttribute('scrolling', 'no');
+    f.setAttribute('allow', 'encrypted-media');
+    box.replaceChildren(f);
+  };
+  if (box && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => { if (entries.some((e) => e.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '300px' });
+    io.observe(box);
+  } else load();
+</script>

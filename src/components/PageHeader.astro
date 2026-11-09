@@ -1,0 +1,32 @@
+---
+interface Crumb { label: string; href?: string }
+interface Props { title: string; crumbs?: Crumb[]; lead?: string; eyebrow?: string }
+const { title, crumbs = [], lead, eyebrow } = Astro.props;
+---
+<header class="ph">
+  <div class="wrap">
+    {crumbs.length > 0 && (
+      <nav aria-label="Breadcrumb">
+        <ol class="crumbs">
+          <li><a href="/">Home</a></li>
+          {crumbs.map((c) => <li>{c.href ? <a href={c.href}>{c.label}</a> : <span>{c.label}</span>}</li>)}
+        </ol>
+      </nav>
+    )}
+    {eyebrow && <p class="ph-eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {lead && <p class="ph-lead">{lead}</p>}
+    <slot />
+  </div>
+</header>
+
+<style>
+  .ph { background: var(--blue-deep); color: var(--white); padding-block: 40px 44px; background-image: linear-gradient(120deg, rgba(27,83,155,0.55), rgba(11,35,67,0) 60%); }
+  .crumbs { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 14px; color: var(--on-dark-2); }
+  .crumbs li + li::before { content: '/'; margin-right: 6px; color: #7f96b8; }
+  .crumbs a { color: var(--on-dark); text-decoration: none; }
+  .crumbs a:hover { color: var(--white); text-decoration: underline; }
+  .ph-eyebrow { font-size: 13.5px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ochre); margin-bottom: 10px; }
+  h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.15; max-width: 920px; }
+  .ph-lead { margin-top: 14px; font-size: 18px; color: var(--on-dark); max-width: 720px; }
+</style>
